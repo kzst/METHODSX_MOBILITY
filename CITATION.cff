@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this workflow, please cite the MethodsX article and this software release."
+title: "Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection"
+type: software
+version: 0.2.0
+authors:
+  - family-names: Kosztyán
+    given-names: Zsolt T.
+    email: kosztyan.zsolt@gtk.uni-pannon.hu
+    affiliation: University of Pannonia
+  - family-names: Dénes
+    given-names: Kornél
+    affiliation: Eötvös Loránd University
+repository-code: "https://github.com/kzst/METHODSX_MOBILITY"
+keywords:
+  - longitudinal networks
+  - anomaly detection
+  - network indicators
+  - graphon distances
+  - directed weighted networks
+  - reproducibility
+

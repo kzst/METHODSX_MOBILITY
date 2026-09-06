@@ -1,0 +1,1063 @@
+"from_year","to_year","transition","analysis_dimension","estimator","fixed_K","family","scale","channel","score","evidence_percentile","robust_z"
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.0239541254342939,0.235294117647059,-0.625073587460628
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.000131362889983583,0.176470588235294,-1.00444444444445
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00673464292686529,0.411764705882353,-0.315706977247586
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000579581799944107,0.176470588235294,-0.663270933834834
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.00254435751121451,0.235294117647059,-1.05482291045732
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.00898025058767171,0.294117647058824,-0.936514396061388
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00684452034266947,0.470588235294118,-0.140746812299942
+2006,2007,"2006-2007","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00252065738150464,0.176470588235294,-0.688022219948048
+2006,2007,"2006-2007","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",1861.46997282972,0.411764705882353,-0.174858999073994
+2006,2007,"2006-2007","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",101.00819436805,0.470588235294118,-0.0336389047324931
+2006,2007,"2006-2007","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",46.5530193445947,0.294117647058824,-0.368151888681241
+2006,2007,"2006-2007","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.67232363334334,0.176470588235294,-0.972859877435295
+2006,2007,"2006-2007","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.13095400164695,0.588235294117647,0.151804127468673
+2006,2007,"2006-2007","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.0525711058209,0.176470588235294,-1.05796804773841
+2006,2007,"2006-2007","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.108615031171861,0.235294117647059,-1.10546135019429
+2006,2007,"2006-2007","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.151944709740006,0.705882352941177,0.9290010110231
+2006,2007,"2006-2007","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.790022424496729,0.117647058823529,-1.79950697338164
+2006,2007,"2006-2007","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",38.9199871844186,0.294117647058824,-0.185496833873792
+2006,2007,"2006-2007","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.854564252936186,0.235294117647059,-0.781799949575123
+2006,2007,"2006-2007","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.11145628494389,0.352941176470588,-0.764872228922366
+2006,2007,"2006-2007","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.37723203328249,0.352941176470588,-0.162746141344775
+2006,2007,"2006-2007","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0485804953911277,0.352941176470588,-0.440806391025726
+2006,2007,"2006-2007","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0864836937119214,0.411764705882353,-0.145779431408886
+2006,2007,"2006-2007","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0420330595650096,0.264705882352941,-0.620645772617205
+2006,2007,"2006-2007","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",44.5969133216777,0.117647058823529,-1.10285123762789
+2006,2007,"2006-2007","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.64126485422858,0.352941176470588,-0.5837761956683
+2006,2007,"2006-2007","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.27311316967434,0.470588235294118,-0.017887104892341
+2006,2007,"2006-2007","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.86837748937745,0.176470588235294,-1.02887138857592
+2006,2007,"2006-2007","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.107334225933571,0.470588235294118,-0.10231378018246
+2006,2007,"2006-2007","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.166079729877099,0.588235294117647,0.338338578366885
+2006,2007,"2006-2007","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.185391364451748,0.352941176470588,-0.567386478177785
+2006,2007,"2006-2007","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",34.2191578269823,0.411764705882353,-0.146537535422633
+2006,2007,"2006-2007","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.317779591837182,0.117647058823529,-1.14214280449485
+2006,2007,"2006-2007","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.472097959184047,0.176470588235294,-1.04035215912093
+2006,2007,"2006-2007","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.9013297908742,0.529411764705882,0.0122183815142044
+2006,2007,"2006-2007","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.011991958811577,0.294117647058824,-0.776158023460101
+2006,2007,"2006-2007","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.027850451642214,0.294117647058824,-0.652371005438134
+2006,2007,"2006-2007","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2006,2007,"2006-2007","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",38.0267185349203,0.411764705882353,-0.184717807523393
+2006,2007,"2006-2007","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.917844729703048,0.117647058823529,-1.18750600922651
+2006,2007,"2006-2007","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.245082297191,0.176470588235294,-0.828061023690786
+2006,2007,"2006-2007","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.26778651075903,0.470588235294118,-0.21867087271014
+2006,2007,"2006-2007","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0499019422301574,0.176470588235294,-1.04594463726344
+2006,2007,"2006-2007","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0844462195152427,0.235294117647059,-0.935021758223408
+2006,2007,"2006-2007","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.333421662406024,0.352941176470588,-1.08235124232575
+2006,2007,"2006-2007","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",57.271342268509,0.470588235294118,-0.0195028038734886
+2006,2007,"2006-2007","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.37096988056226,0.647058823529412,0.428517061252383
+2006,2007,"2006-2007","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.63558744670194,0.705882352941177,0.936513983574734
+2006,2007,"2006-2007","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.95977227465398,0.529411764705882,0.0873341131749648
+2006,2007,"2006-2007","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.239013926780372,0.941176470588235,1.3443286990149
+2006,2007,"2006-2007","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.267433960277235,0.764705882352941,1.00848689841048
+2006,2007,"2006-2007","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.722069655026218,0.352941176470588,-0.828439273309
+2006,2007,"2006-2007","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",46.5530193445947,0.294117647058824,-0.368151888681241
+2006,2007,"2006-2007","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.67232363334334,0.176470588235294,-0.972859877435295
+2006,2007,"2006-2007","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.13095400164695,0.588235294117647,0.151804127468673
+2006,2007,"2006-2007","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.0525711058209,0.176470588235294,-1.05796804773841
+2006,2007,"2006-2007","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.108615031171861,0.235294117647059,-1.10546135019429
+2006,2007,"2006-2007","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.151944709740006,0.705882352941177,0.9290010110231
+2006,2007,"2006-2007","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.790022424496729,0.117647058823529,-1.79950697338164
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.0391627328222182,0.352941176470588,-0.312079554218919
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00821018062397373,0.823529411764706,1.18222222222222
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0154645309651554,0.823529411764706,1.22802824672561
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.0043446010207282,1,6.62848608660676
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.000447270214083417,0.117647058823529,-1.33753315176106
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0975312661353862,0.88235294117647,2.83931631372746
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.0259808933010836,1,4.50261137147891
+2007,2008,"2007-2008","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.032261221408025,1,15.0318345975427
+2007,2008,"2007-2008","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",485.874210187274,0.0588235294117647,-1.1921878159611
+2007,2008,"2007-2008","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",104.659863881094,0.529411764705882,0.0336389047324931
+2007,2008,"2007-2008","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",38.2505948938675,0.0588235294117647,-1.09581705186864
+2007,2008,"2007-2008","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.90558860847616,0.411764705882353,-0.566981520062119
+2007,2008,"2007-2008","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.77008686937299,0.294117647058824,-0.588543747693415
+2007,2008,"2007-2008","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.39008319876621,0.411764705882353,-0.198393741994456
+2007,2008,"2007-2008","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.148945713925653,0.470588235294118,-0.0265341330455393
+2007,2008,"2007-2008","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.137381513039746,0.470588235294118,-0.27977151626184
+2007,2008,"2007-2008","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.852600096067616,0.823529411764706,0.88554513559856
+2007,2008,"2007-2008","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",16.3378403780491,0.176470588235294,-1.04325854626099
+2007,2008,"2007-2008","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.01011293048659,0.411764705882353,-0.589171592693241
+2007,2008,"2007-2008","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.29638511016278,0.411764705882353,-0.547093017583749
+2007,2008,"2007-2008","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.15620077098543,0.294117647058824,-0.320284955999358
+2007,2008,"2007-2008","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0618797306787829,0.529411764705882,0.0670620712399386
+2007,2008,"2007-2008","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.106845444749477,0.588235294117647,0.353893705223131
+2007,2008,"2007-2008","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0420330595650096,0.264705882352941,-0.620645772617205
+2007,2008,"2007-2008","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",52.0020728605233,0.294117647058824,-0.586353278210028
+2007,2008,"2007-2008","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.34568619482133,0.529411764705882,0.241962441134948
+2007,2008,"2007-2008","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.90881497568551,0.764705882352941,1.13826971468305
+2007,2008,"2007-2008","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.3716938996306,0.705882352941177,0.408475822111565
+2007,2008,"2007-2008","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.148339284098523,0.88235294117647,1.23161286919004
+2007,2008,"2007-2008","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.225065115161456,1,1.89324318073423
+2007,2008,"2007-2008","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.258708402003696,0.470588235294118,-0.105702697619384
+2007,2008,"2007-2008","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",9.02339452717262,0,-1.22207081869699
+2007,2008,"2007-2008","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.671934693877164,0.352941176470588,-0.849298116954956
+2007,2008,"2007-2008","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.828244897959257,0.352941176470588,-0.747591226188504
+2007,2008,"2007-2008","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.87866495437348,0.470588235294118,-0.0122183815142042
+2007,2008,"2007-2008","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0297514065208364,0.588235294117647,0.360978783211683
+2007,2008,"2007-2008","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0595028130415962,0.588235294117647,0.360978783209671
+2007,2008,"2007-2008","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2007,2008,"2007-2008","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",26.659857159364,0.294117647058824,-0.813837145388351
+2007,2008,"2007-2008","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.63749147289104,0.470588235294118,-0.108717736211272
+2007,2008,"2007-2008","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.24230825104996,0.823529411764706,1.7653881683063
+2007,2008,"2007-2008","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.68526801937783,0.588235294117647,0.272880699399728
+2007,2008,"2007-2008","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.154770895354321,0.88235294117647,3.57391494459587
+2007,2008,"2007-2008","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.267422045638668,0.88235294117647,3.47029680289184
+2007,2008,"2007-2008","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.681682666839382,0.941176470588235,2.09781853301762
+2007,2008,"2007-2008","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",28.3689199366716,0,-1.37729020142696
+2007,2008,"2007-2008","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.32289337987063,0.117647058823529,-1.87908393418629
+2007,2008,"2007-2008","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.41440874649698,0.0588235294117647,-2.37752693349782
+2007,2008,"2007-2008","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.77172775933206,0.0588235294117647,-1.22694228257923
+2007,2008,"2007-2008","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.116005346747729,0.176470588235294,-2.97698202666712
+2007,2008,"2007-2008","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.125146362259203,0.117647058823529,-2.65187371837243
+2007,2008,"2007-2008","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.719708725292929,0.235294117647059,-0.920607260598749
+2007,2008,"2007-2008","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",38.2505948938675,0.0588235294117647,-1.09581705186864
+2007,2008,"2007-2008","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.90558860847616,0.411764705882353,-0.566981520062119
+2007,2008,"2007-2008","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.77008686937299,0.294117647058824,-0.588543747693415
+2007,2008,"2007-2008","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.39008319876621,0.411764705882353,-0.198393741994456
+2007,2008,"2007-2008","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.148945713925653,0.470588235294118,-0.0265341330455393
+2007,2008,"2007-2008","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.137381513039746,0.470588235294118,-0.27977151626184
+2007,2008,"2007-2008","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.852600096067616,0.823529411764706,0.88554513559856
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.114521427811543,0.705882352941177,1.23880681446126
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00108374384236452,0.352941176470588,-0.746666666666671
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0145642625526959,0.764705882352941,1.06883078013172
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000964824784022378,0.529411764705882,0.0828336858232795
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0115370436758881,0.588235294117647,0.157489270853219
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.00558330855125355,0.117647058823529,-1.08136059552218
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00800462188395856,0.529411764705882,0.140746812299942
+2008,2009,"2008-2009","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00248880669950408,0.117647058823529,-0.704857413797831
+2008,2009,"2008-2009","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",1718.5114076946,0.352941176470588,-0.280584730340723
+2008,2009,"2008-2009","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",89.7435497647774,0.411764705882353,-0.241177021367249
+2008,2009,"2008-2009","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",47.4415183593281,0.411764705882353,-0.290279481123089
+2008,2009,"2008-2009","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.67222614826844,0.647058823529412,0.766958927595439
+2008,2009,"2008-2009","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.47813910853726,0.705882352941177,0.864082229811951
+2008,2009,"2008-2009","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.1854243018615,0.294117647058824,-0.719618115574756
+2008,2009,"2008-2009","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.116961331231532,0.352941176470588,-0.882180967071545
+2008,2009,"2008-2009","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.13434004845319,0.352941176470588,-0.532218757798663
+2008,2009,"2008-2009","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.833251814143141,0.529411764705882,0.0553585229885757
+2008,2009,"2008-2009","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",42.1203338173397,0.470588235294118,-0.0639346621447166
+2008,2009,"2008-2009","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.95607381624825,0.647058823529412,0.582287361303689
+2008,2009,"2008-2009","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.06170127277331,0.647058823529412,0.354172375308573
+2008,2009,"2008-2009","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.69961137410068,0.529411764705882,0.067027958001251
+2008,2009,"2008-2009","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0583675052481323,0.470588235294118,-0.0670620712399383
+2008,2009,"2008-2009","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0943296315092532,0.529411764705882,0.0467582507276639
+2008,2009,"2008-2009","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0774708187595566,0.352941176470588,-0.183866009635579
+2008,2009,"2008-2009","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",54.3793477787773,0.352941176470588,-0.420542178825541
+2008,2009,"2008-2009","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.01172831952208,0.764705882352941,1.02271209253128
+2008,2009,"2008-2009","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.24293694481823,0.88235294117647,1.74594046460063
+2008,2009,"2008-2009","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.8572230448827,0.470588235294118,-0.0834187936914889
+2008,2009,"2008-2009","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.120336300247777,0.588235294117647,0.320653877979889
+2008,2009,"2008-2009","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.204462591246746,0.941176470588235,1.35014323994499
+2008,2009,"2008-2009","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.195066076349103,0.411764705882353,-0.506463973481391
+2008,2009,"2008-2009","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",26.4626328999898,0.294117647058824,-0.477640849192478
+2008,2009,"2008-2009","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.56646530612268,0.470588235294118,-0.10962632872152
+2008,2009,"2008-2009","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.56646530612183,0.470588235294118,-0.14075715891652
+2008,2009,"2008-2009","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.62581269242619,0.352941176470588,-0.284838517388931
+2008,2009,"2008-2009","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0102630609560709,0.176470588235294,-0.886859291802294
+2008,2009,"2008-2009","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.020526121912003,0.176470588235294,-0.886859291807854
+2008,2009,"2008-2009","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2008,2009,"2008-2009","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",32.4583075327553,0.352941176470588,-0.492911505581096
+2008,2009,"2008-2009","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.78254007371154,0.529411764705882,0.108717736211272
+2008,2009,"2008-2009","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.57515102040815,0.294117647058824,-0.399458310073401
+2008,2009,"2008-2009","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.12205201997099,0.411764705882353,-0.390261749380321
+2008,2009,"2008-2009","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0610161026201743,0.352941176470588,-0.556325366330626
+2008,2009,"2008-2009","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0915241539303025,0.411764705882353,-0.764613696603362
+2008,2009,"2008-2009","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.504287576076487,0.764705882352941,0.477922826186036
+2008,2009,"2008-2009","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",43.8527929543768,0.235294117647059,-0.649883778277448
+2008,2009,"2008-2009","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.25564232841732,0.588235294117647,0.298575638633994
+2008,2009,"2008-2009","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.72068825925873,0.764705882352941,1.06348601642527
+2008,2009,"2008-2009","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.066490959732,0.235294117647059,-0.900859958536318
+2008,2009,"2008-2009","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.197854660325302,0.411764705882353,-0.101602792481851
+2008,2009,"2008-2009","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.269596191104482,0.823529411764706,1.06411047119331
+2008,2009,"2008-2009","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.746281821692592,0.529411764705882,0.116775926490532
+2008,2009,"2008-2009","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",47.4415183593281,0.411764705882353,-0.290279481123089
+2008,2009,"2008-2009","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.67222614826844,0.647058823529412,0.766958927595439
+2008,2009,"2008-2009","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.47813910853726,0.705882352941177,0.864082229811951
+2008,2009,"2008-2009","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.1854243018615,0.294117647058824,-0.719618115574756
+2008,2009,"2008-2009","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.116961331231532,0.352941176470588,-0.882180967071545
+2008,2009,"2008-2009","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.13434004845319,0.352941176470588,-0.532218757798663
+2008,2009,"2008-2009","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.833251814143141,0.529411764705882,0.0553585229885757
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.123865605603191,0.764705882352941,1.43111054219493
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.000131362889983569,0.117647058823529,-1.00444444444445
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0096098158721617,0.588235294117647,0.192719446001043
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000646091308301067,0.294117647058824,-0.534461186513814
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0033576879981585,0.294117647058824,-0.945177089542676
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.00601135080958448,0.176470588235294,-1.06310879915264
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00857459649009285,0.588235294117647,0.279048686834429
+2009,2010,"2009-2010","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00657411527069723,0.588235294117647,1.45449860033684
+2009,2010,"2009-2010","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",3433.00575668428,0.705882352941177,0.987378253397149
+2009,2010,"2009-2010","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",13.2770458947128,0.0588235294117647,-1.64998437905588
+2009,2010,"2009-2010","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",79.9519476569507,0.705882352941177,2.55909385320153
+2009,2010,"2009-2010","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.39663526020919,0.823529411764706,2.02742239946154
+2009,2010,"2009-2010","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.87176626018721,0.88235294117647,1.67163991314485
+2009,2010,"2009-2010","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.39386490060946,0.470588235294118,-0.188762520463792
+2009,2010,"2009-2010","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.163602249785214,0.705882352941177,0.365557802132757
+2009,2010,"2009-2010","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.151864538551684,0.588235294117647,0.922346652648434
+2009,2010,"2009-2010","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.86392211548728,0.941176470588235,1.37134480435492
+2009,2010,"2009-2010","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",75.6567449566898,0.823529411764706,1.20991452911535
+2009,2010,"2009-2010","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.27519245309887,0.88235294117647,2.21585737649375
+2009,2010,"2009-2010","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.26869118505381,0.941176470588235,1.77556955813814
+2009,2010,"2009-2010","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.06350215220655,0.588235294117647,0.326389105608899
+2009,2010,"2009-2010","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.104511666815233,0.823529411764706,1.69508168144451
+2009,2010,"2009-2010","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.140953945550081,0.823529411764706,1.19090922267143
+2009,2010,"2009-2010","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.162838620295514,0.705882352941177,0.868314742438476
+2009,2010,"2009-2010","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",75.3742963700569,0.705882352941177,1.04382169457852
+2009,2010,"2009-2010","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.37809655712137,0.647058823529412,0.279954601283602
+2009,2010,"2009-2010","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.75676240660072,0.705882352941177,0.861730285316945
+2009,2010,"2009-2010","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.76422718872639,0.117647058823529,-1.12845131939558
+2009,2010,"2009-2010","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0766856600678276,0.235294117647059,-1.09933562585092
+2009,2010,"2009-2010","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.127497834642857,0.411764705882353,-0.678712784077767
+2009,2010,"2009-2010","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.463344378609659,0.911764705882353,1.1829078964838
+2009,2010,"2009-2010","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",59.5986440560593,0.647058823529412,0.936838341186817
+2009,2010,"2009-2010","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.90893061224606,0.588235294117647,0.17355227011067
+2009,2010,"2009-2010","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.90893061224507,0.529411764705882,0.14075715891652
+2009,2010,"2009-2010","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",0.161519342975825,0,-1.86360964964333
+2009,2010,"2009-2010","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.00487589525479063,0.0588235294117647,-1.23179932050441
+2009,2010,"2009-2010","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0097517905095067,0.0588235294117647,-1.23179932050834
+2009,2010,"2009-2010","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2009,2010,"2009-2010","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",64.9794371682716,0.705882352941177,1.30702876525863
+2009,2010,"2009-2010","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.84915495425353,0.823529411764706,1.70762947428838
+2009,2010,"2009-2010","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.78529057273543,0.705882352941177,1.17193897630921
+2009,2010,"2009-2010","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.54425795283456,0.176470588235294,-1.07056872392468
+2009,2010,"2009-2010","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0745705993011147,0.529411764705882,0.0407996120658056
+2009,2010,"2009-2010","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0894502642592927,0.352941176470588,-0.814544580124785
+2009,2010,"2009-2010","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.461329470955938,0.529411764705882,0.0856478778820438
+2009,2010,"2009-2010","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",83.8022928972849,0.823529411764706,1.22687682463204
+2009,2010,"2009-2010","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",4.27898947950831,0.88235294117647,1.45159746361925
+2009,2010,"2009-2010","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",4.35546768026028,0.88235294117647,2.01058900022419
+2009,2010,"2009-2010","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.61791376992593,0.411764705882353,-0.290847476536046
+2009,2010,"2009-2010","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.203165190455716,0.529411764705882,0.0849569646141465
+2009,2010,"2009-2010","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.272224164071941,0.88235294117647,1.13171530032844
+2009,2010,"2009-2010","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.721369522093176,0.294117647058824,-0.855771659514296
+2009,2010,"2009-2010","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",79.9519476569507,0.705882352941177,2.55909385320153
+2009,2010,"2009-2010","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.39663526020919,0.823529411764706,2.02742239946154
+2009,2010,"2009-2010","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.87176626018721,0.88235294117647,1.67163991314485
+2009,2010,"2009-2010","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.39386490060946,0.470588235294118,-0.188762520463792
+2009,2010,"2009-2010","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.163602249785214,0.705882352941177,0.365557802132757
+2009,2010,"2009-2010","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.151864538551684,0.588235294117647,0.922346652648434
+2009,2010,"2009-2010","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.86392211548728,0.941176470588235,1.37134480435492
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.0199991771356398,0.176470588235294,-0.706466655720188
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.000164203612479485,0.235294117647059,-0.995555555555555
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00402707576423883,0.352941176470588,-0.794495110828084
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000389985735806508,0.0588235294117647,-1.03046386185275
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.00211635030444102,0.176470588235294,-1.1125229503518
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.00431764488081976,0.0588235294117647,-1.13532871464006
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00315637568440308,0.176470588235294,-1.03565917208396
+2010,2011,"2010-2011","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00183965311388035,0,-1.0479780556749
+2010,2011,"2010-2011","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",734.03959888346,0.294117647058824,-1.00865584521001
+2010,2011,"2010-2011","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",12.4536978804402,0,-1.66515361894183
+2010,2011,"2010-2011","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",28.0626603929784,0,-1.98873755540693
+2010,2011,"2010-2011","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.19588861008718,0,-1.80185130456298
+2010,2011,"2010-2011","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.28353620142573,0.0588235294117647,-1.58674148020395
+2010,2011,"2010-2011","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.5374836737149,0,-4.9165860197022
+2010,2011,"2010-2011","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0612916415411771,0,-2.37145759905469
+2010,2011,"2010-2011","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0740060975610185,0,-5.54004937370417
+2010,2011,"2010-2011","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.805859266395536,0.235294117647059,-1.11998751104739
+2010,2011,"2010-2011","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",15.1515463673845,0.117647058823529,-1.08831881403391
+2010,2011,"2010-2011","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.438871393237726,0.0588235294117647,-1.2965856346241
+2010,2011,"2010-2011","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.525216191492789,0.0588235294117647,-1.4552508383995
+2010,2011,"2010-2011","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",0.473728912472108,0,-1.51945750528178
+2010,2011,"2010-2011","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0136897862806151,0.0588235294117647,-1.77320561549565
+2010,2011,"2010-2011","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0287674336340916,0.0588235294117647,-1.56212445274651
+2010,2011,"2010-2011","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0,0.0882352941176471,-1.13871435854017
+2010,2011,"2010-2011","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",46.6997995833058,0.176470588235294,-0.956178305421481
+2010,2011,"2010-2011","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.30338087706062,0.235294117647059,-0.979851440165513
+2010,2011,"2010-2011","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.03906130743341,0.352941176470588,-0.443559415565983
+2010,2011,"2010-2011","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.74982446954666,0.0588235294117647,-1.14222201204425
+2010,2011,"2010-2011","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0756356442192058,0.176470588235294,-1.13349346357683
+2010,2011,"2010-2011","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.124105798050347,0.352941176470588,-0.768129735135501
+2010,2011,"2010-2011","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.463344378609659,0.911764705882353,1.1829078964838
+2010,2011,"2010-2011","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",13.4320553503465,0.176470588235294,-1.03387801050264
+2010,2011,"2010-2011","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.324440816326552,0.176470588235294,-1.13663475394585
+2010,2011,"2010-2011","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.324440816326363,0.0588235294117647,-1.16172970920128
+2010,2011,"2010-2011","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",0.234182185776332,0.117647058823529,-1.78526605910251
+2010,2011,"2010-2011","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.00265701496834432,0,-1.37387414651383
+2010,2011,"2010-2011","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.00565131495218171,0,-1.36307597272841
+2010,2011,"2010-2011","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2010,2011,"2010-2011","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",22.8742727195049,0.0588235294117647,-1.02335710851181
+2010,2011,"2010-2011","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.883888085669922,0.0588235294117647,-1.23840880246589
+2010,2011,"2010-2011","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.667738079659654,0.0588235294117647,-1.57775731697589
+2010,2011,"2010-2011","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.16268260616063,0,-1.5198436203302
+2010,2011,"2010-2011","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0372125831933502,0,-1.60495714942648
+2010,2011,"2010-2011","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0260223246971717,0,-2.34163307791261
+2010,2011,"2010-2011","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.38875550220088,0.411764705882353,-0.57706640529494
+2010,2011,"2010-2011","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",34.6963723046831,0.117647058823529,-1.0800370859176
+2010,2011,"2010-2011","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.5703322673686,0.176470588235294,-1.60029052832097
+2010,2011,"2010-2011","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.90448520223058,0.176470588235294,-1.64632352935695
+2010,2011,"2010-2011","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.99238315807584,0,-2.08909365854174
+2010,2011,"2010-2011","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0844449147843454,0,-4.08570495570455
+2010,2011,"2010-2011","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.112359070409014,0.0588235294117647,-2.98082789382915
+2010,2011,"2010-2011","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.7567501341859,0.647058823529412,0.525446832373097
+2010,2011,"2010-2011","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",28.0626603929784,0,-1.98873755540693
+2010,2011,"2010-2011","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.19588861008718,0,-1.80185130456298
+2010,2011,"2010-2011","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.28353620142573,0.0588235294117647,-1.58674148020395
+2010,2011,"2010-2011","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.5374836737149,0,-4.9165860197022
+2010,2011,"2010-2011","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0612916415411771,0,-2.37145759905469
+2010,2011,"2010-2011","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0740060975610185,0,-5.54004937370417
+2010,2011,"2010-2011","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.805859266395536,0.235294117647059,-1.11998751104739
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.186869268966221,0.88235294117647,2.72772963439764
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00308702791461413,0.470588235294118,-0.204444444444444
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0091731415463342,0.529411764705882,0.115500868256637
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.0037154177013623,0.88235294117647,5.40993934963271
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0102442974635535,0.470588235294118,-0.0167870189958498
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0961192420988239,0.823529411764706,2.77910736313289
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.0197140037499903,0.941176470588235,2.98197770975295
+2011,2012,"2011-2012","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00202119349980545,0.0588235294117647,-0.9520219443251
+2011,2012,"2011-2012","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",5324.06394982132,0.941176470588235,2.38591992278497
+2011,2012,"2011-2012","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",53.0554375219639,0.294117647058824,-0.91711327909403
+2011,2012,"2011-2012","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",102.421170209842,0.941176470588235,4.5284066235468
+2011,2012,"2011-2012","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.6093172679565,0.941176470588235,2.39748663177141
+2011,2012,"2011-2012","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.16513973130538,0.941176470588235,2.27351912725506
+2011,2012,"2011-2012","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.10111826394447,0.235294117647059,-0.934328360117875
+2011,2012,"2011-2012","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.150929424568962,0.529411764705882,0.0265341330455393
+2011,2012,"2011-2012","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.135495206636129,0.411764705882353,-0.436338471008389
+2011,2012,"2011-2012","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.833765272851998,0.588235294117647,0.0773897580039067
+2011,2012,"2011-2012","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",102.897526627115,0.941176470588235,2.24463012691665
+2011,2012,"2011-2012","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.42241560779256,0.941176470588235,2.3981755731523
+2011,2012,"2011-2012","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.81959371285578,0.88235294117647,1.24669531047185
+2011,2012,"2011-2012","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.08682096257104,0.647058823529412,0.343009459244844
+2011,2012,"2011-2012","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0874749697082721,0.705882352941177,1.04448779580735
+2011,2012,"2011-2012","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.10859457080628,0.647058823529412,0.396816894960359
+2011,2012,"2011-2012","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0923886330123246,0.558823529411765,0
+2011,2012,"2011-2012","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",109.070979361346,0.941176470588235,3.39411109926366
+2011,2012,"2011-2012","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",4.35815350213875,1,2.60102216178033
+2011,2012,"2011-2012","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",4.20591372136954,1,3.49731533372122
+2011,2012,"2011-2012","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.03171789281851,0.529411764705882,0.0834187936914885
+2011,2012,"2011-2012","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.131094772118762,0.647058823529412,0.670635391906821
+2011,2012,"2011-2012","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.202166714361758,0.88235294117647,1.28962198509978
+2011,2012,"2011-2012","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.172835789655283,0.294117647058824,-0.646450027833738
+2011,2012,"2011-2012","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",91.9856741890095,0.764705882352941,2.31934572704802
+2011,2012,"2011-2012","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.73756734693959,0.764705882352941,0.85873755830118
+2011,2012,"2011-2012","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.73756734693976,0.705882352941177,0.821915515480154
+2011,2012,"2011-2012","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",0.952674033137035,0.235294117647059,-1.01060284848355
+2011,2012,"2011-2012","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0375606191651321,0.647058823529412,0.861002391734453
+2011,2012,"2011-2012","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0751212383298688,0.647058823529412,0.861002391722858
+2011,2012,"2011-2012","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2011,2012,"2011-2012","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",95.0658826625738,0.941176470588235,2.97221707386148
+2011,2012,"2011-2012","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.97338821339058,0.88235294117647,1.89386165604163
+2011,2012,"2011-2012","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.89885336765284,0.764705882352941,1.31940318192423
+2011,2012,"2011-2012","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.77116850311224,0.235294117647059,-0.803399435190608
+2011,2012,"2011-2012","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0727183297550818,0.470588235294118,-0.0407996120658056
+2011,2012,"2011-2012","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.134190595690001,0.529411764705882,0.262621822989017
+2011,2012,"2011-2012","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.474278485913495,0.647058823529412,0.203892715702728
+2011,2012,"2011-2012","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",106.67533319752,0.941176470588235,2.30141395189493
+2011,2012,"2011-2012","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",4.83521615146103,0.941176470588235,2.07830707210027
+2011,2012,"2011-2012","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",4.19860097890073,0.823529411764706,1.77654089469186
+2011,2012,"2011-2012","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.54949589656303,0.294117647058824,-0.36653487279846
+2011,2012,"2011-2012","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.198328493330947,0.470588235294118,-0.0849569646141455
+2011,2012,"2011-2012","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.214900700637775,0.411764705882353,-0.342935694520918
+2011,2012,"2011-2012","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.757235432318695,0.705882352941177,0.54439231452976
+2011,2012,"2011-2012","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",102.421170209842,0.941176470588235,4.5284066235468
+2011,2012,"2011-2012","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.6093172679565,0.941176470588235,2.39748663177141
+2011,2012,"2011-2012","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.16513973130538,0.941176470588235,2.27351912725506
+2011,2012,"2011-2012","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.10111826394447,0.235294117647059,-0.934328360117875
+2011,2012,"2011-2012","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.150929424568962,0.529411764705882,0.0265341330455393
+2011,2012,"2011-2012","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.135495206636129,0.411764705882353,-0.436338471008389
+2011,2012,"2011-2012","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.833765272851998,0.588235294117647,0.0773897580039067
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.165248366645773,0.823529411764706,2.28277019485189
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00210180623973727,0.411764705882353,-0.471111111111114
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00117310380395613,0,-1.29917249317206
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.00180546128419623,0.705882352941177,1.71090428582026
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",9.58687237126998e-05,0,-1.38490590551962
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0479252046548937,0.705882352941177,0.724105221328515
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.0104474645868372,0.647058823529412,0.733492035271184
+2012,2013,"2012-2013","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00334649578102486,0.235294117647059,-0.25151195796152
+2012,2013,"2012-2013","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",3437.19306956887,0.764705882352941,0.990475001859531
+2012,2013,"2012-2013","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",16.3498122402215,0.117647058823529,-1.593372194414
+2012,2013,"2012-2013","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",67.8222871755176,0.647058823529412,1.49599096969904
+2012,2013,"2012-2013","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.49435948262693,0.529411764705882,0.457472987664204
+2012,2013,"2012-2013","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.18096968578867,0.647058823529412,0.254415316372918
+2012,2013,"2012-2013","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.38391809800891,0.0588235294117647,-2.76089057107071
+2012,2013,"2012-2013","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0760968715513749,0.0588235294117647,-1.9753877950381
+2012,2013,"2012-2013","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0749788297786439,0.0588235294117647,-5.45931078277039
+2012,2013,"2012-2013","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.84768722664999,0.764705882352941,0.674746138771091
+2012,2013,"2012-2013","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",63.4527520672177,0.647058823529412,0.746357280613093
+2012,2013,"2012-2013","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.31927302204493,0.705882352941177,1.03206596010116
+2012,2013,"2012-2013","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.04791212307273,0.588235294117647,0.337933748673328
+2012,2013,"2012-2013","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.35241557410458,0.176470588235294,-0.893178427436554
+2012,2013,"2012-2013","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0495399486670686,0.411764705882353,-0.404166986629285
+2012,2013,"2012-2013","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0486823761281557,0.235294117647059,-1.07341590486664
+2012,2013,"2012-2013","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0923886330123246,0.558823529411765,0
+2012,2013,"2012-2013","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",70.3865820645715,0.647058823529412,0.695936649370688
+2012,2013,"2012-2013","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.76410327728829,0.705882352941177,0.732440414162745
+2012,2013,"2012-2013","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.3308875729153,0.588235294117647,0.0871877425790824
+2012,2013,"2012-2013","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.92877045763209,0.235294117647059,-0.971128611424084
+2012,2013,"2012-2013","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0737886685569919,0.117647058823529,-1.19357702806438
+2012,2013,"2012-2013","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.09278631655824,0.235294117647059,-1.59373773415202
+2012,2013,"2012-2013","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.0827080994860282,0.176470588235294,-1.21399195423597
+2012,2013,"2012-2013","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",60.2846515305477,0.705882352941177,0.966121989497356
+2012,2013,"2012-2013","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.02938775509915,0.647058823529412,0.273156184208117
+2012,2013,"2012-2013","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.02938775510215,0.588235294117647,0.239775686613227
+2012,2013,"2012-2013","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",0.229387514950546,0.0588235294117647,-1.7904355750955
+2012,2013,"2012-2013","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0147226290804121,0.352941176470588,-0.601313303037979
+2012,2013,"2012-2013","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0294452581609858,0.352941176470588,-0.601313303033566
+2012,2013,"2012-2013","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2012,2013,"2012-2013","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",63.3641298778828,0.647058823529412,1.21762668500074
+2012,2013,"2012-2013","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.28654588685654,0.647058823529412,0.864248926894778
+2012,2013,"2012-2013","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.02938775510287,0.529411764705882,0.190379755215734
+2012,2013,"2012-2013","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.52952579844913,0.117647058823529,-1.0879146745817
+2012,2013,"2012-2013","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.049685607633087,0.117647058823529,-1.05547496469963
+2012,2013,"2012-2013","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0721608596749517,0.176470588235294,-1.23080358296515
+2012,2013,"2012-2013","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.442570839759548,0.470588235294118,-0.0856478778820438
+2012,2013,"2012-2013","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",74.6029608686822,0.647058823529412,0.794707612275477
+2012,2013,"2012-2013","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",4.23448501171381,0.823529411764706,1.40145355827715
+2012,2013,"2012-2013","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",4.40496490087883,0.941176470588235,2.08443979592834
+2012,2013,"2012-2013","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.60431968702593,0.352941176470588,-0.30588595535311
+2012,2013,"2012-2013","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.227671358118636,0.764705882352941,0.945862481441009
+2012,2013,"2012-2013","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.319131446726912,1,2.33840915462206
+2012,2013,"2012-2013","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.806488229017685,0.941176470588235,2.46716497316912
+2012,2013,"2012-2013","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",67.8222871755176,0.647058823529412,1.49599096969904
+2012,2013,"2012-2013","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.49435948262693,0.529411764705882,0.457472987664204
+2012,2013,"2012-2013","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.18096968578867,0.647058823529412,0.254415316372918
+2012,2013,"2012-2013","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.38391809800891,0.0588235294117647,-2.76089057107071
+2012,2013,"2012-2013","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0760968715513749,0.0588235294117647,-1.9753877950381
+2012,2013,"2012-2013","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0749788297786439,0.0588235294117647,-5.45931078277039
+2012,2013,"2012-2013","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.84768722664999,0.764705882352941,0.674746138771091
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.0461790625533833,0.470588235294118,-0.16768307628401
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00459770114942529,0.529411764705882,0.204444444444444
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00128549551972737,0.0588235294117647,-1.27929789114305
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000663030377000773,0.352941176470588,-0.501655092874509
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0104933428757787,0.529411764705882,0.0167870189958498
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0250755081464296,0.470588235294118,-0.250209813370607
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00285263949760695,0.117647058823529,-1.10935944494834
+2013,2014,"2013-2014","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.0084880395931767,0.647058823529412,2.46613430038817
+2013,2014,"2013-2014","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",2171.49046707801,0.529411764705882,0.0544182284296097
+2013,2014,"2013-2014","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",108.171828946647,0.588235294117647,0.0983428204849888
+2013,2014,"2013-2014","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",49.5169235074633,0.470588235294118,-0.108380803843888
+2013,2014,"2013-2014","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.34198029786814,0.0588235294117647,-1.5476534584069
+2013,2014,"2013-2014","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.24250419266249,0,-1.67092193828578
+2013,2014,"2013-2014","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.29050581864985,0.352941176470588,-0.451996973316891
+2013,2014,"2013-2014","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.085261807747207,0.117647058823529,-1.73020724192224
+2013,2014,"2013-2014","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0912712669799818,0.117647058823529,-4.10700806401766
+2013,2014,"2013-2014","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.859643243600963,0.88235294117647,1.18774906335014
+2013,2014,"2013-2014","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",42.0052506989875,0.411764705882353,-0.0683059866919846
+2013,2014,"2013-2014","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.925113444311237,0.294117647058824,-0.694433248501641
+2013,2014,"2013-2014","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.727873017107509,0.176470588235294,-1.21659446018198
+2013,2014,"2013-2014","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.37939241485111,0.411764705882353,-0.161206341282177
+2013,2014,"2013-2014","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0450962559321679,0.294117647058824,-0.57386181097381
+2013,2014,"2013-2014","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0421685904754197,0.176470588235294,-1.23326285036991
+2013,2014,"2013-2014","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0923886330123246,0.558823529411765,0
+2013,2014,"2013-2014","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",48.3554269835913,0.235294117647059,-0.840700958941912
+2013,2014,"2013-2014","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.05630972322064,0.117647058823529,-1.2694738380241
+2013,2014,"2013-2014","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.22164764234634,0.176470588235294,-1.93019729258333
+2013,2014,"2013-2014","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.14443327512646,0.352941176470588,-0.764929605639037
+2013,2014,"2013-2014","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0566271981100064,0.0588235294117647,-1.75185309926427
+2013,2014,"2013-2014","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0879441301892303,0.176470588235294,-1.72138185878386
+2013,2014,"2013-2014","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.0616480847787164,0.117647058823529,-1.34660870381206
+2013,2014,"2013-2014","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",39.1477510542516,0.529411764705882,0.0638496631143805
+2013,2014,"2013-2014","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.533779591836393,0.294117647058824,-0.963536165358404
+2013,2014,"2013-2014","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.548734693877895,0.235294117647059,-0.977355009621273
+2013,2014,"2013-2014","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.00849645640558,0.588235294117647,0.127763287829882
+2013,2014,"2013-2014","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0114746089790173,0.235294117647059,-0.809283914881961
+2013,2014,"2013-2014","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0229492179581935,0.235294117647059,-0.80928391487789
+2013,2014,"2013-2014","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2013,2014,"2013-2014","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",43.9453277265863,0.529411764705882,0.142858237676699
+2013,2014,"2013-2014","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.10295002311404,0.294117647058824,-0.910023450325168
+2013,2014,"2013-2014","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.976467705052932,0.117647058823529,-1.17686396989379
+2013,2014,"2013-2014","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.63922686823027,0.529411764705882,0.218670872710139
+2013,2014,"2013-2014","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0519877917786615,0.235294117647059,-0.954055362736556
+2013,2014,"2013-2014","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.048229128057477,0.0588235294117647,-1.80698298178352
+2013,2014,"2013-2014","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.50126732223463,0.705882352941177,0.450343166507034
+2013,2014,"2013-2014","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",58.1016317162122,0.529411764705882,0.0195028038734889
+2013,2014,"2013-2014","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.05370491616912,0.529411764705882,0.0710494825734668
+2013,2014,"2013-2014","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.4472722423462,0.647058823529412,0.655544112720034
+2013,2014,"2013-2014","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.21407486711382,0.647058823529412,0.368656816439584
+2013,2014,"2013-2014","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.233342115821355,0.88235294117647,1.1450770896984
+2013,2014,"2013-2014","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.296013410958087,0.941176470588235,1.74369570914762
+2013,2014,"2013-2014","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.813743406471118,1,2.75039877461788
+2013,2014,"2013-2014","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",49.5169235074633,0.470588235294118,-0.108380803843888
+2013,2014,"2013-2014","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.34198029786814,0.0588235294117647,-1.5476534584069
+2013,2014,"2013-2014","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.24250419266249,0,-1.67092193828578
+2013,2014,"2013-2014","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.29050581864985,0.352941176470588,-0.451996973316891
+2013,2014,"2013-2014","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.085261807747207,0.117647058823529,-1.73020724192224
+2013,2014,"2013-2014","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0912712669799818,0.117647058823529,-4.10700806401766
+2013,2014,"2013-2014","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.859643243600963,0.88235294117647,1.18774906335014
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.00331833016561589,0,-1.04975946602582
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",9.8522167487694e-05,0.0588235294117647,-1.01333333333333
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00276413537489928,0.176470588235294,-1.01782507293648
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000612444594609851,0.235294117647059,-0.599625172774053
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.00793687386417896,0.411764705882353,-0.327852888052193
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0179276621259097,0.411764705882353,-0.55499521132664
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.000992052554042555,0,-1.56082282464972
+2014,2015,"2014-2015","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.0035908006878668,0.411764705882353,-0.122380642498201
+2014,2015,"2014-2015","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",569.669876453558,0.117647058823529,-1.13021630635192
+2014,2015,"2014-2015","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",54.0487323139041,0.352941176470588,-0.898812965356435
+2014,2015,"2014-2015","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",42.8757619122944,0.235294117647059,-0.690444749692766
+2014,2015,"2014-2015","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.85683233741823,0.352941176470588,-0.651816867492071
+2014,2015,"2014-2015","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.80229840794847,0.352941176470588,-0.522459191890877
+2014,2015,"2014-2015","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.65501787189239,0.647058823529412,0.476340711910969
+2014,2015,"2014-2015","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.159588896442383,0.647058823529412,0.258192494680642
+2014,2015,"2014-2015","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.152941153102181,0.764705882352941,1.01170767124217
+2014,2015,"2014-2015","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.830671448973585,0.470588235294118,-0.0553585229885757
+2014,2015,"2014-2015","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",11.2218348216318,0,-1.23758522938295
+2014,2015,"2014-2015","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.143655907670626,0,-1.66217456026733
+2014,2015,"2014-2015","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.29879609078631,0,-1.72189175230084
+2014,2015,"2014-2015","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.05266840289443,0.117647058823529,-1.10682157256345
+2014,2015,"2014-2015","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0122231795166035,0,-1.8292120930018
+2014,2015,"2014-2015","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0260632404672055,0,-1.62848479077758
+2014,2015,"2014-2015","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0,0.0882352941176471,-1.13871435854017
+2014,2015,"2014-2015","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",29.8479512232762,0,-2.13156760591068
+2014,2015,"2014-2015","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.689758134829418,0,-1.69915390515769
+2014,2015,"2014-2015","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.818443488451536,0.0588235294117647,-2.66350845797338
+2014,2015,"2014-2015","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.56365618949031,0,-1.32022077280575
+2014,2015,"2014-2015","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0556796820608537,0,-1.78267653825535
+2014,2015,"2014-2015","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.068634890102922,0.0588235294117647,-2.23038974495222
+2014,2015,"2014-2015","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.0411971448648581,0,-1.47539005628709
+2014,2015,"2014-2015","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",10.257892870585,0.0588235294117647,-1.16937370288875
+2014,2015,"2014-2015","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.10119183673498,0,-1.32123544809232
+2014,2015,"2014-2015","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.163200000000306,0,-1.29427334969062
+2014,2015,"2014-2015","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",0.972342090403225,0.294117647058824,-0.989397151516449
+2014,2015,"2014-2015","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.00672906842458881,0.117647058823529,-1.11314070819771
+2014,2015,"2014-2015","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.013458136849395,0.117647058823529,-1.11314070819215
+2014,2015,"2014-2015","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2014,2015,"2014-2015","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",23.7183002310056,0.117647058823529,-0.976642891488191
+2014,2015,"2014-2015","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.755579696620429,0,-1.4307498180354
+2014,2015,"2014-2015","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.635834767225995,0,-1.61918458748238
+2014,2015,"2014-2015","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.05552594943716,0.352941176470588,-0.468590954104593
+2014,2015,"2014-2015","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0616170205899571,0.411764705882353,-0.529852739705608
+2014,2015,"2014-2015","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0527340096093953,0.117647058823529,-1.69852363643314
+2014,2015,"2014-2015","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.552442047502135,0.88235294117647,0.917648757674254
+2014,2015,"2014-2015","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",34.1278500595569,0.0588235294117647,-1.10674530887547
+2014,2015,"2014-2015","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.13219270017019,0,-2.0939494815225
+2014,2015,"2014-2015","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.10983991922515,0,-2.83194942348051
+2014,2015,"2014-2015","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.92217746085176,0.117647058823529,-1.06050702791873
+2014,2015,"2014-2015","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.094432545627997,0.0588235294117647,-3.73483791636981
+2014,2015,"2014-2015","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0936729406897745,0,-3.46153017749363
+2014,2015,"2014-2015","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.790309056061332,0.823529411764706,1.83554862882231
+2014,2015,"2014-2015","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",42.8757619122944,0.235294117647059,-0.690444749692766
+2014,2015,"2014-2015","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.85683233741823,0.352941176470588,-0.651816867492071
+2014,2015,"2014-2015","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.80229840794847,0.352941176470588,-0.522459191890877
+2014,2015,"2014-2015","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.65501787189239,0.647058823529412,0.476340711910969
+2014,2015,"2014-2015","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.159588896442383,0.647058823529412,0.258192494680642
+2014,2015,"2014-2015","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.152941153102181,0.764705882352941,1.01170767124217
+2014,2015,"2014-2015","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.830671448973585,0.470588235294118,-0.0553585229885757
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.00739512625166583,0.117647058823529,-0.965858763145559
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00492610837438424,0.588235294117647,0.293333333333335
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00786681694798683,0.470588235294118,-0.115500868256637
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.00200741263001669,0.764705882352941,2.10202583323359
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.000418450661411995,0.0588235294117647,-1.34141834180591
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0598303769918227,0.764705882352941,1.23174384113501
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00562722417123618,0.294117647058824,-0.436118466687674
+2015,2016,"2015-2016","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.011326796153186,0.823529411764706,3.96660505888711
+2015,2016,"2015-2016","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",698.217457008,0.235294117647059,-1.03514829175732
+2015,2016,"2015-2016","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",46.9227438599855,0.176470588235294,-1.03010110403927
+2015,2016,"2015-2016","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",42.2759687833034,0.176470588235294,-0.743013558680566
+2015,2016,"2015-2016","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.96852496520125,0.470588235294118,-0.457472987664204
+2015,2016,"2015-2016","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.87812809145881,0.411764705882353,-0.366888512158076
+2015,2016,"2015-2016","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.54210021412602,0.529411764705882,0.188762520463792
+2015,2016,"2015-2016","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.166540910354718,0.764705882352941,0.444172907405211
+2015,2016,"2015-2016","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.159216213389976,0.88235294117647,1.53254939569738
+2015,2016,"2015-2016","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.838390804597701,0.705882352941177,0.27585981061501
+2015,2016,"2015-2016","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",18.6155611673742,0.235294117647059,-0.956741453739015
+2015,2016,"2015-2016","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.529746070901344,0.117647058823529,-1.18404825972522
+2015,2016,"2015-2016","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.677138095091251,0.117647058823529,-1.27634183212872
+2015,2016,"2015-2016","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.45513296015033,0.235294117647059,-0.819967176349745
+2015,2016,"2015-2016","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0403034928070951,0.235294117647059,-0.75688686359422
+2015,2016,"2015-2016","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0546657931562052,0.294117647058824,-0.926584095133358
+2015,2016,"2015-2016","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0923886330123246,0.558823529411765,0
+2015,2016,"2015-2016","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",35.7386897074365,0.0588235294117647,-1.72069807763481
+2015,2016,"2015-2016","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.974360480719679,0.0588235294117647,-1.36553659463062
+2015,2016,"2015-2016","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.786570943455212,0,-2.7214753536252
+2015,2016,"2015-2016","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.9730272615385,0.294117647058824,-0.928813904277297
+2015,2016,"2015-2016","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0772695263070024,0.294117647058824,-1.08034199991894
+2015,2016,"2015-2016","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0651559099710221,0,-2.32209860118089
+2015,2016,"2015-2016","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.0602000684474218,0.0588235294117647,-1.35572698895375
+2015,2016,"2015-2016","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",12.5849119092321,0.117647058823529,-1.07004008091839
+2015,2016,"2015-2016","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.252375510204079,0.0588235294117647,-1.19622430082048
+2015,2016,"2015-2016","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.417893877550915,0.117647058823529,-1.08490915450669
+2015,2016,"2015-2016","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",0.838845010957565,0.176470588235294,-1.13333097143593
+2015,2016,"2015-2016","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0176528579935625,0.411764705882353,-0.413690849701218
+2015,2016,"2015-2016","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0353057159868887,0.411764705882353,-0.413690849709307
+2015,2016,"2015-2016","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2015,2016,"2015-2016","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",24.1274375446647,0.176470588235294,-0.953998452767527
+2015,2016,"2015-2016","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.06962174958002,0.176470588235294,-0.959984283176393
+2015,2016,"2015-2016","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.71400319654112,0.411764705882353,-0.219155193491465
+2015,2016,"2015-2016","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.93947701240524,0.294117647058824,-0.605229430928255
+2015,2016,"2015-2016","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0842717341653031,0.647058823529412,0.468169958789553
+2015,2016,"2015-2016","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.1402938236128,0.588235294117647,0.409562890673493
+2015,2016,"2015-2016","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.465855653411659,0.588235294117647,0.126979030265275
+2015,2016,"2015-2016","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",36.4083687971942,0.176470588235294,-0.999610357821987
+2015,2016,"2015-2016","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.22136658789828,0.0588235294117647,-1.9934758165891
+2015,2016,"2015-2016","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.6354437711306,0.117647058823529,-2.04773846772766
+2015,2016,"2015-2016","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.03156851875938,0.176470588235294,-0.939492972081267
+2015,2016,"2015-2016","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0988070664098648,0.117647058823529,-3.58116031461725
+2015,2016,"2015-2016","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.138835114936463,0.176470588235294,-2.29972938611394
+2015,2016,"2015-2016","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.752208296721084,0.588235294117647,0.348138710141922
+2015,2016,"2015-2016","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",42.2759687833034,0.176470588235294,-0.743013558680566
+2015,2016,"2015-2016","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.96852496520125,0.470588235294118,-0.457472987664204
+2015,2016,"2015-2016","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.87812809145881,0.411764705882353,-0.366888512158076
+2015,2016,"2015-2016","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.54210021412602,0.529411764705882,0.188762520463792
+2015,2016,"2015-2016","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.166540910354718,0.764705882352941,0.444172907405211
+2015,2016,"2015-2016","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.159216213389976,0.88235294117647,1.53254939569738
+2015,2016,"2015-2016","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.838390804597701,0.705882352941177,0.27585981061501
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.0388220962993664,0.294117647058824,-0.319089873864718
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",3.28407224958888e-05,0,-1.03111111111111
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00378176861722967,0.294117647058824,-0.837873591957445
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000459827072234242,0.117647058823529,-0.895201323908014
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0128324372719422,0.705882352941177,0.33212245690358
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0135190412490012,0.352941176470588,-0.742979572566154
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00169185395435378,0.0588235294117647,-1.39101903966829
+2016,2017,"2016-2017","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00404706995996462,0.529411764705882,0.118787871360604
+2016,2017,"2016-2017","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",2351.11378498997,0.588235294117647,0.187259563405586
+2016,2017,"2016-2017","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",138.1373957121,0.647058823529412,0.650423912203467
+2016,2017,"2016-2017","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",51.9901034296172,0.529411764705882,0.108380803843889
+2016,2017,"2016-2017","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.67904243437273,0.235294117647059,-0.961169241394557
+2016,2017,"2016-2017","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.51205077685182,0.176470588235294,-1.11792549440274
+2016,2017,"2016-2017","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.63770828938531,0.588235294117647,0.432256743729553
+2016,2017,"2016-2017","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.117215453112278,0.411764705882353,-0.875382693526696
+2016,2017,"2016-2017","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.128845309804069,0.235294117647059,-0.988292328757834
+2016,2017,"2016-2017","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.826741530975108,0.352941176470588,-0.223981521336746
+2016,2017,"2016-2017","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",58.5086125832752,0.588235294117647,0.558558769409034
+2016,2017,"2016-2017","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.20928965134602,0.470588235294118,-0.342515143583655
+2016,2017,"2016-2017","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.04365347060263,0.294117647058824,-0.844719399401597
+2016,2017,"2016-2017","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.26468815083462,0.705882352941177,1.18252780941461
+2016,2017,"2016-2017","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0813972564933807,0.588235294117647,0.81239333339839
+2016,2017,"2016-2017","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0905188208393593,0.470588235294118,-0.0467582507276643
+2016,2017,"2016-2017","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.184206965820869,0.764705882352941,1.13168525756152
+2016,2017,"2016-2017","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",57.5291386291341,0.411764705882353,-0.200849336521709
+2016,2017,"2016-2017","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.26900419926686,0.176470588235294,-1.02014855983449
+2016,2017,"2016-2017","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.13779427343831,0.117647058823529,-2.08270219879983
+2016,2017,"2016-2017","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.19831418681963,0.647058823529412,0.242704434997737
+2016,2017,"2016-2017","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0822089708878789,0.352941176470588,-0.919658000081057
+2016,2017,"2016-2017","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0838134449966699,0.117647058823529,-1.83027021114232
+2016,2017,"2016-2017","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.120428721911147,0.235294117647059,-0.976461904635899
+2016,2017,"2016-2017","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",43.04159866755,0.588235294117647,0.230066604362296
+2016,2017,"2016-2017","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.445583673469227,0.235294117647059,-1.0364638346416
+2016,2017,"2016-2017","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.622563265306044,0.294117647058824,-0.916666234581668
+2016,2017,"2016-2017","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.61423073140301,0.705882352941177,0.780853590768125
+2016,2017,"2016-2017","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0210512661646765,0.470588235294118,-0.19609089508928
+2016,2017,"2016-2017","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0421025323294552,0.470588235294118,-0.196090895086266
+2016,2017,"2016-2017","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2016,2017,"2016-2017","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",48.3026599048543,0.588235294117647,0.384022605242979
+2016,2017,"2016-2017","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.20578277614076,0.352941176470588,-0.755871751457374
+2016,2017,"2016-2017","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.70674368581725,0.352941176470588,-0.228581854598466
+2016,2017,"2016-2017","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.24288545117359,0.705882352941177,0.929431276075324
+2016,2017,"2016-2017","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.104760568383618,0.764705882352941,1.37077777802217
+2016,2017,"2016-2017","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.156659337709331,0.705882352941177,0.803578343638364
+2016,2017,"2016-2017","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.544189548441171,0.823529411764706,0.842290483992628
+2016,2017,"2016-2017","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",56.9207308571836,0.411764705882353,-0.0359739408000154
+2016,2017,"2016-2017","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.13923468058149,0.294117647058824,-0.959298956671071
+2016,2017,"2016-2017","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.40211312066716,0.235294117647059,-0.903853199065976
+2016,2017,"2016-2017","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.1730807940242,0.588235294117647,0.323307048873924
+2016,2017,"2016-2017","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.176960672957142,0.294117647058824,-0.835611848535806
+2016,2017,"2016-2017","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.199292582345698,0.294117647058824,-0.744455871220833
+2016,2017,"2016-2017","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.724127181092158,0.411764705882353,-0.748115816994318
+2016,2017,"2016-2017","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",51.9901034296172,0.529411764705882,0.108380803843889
+2016,2017,"2016-2017","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.67904243437273,0.235294117647059,-0.961169241394557
+2016,2017,"2016-2017","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.51205077685182,0.176470588235294,-1.11792549440274
+2016,2017,"2016-2017","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.63770828938531,0.588235294117647,0.432256743729553
+2016,2017,"2016-2017","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.117215453112278,0.411764705882353,-0.875382693526696
+2016,2017,"2016-2017","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.128845309804069,0.235294117647059,-0.988292328757834
+2016,2017,"2016-2017","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.826741530975108,0.352941176470588,-0.223981521336746
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.112075234356386,0.647058823529412,1.18846400948972
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.015927750410509,1,3.27111111111112
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0026381545759144,0.117647058823529,-1.04010267788218
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.00142266392577617,0.588235294117647,0.969536138147255
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0702634232975554,1,8.07444579261996
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0458146416143719,0.647058823529412,0.63411044606754
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.0129103254175841,0.823529411764706,1.33109457044379
+2017,2018,"2017-2018","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.0187856839321718,0.941176470588235,7.90912100440954
+2017,2018,"2017-2018","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",5348.03387388153,1,2.40364700158768
+2017,2018,"2017-2018","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",249.145447835855,1,2.69561955578058
+2017,2018,"2017-2018","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",110.50797700582,1,5.23717399888188
+2017,2018,"2017-2018","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.54581502865151,0.88235294117647,2.28699347023289
+2017,2018,"2017-2018","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.77637129814272,0.823529411764706,1.47592949472639
+2017,2018,"2017-2018","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.42030999278346,0.941176470588235,7.51897445653149
+2017,2018,"2017-2018","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.224961667771532,1,2.00704615723927
+2017,2018,"2017-2018","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.190131610171193,1,4.09858507236859
+2017,2018,"2017-2018","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.887886728552273,1,2.39960669451113
+2017,2018,"2017-2018","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",107.328704168613,1,2.4129442588049
+2017,2018,"2017-2018","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.47455073090834,0.764705882352941,1.22435875480556
+2017,2018,"2017-2018","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.57766754157054,0.764705882352941,0.961793858671077
+2017,2018,"2017-2018","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.98958302923013,1,2.41193713243145
+2017,2018,"2017-2018","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.128757807461715,1,2.62098831439474
+2017,2018,"2017-2018","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.1942469837125,1,2.49870929792772
+2017,2018,"2017-2018","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.355872990804361,1,3.24751445806653
+2017,2018,"2017-2018","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",116.370464215625,1,3.90323841951373
+2017,2018,"2017-2018","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.10576814963292,0.823529411764706,1.13294770954935
+2017,2018,"2017-2018","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.29278327790161,0.529411764705882,0.017887104892341
+2017,2018,"2017-2018","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",7.06889397181493,1,2.9873161606983
+2017,2018,"2017-2018","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.163181072358635,0.941176470588235,1.71442786252246
+2017,2018,"2017-2018","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.147384161618467,0.470588235294118,-0.15449239983356
+2017,2018,"2017-2018","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.400604679147027,0.647058823529412,0.787830536484324
+2017,2018,"2017-2018","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",94.6577035168464,0.823529411764706,2.43340682699475
+2017,2018,"2017-2018","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.3349551020425,0.411764705882353,-0.30105808555812
+2017,2018,"2017-2018","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.33495510204095,0.411764705882353,-0.331063844025703
+2017,2018,"2017-2018","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.50984436659216,0.823529411764706,2.8246654309761
+2017,2018,"2017-2018","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0271762389510074,0.529411764705882,0.196090895089279
+2017,2018,"2017-2018","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0543524779019134,0.529411764705882,0.196090895086267
+2017,2018,"2017-2018","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0,0.323529411764706,0
+2017,2018,"2017-2018","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",104.731144362026,1,3.50715832455066
+2017,2018,"2017-2018","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",4.04025838069711,1,3.49315608238969
+2017,2018,"2017-2018","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",4.97971389207878,1,4.02145401162829
+2017,2018,"2017-2018","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.81759878861053,1,3.96095330189272
+2017,2018,"2017-2018","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.255090433077862,1,7.99335619763351
+2017,2018,"2017-2018","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.38105826150383,1,6.20619772254676
+2017,2018,"2017-2018","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.76663101690167,1,2.87353034655507
+2017,2018,"2017-2018","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",108.657543607949,1,2.39453487732045
+2017,2018,"2017-2018","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.39700680158984,0.705882352941177,0.457853282268113
+2017,2018,"2017-2018","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.0675668831259,0.588235294117647,0.0890164862973211
+2017,2018,"2017-2018","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.27543268602142,0.941176470588235,2.64903763521682
+2017,2018,"2017-2018","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.223196553808311,0.705882352941177,0.78866190359185
+2017,2018,"2017-2018","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.223086980929424,0.470588235294118,-0.13234293454123
+2017,2018,"2017-2018","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.798952872307473,0.88235294117647,2.17299329508069
+2017,2018,"2017-2018","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",110.50797700582,1,5.23717399888188
+2017,2018,"2017-2018","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.54581502865151,0.88235294117647,2.28699347023289
+2017,2018,"2017-2018","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.77637129814272,0.823529411764706,1.47592949472639
+2017,2018,"2017-2018","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.42030999278346,0.941176470588235,7.51897445653149
+2017,2018,"2017-2018","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.224961667771532,1,2.00704615723927
+2017,2018,"2017-2018","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.190131610171193,1,4.09858507236859
+2017,2018,"2017-2018","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.887886728552273,1,2.39960669451113
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.00407723126383175,0.0588235294117647,-1.03414123685444
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00942528735632184,0.941176470588235,1.51111111111111
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.00296573845889103,0.235294117647059,-0.982174927063517
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000839196165376421,0.411764705882353,-0.16047273793231
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0313713684448005,0.823529411764706,2.83137258948613
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0368113802111019,0.529411764705882,0.250209813370607
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00567814010364676,0.352941176470588,-0.423763935766001
+2018,2019,"2018-2019","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00346248032896368,0.294117647058824,-0.190206446572638
+2018,2019,"2018-2019","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",3060.21723772771,0.647058823529412,0.711680615153001
+2018,2019,"2018-2019","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",236.335970608584,0.941176470588235,2.45961967540695
+2018,2019,"2018-2019","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",81.0963740943513,0.764705882352941,2.65939699420201
+2018,2019,"2018-2019","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.82175656513354,0.705882352941177,1.02714012256471
+2018,2019,"2018-2019","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.99274396192175,0.470588235294118,-0.131744857976043
+2018,2019,"2018-2019","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.36482681522875,0.88235294117647,7.37767014529668
+2018,2019,"2018-2019","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.22193129963083,0.941176470588235,1.92597768922094
+2018,2019,"2018-2019","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.158059216602188,0.823529411764706,1.43651650127044
+2018,2019,"2018-2019","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.80598820994325,0.294117647058824,-1.11445486440144
+2018,2019,"2018-2019","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",63.7384721203002,0.705882352941177,0.757210089431351
+2018,2019,"2018-2019","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.00575359109021,0.352941176470588,-0.594570111010721
+2018,2019,"2018-2019","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.53356165032194,0.470588235294118,-0.267784911869318
+2018,2019,"2018-2019","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.99616296633774,0.88235294117647,1.70388245484556
+2018,2019,"2018-2019","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.082037750600891,0.647058823529412,0.83685239066264
+2018,2019,"2018-2019","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.123309782507279,0.705882352941177,0.757925130361185
+2018,2019,"2018-2019","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.312842339530055,0.88235294117647,2.71715029024894
+2018,2019,"2018-2019","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",78.3775617643982,0.764705882352941,1.25329462215429
+2018,2019,"2018-2019","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.46649877749935,0.294117647058824,-0.788640945842411
+2018,2019,"2018-2019","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.14989367226402,0.411764705882353,-0.241987557161774
+2018,2019,"2018-2019","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.14668799176099,0.823529411764706,2.10557883376616
+2018,2019,"2018-2019","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.113624500604118,0.529411764705882,0.10231378018246
+2018,2019,"2018-2019","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.170848272714654,0.647058823529412,0.46404139727627
+2018,2019,"2018-2019","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.43848842763931,0.823529411764706,1.02638780515804
+2018,2019,"2018-2019","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",417.11207244297,1,16.1980386815849
+2018,2019,"2018-2019","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",11.296005942603,1,7.93556141863758
+2018,2019,"2018-2019","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",16.4415818273193,1,12.0869289899539
+2018,2019,"2018-2019","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",33.1289461406258,0.88235294117647,33.6811954622399
+2018,2019,"2018-2019","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.896904761114654,1,55.8847773089632
+2018,2019,"2018-2019","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",1.30768626096619,1,40.3215497241432
+2018,2019,"2018-2019","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0.915035351647668,1,0
+2018,2019,"2018-2019","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",69.1461535618411,0.823529411764706,1.53764316020767
+2018,2019,"2018-2019","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.57886495734911,0.764705882352941,1.30245056986911
+2018,2019,"2018-2019","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",4.57024719927788,0.941176470588235,3.48975099548112
+2018,2019,"2018-2019","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.39980597523525,0.941176470588235,3.46903519296794
+2018,2019,"2018-2019","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.201594293568184,0.941176470588235,5.63665628461298
+2018,2019,"2018-2019","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.36097234224378,0.941176470588235,5.72260994590967
+2018,2019,"2018-2019","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.286191411905612,0.176470588235294,-1.51363758564659
+2018,2019,"2018-2019","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",78.9811933556121,0.705882352941177,1.00038964217801
+2018,2019,"2018-2019","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.92758712030003,0.470588235294118,-0.0710494825734668
+2018,2019,"2018-2019","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.06048798676573,0.529411764705882,0.078454638129427
+2018,2019,"2018-2019","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.19572864552004,0.88235294117647,2.56086489612647
+2018,2019,"2018-2019","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.230753468944343,0.823529411764706,1.05413751855899
+2018,2019,"2018-2019","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.243056135498455,0.588235294117647,0.381365273012252
+2018,2019,"2018-2019","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.691132079998507,0.0588235294117647,-2.0362066971862
+2018,2019,"2018-2019","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",81.0963740943513,0.764705882352941,2.65939699420201
+2018,2019,"2018-2019","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.82175656513354,0.705882352941177,1.02714012256471
+2018,2019,"2018-2019","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.99274396192175,0.470588235294118,-0.131744857976043
+2018,2019,"2018-2019","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.36482681522875,0.88235294117647,7.37767014529668
+2018,2019,"2018-2019","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.22193129963083,0.941176470588235,1.92597768922094
+2018,2019,"2018-2019","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.158059216602188,0.823529411764706,1.43651650127044
+2018,2019,"2018-2019","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.80598820994325,0.294117647058824,-1.11445486440144
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.211113818543465,0.941176470588235,3.22668388857447
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00571428571428571,0.647058823529412,0.506666666666666
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0322871125909931,0.88235294117647,4.20282147432084
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.00360026766250487,0.823529411764706,5.18692691463433
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0122718513091498,0.647058823529412,0.256549354615784
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.107042448324618,0.941176470588235,3.24487477711002
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.011398846844722,0.705882352941177,0.964340827916036
+2019,2020,"2019-2020","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00926884469070111,0.705882352941177,2.87884148121048
+2019,2020,"2019-2020","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",2024.32568968119,0.470588235294118,-0.0544182284296096
+2019,2020,"2019-2020","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",216.535039947797,0.88235294117647,2.0948103093164
+2019,2020,"2019-2020","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",55.9149899194098,0.588235294117647,0.45237708890936
+2019,2020,"2019-2020","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.94946810812116,0.764705882352941,1.24935672947663
+2019,2020,"2019-2020","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.54399317615294,0.764705882352941,0.999187133167451
+2019,2020,"2019-2020","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.62050429604629,0.823529411764706,5.48203284503698
+2019,2020,"2019-2020","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.185221511418162,0.823529411764706,0.943916713952925
+2019,2020,"2019-2020","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.151939556458484,0.647058823529412,0.928573279031428
+2019,2020,"2019-2020","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.767552335337544,0.0588235294117647,-2.76364256314222
+2019,2020,"2019-2020","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",45.4867277836769,0.529411764705882,0.0639346621447166
+2019,2020,"2019-2020","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.97236274457511,0.823529411764706,1.84083915013146
+2019,2020,"2019-2020","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.64255359555774,0.823529411764706,1.03820614132892
+2019,2020,"2019-2020","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.59144911968624,0.764705882352941,1.41542489000533
+2019,2020,"2019-2020","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0965352629489033,0.764705882352941,1.39048041089151
+2019,2020,"2019-2020","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.128622443386715,0.764705882352941,0.888296723678173
+2019,2020,"2019-2020","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.0821821060826464,0.411764705882353,-0.125798146229753
+2019,2020,"2019-2020","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",62.8695264676184,0.588235294117647,0.171634119993685
+2019,2020,"2019-2020","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.26635704813158,0.88235294117647,1.32119365056589
+2019,2020,"2019-2020","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.21775665000694,0.823529411764706,1.7001448269452
+2019,2020,"2019-2020","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.95528003965363,0.764705882352941,1.92257033057381
+2019,2020,"2019-2020","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.136175157143618,0.764705882352941,0.835904294744772
+2019,2020,"2019-2020","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.193845958769705,0.823529411764706,1.07027983614398
+2019,2020,"2019-2020","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.386890537834933,0.588235294117647,0.701471392423252
+2019,2020,"2019-2020","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",26.7325599722555,0.352941176470588,-0.466118453668121
+2019,2020,"2019-2020","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.40432108843529,0.705882352941177,0.583182029428653
+2019,2020,"2019-2020","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.41976311202432,0.647058823529412,0.560673162467977
+2019,2020,"2019-2020","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.26860755003551,0.647058823529412,0.408209747520624
+2019,2020,"2019-2020","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.15202299037324,0.764705882352941,8.19002395876247
+2019,2020,"2019-2020","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.301647240452782,0.764705882352941,8.11322833082662
+2019,2020,"2019-2020","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0.0781817192578367,0.764705882352941,0
+2019,2020,"2019-2020","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",38.7830327968575,0.470588235294118,-0.142858237676699
+2019,2020,"2019-2020","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.40379780838452,0.705882352941177,1.04001571682361
+2019,2020,"2019-2020","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.40264662245034,0.647058823529412,0.675065980155706
+2019,2020,"2019-2020","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.38087446326558,0.823529411764706,2.26932364589124
+2019,2020,"2019-2020","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0838739358872776,0.588235294117647,0.450645494859724
+2019,2020,"2019-2020","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.167516637050316,0.764705882352941,1.06497824177659
+2019,2020,"2019-2020","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.029094585406478,0.0588235294117647,-3.86133527950568
+2019,2020,"2019-2020","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",59.0332870931577,0.588235294117647,0.0632704132162557
+2019,2020,"2019-2020","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.70201154473837,0.764705882352941,0.801507070915836
+2019,2020,"2019-2020","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.95532225374919,0.470588235294118,-0.078454638129427
+2019,2020,"2019-2020","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.96168454462772,0.823529411764706,2.30195318583173
+2019,2020,"2019-2020","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.197696776455456,0.352941176470588,-0.107149277613183
+2019,2020,"2019-2020","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.212718432753545,0.352941176470588,-0.399074722306687
+2019,2020,"2019-2020","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.715641354732467,0.176470588235294,-1.07939273940125
+2019,2020,"2019-2020","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",55.9149899194098,0.588235294117647,0.45237708890936
+2019,2020,"2019-2020","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.94946810812116,0.764705882352941,1.24935672947663
+2019,2020,"2019-2020","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.54399317615294,0.764705882352941,0.999187133167451
+2019,2020,"2019-2020","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.62050429604629,0.823529411764706,5.48203284503698
+2019,2020,"2019-2020","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.185221511418162,0.823529411764706,0.943916713952925
+2019,2020,"2019-2020","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.151939556458484,0.647058823529412,0.928573279031428
+2019,2020,"2019-2020","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.767552335337544,0.0588235294117647,-2.76364256314222
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.0624747474671814,0.529411764705882,0.16768307628401
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00857142857142856,0.88235294117647,1.28
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0395903051309106,0.941176470588235,5.49426937398224
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.00153475395195679,0.647058823529412,1.18662221059334
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0469189726339254,0.941176470588235,4.92735921723198
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.0413903218780136,0.588235294117647,0.445456682729672
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.0126029588211019,0.764705882352941,1.25651339436108
+2020,2021,"2020-2021","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00359759788973008,0.470588235294118,-0.118787871360604
+2020,2021,"2020-2021","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",3438.36830717975,0.823529411764706,0.991344154789995
+2020,2021,"2020-2021","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",205.029274175418,0.823529411764706,1.8828298125552
+2020,2021,"2020-2021","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",82.8809721181254,0.823529411764706,2.81580791006163
+2020,2021,"2020-2021","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.49970801485637,0.588235294117647,0.466779371849844
+2020,2021,"2020-2021","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.1211765290558,0.529411764705882,0.131744857976043
+2020,2021,"2020-2021","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.42200643775342,1,7.52329495507885
+2020,2021,"2020-2021","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.198719600106872,0.88235294117647,1.305017847664
+2020,2021,"2020-2021","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.18675416824894,0.941176470588235,3.81825108442993
+2020,2021,"2020-2021","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.834132689777397,0.647058823529412,0.0931547036410872
+2020,2021,"2020-2021","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",72.942733969422,0.764705882352941,1.10682536173735
+2020,2021,"2020-2021","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.76245615795847,0.529411764705882,0.342515143583656
+2020,2021,"2020-2021","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.11243411052312,0.705882352941177,0.413917292743943
+2020,2021,"2020-2021","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.19828573706907,0.941176470588235,1.84794434629383
+2020,2021,"2020-2021","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.121418749392404,0.88235294117647,2.34072587407238
+2020,2021,"2020-2021","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.18076187334486,0.88235294117647,2.16778749347192
+2020,2021,"2020-2021","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.321953642135849,0.941176470588235,2.82944950676444
+2020,2021,"2020-2021","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",85.74083494853,0.823529411764706,1.7668710757459
+2020,2021,"2020-2021","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.35038000098172,0.588235294117647,0.247464626939018
+2020,2021,"2020-2021","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.88852054552598,0.235294117647059,-0.717349307080445
+2020,2021,"2020-2021","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.73899910102048,0.941176470588235,2.67189788339988
+2020,2021,"2020-2021","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.174535778983792,1,2.08380535985885
+2020,2021,"2020-2021","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.159105515730884,0.529411764705882,0.15449239983356
+2020,2021,"2020-2021","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.638583841920104,1,2.28640608224814
+2020,2021,"2020-2021","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",391.958588608949,0.88235294117647,15.1243101847786
+2020,2021,"2020-2021","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",9.72261217452555,0.88235294117647,6.63454950680624
+2020,2021,"2020-2021","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",12.9393033769277,0.941176470588235,9.20797596553127
+2020,2021,"2020-2021","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",36.2861010523819,1,37.0851752977056
+2020,2021,"2020-2021","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.8955565142591,0.941176470588235,55.7984491106414
+2020,2021,"2020-2021","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",1.21694274451403,0.941176470588235,37.4163976548335
+2020,2021,"2020-2021","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0.902306036427383,0.941176470588235,0
+2020,2021,"2020-2021","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",67.8490017262171,0.764705882352941,1.46584996444539
+2020,2021,"2020-2021","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.94219378504628,0.588235294117647,0.348047036540338
+2020,2021,"2020-2021","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.34478268353245,0.588235294117647,0.599928169462623
+2020,2021,"2020-2021","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.57916853160898,0.88235294117647,2.50279928258887
+2020,2021,"2020-2021","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.127170453578121,0.823529411764706,2.35801489405986
+2020,2021,"2020-2021","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.169805105100976,0.823529411764706,1.12007530565481
+2020,2021,"2020-2021","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.300256376544833,0.294117647058824,-1.38520237507887
+2020,2021,"2020-2021","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",81.0777994883829,0.764705882352941,1.09888468705782
+2020,2021,"2020-2021","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.71736327030962,0.411764705882353,-0.307912102372583
+2020,2021,"2020-2021","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.59126959009493,0.352941176470588,-0.621628144704185
+2020,2021,"2020-2021","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.28823556039207,1,2.66320083816598
+2020,2021,"2020-2021","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.214905047983575,0.647058823529412,0.497380002418939
+2020,2021,"2020-2021","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.233375999002774,0.529411764705882,0.132342934541229
+2020,2021,"2020-2021","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.776037043609806,0.764705882352941,1.27838564184989
+2020,2021,"2020-2021","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",82.8809721181254,0.823529411764706,2.81580791006163
+2020,2021,"2020-2021","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.49970801485637,0.588235294117647,0.466779371849844
+2020,2021,"2020-2021","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.1211765290558,0.529411764705882,0.131744857976043
+2020,2021,"2020-2021","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.42200643775342,1,7.52329495507885
+2020,2021,"2020-2021","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.198719600106872,0.88235294117647,1.305017847664
+2020,2021,"2020-2021","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.18675416824894,0.941176470588235,3.81825108442993
+2020,2021,"2020-2021","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.834132689777397,0.647058823529412,0.0931547036410872
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.0639203034151521,0.588235294117647,0.197432702590435
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00781609195402298,0.764705882352941,1.07555555555555
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0421159494416701,1,5.94088748278797
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000124494303462175,0,-1.54464424238762
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0319859715966144,0.88235294117647,2.91422779803804
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.000778907359141989,0,-1.28622109826307
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00469663194975312,0.235294117647059,-0.661922646861973
+2021,2022,"2021-2022","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.0112990491438479,0.764705882352941,3.95193892768931
+2021,2022,"2021-2022","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",442.441809919306,0,-1.22430846766644
+2021,2022,"2021-2022","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",164.29963733272,0.764705882352941,1.13243311392384
+2021,2022,"2021-2022","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",47.0869859640381,0.352941176470588,-0.321352437559484
+2021,2022,"2021-2022","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.83951620958373,0.294117647058824,-0.681946729540716
+2021,2022,"2021-2022","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.44221896857849,0.117647058823529,-1.26119105186181
+2021,2022,"2021-2022","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.14244888031755,0.764705882352941,4.26452342634854
+2021,2022,"2021-2022","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.153420231365212,0.588235294117647,0.0931682453798012
+2021,2022,"2021-2022","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.13172549203419,0.294117647058824,-0.749231824048613
+2021,2022,"2021-2022","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.829463977136425,0.411764705882353,-0.107168133693367
+2021,2022,"2021-2022","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",41.6902663148893,0.352941176470588,-0.0802703737361363
+2021,2022,"2021-2022","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.79924342022226,0.588235294117647,0.388071750014851
+2021,2022,"2021-2022","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.98834472037667,0.529411764705882,0.267784911869318
+2021,2022,"2021-2022","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.80300814848263,0.823529411764706,1.56621242240997
+2021,2022,"2021-2022","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.121687681535465,0.941176470588235,2.35099579944751
+2021,2022,"2021-2022","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.182419829689851,0.941176470588235,2.20847339743828
+2021,2022,"2021-2022","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0.312294439841249,0.823529411764706,2.71039728154709
+2021,2022,"2021-2022","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",61.5833831523689,0.529411764705882,0.0819276937701087
+2021,2022,"2021-2022","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.93285942479825,0.470588235294118,-0.241962441134948
+2021,2022,"2021-2022","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.91589760570889,0.294117647058824,-0.667558391699851
+2021,2022,"2021-2022","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",6.24950814084957,0.88235294117647,2.20388698332601
+2021,2022,"2021-2022","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.136748651826699,0.823529411764706,0.854560525836013
+2021,2022,"2021-2022","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.181183045146569,0.705882352941177,0.736474732098722
+2021,2022,"2021-2022","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.434401942352627,0.764705882352941,1.00065485086327
+2021,2022,"2021-2022","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",392.452747055986,0.941176470588235,15.1454043604412
+2021,2022,"2021-2022","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",10.2551182869207,0.941176470588235,7.07486953946765
+2021,2022,"2021-2022","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",12.8716209467576,0.88235294117647,9.15233945924015
+2021,2022,"2021-2022","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",36.2800480706664,0.941176470588235,37.0786490966545
+2021,2022,"2021-2022","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.888063833313331,0.88235294117647,55.3186930155439
+2021,2022,"2021-2022","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",1.13118540232116,0.88235294117647,34.6708778659737
+2021,2022,"2021-2022","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0.886184609169865,0.88235294117647,0
+2021,2022,"2021-2022","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",24.6581078546704,0.235294117647059,-0.924627552303018
+2021,2022,"2021-2022","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.07240830705103,0.235294117647059,-0.955807087142003
+2021,2022,"2021-2022","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.40099293302178,0.235294117647059,-0.625607059111659
+2021,2022,"2021-2022","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.66234861794065,0.764705882352941,1.42331609446809
+2021,2022,"2021-2022","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0870651369047019,0.705882352941177,0.591229530065374
+2021,2022,"2021-2022","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.150973056107967,0.647058823529412,0.666675658661156
+2021,2022,"2021-2022","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.292318698546316,0.235294117647059,-1.45768583815957
+2021,2022,"2021-2022","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",46.7118287705476,0.294117647058824,-0.515571063731215
+2021,2022,"2021-2022","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.16489327529431,0.352941176470588,-0.930389002047373
+2021,2022,"2021-2022","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.59024889798115,0.294117647058824,-0.623151036774271
+2021,2022,"2021-2022","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.09642686996298,0.705882352941177,1.34476031688532
+2021,2022,"2021-2022","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.211922554291275,0.588235294117647,0.392604530834804
+2021,2022,"2021-2022","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.247747242632952,0.647058823529412,0.502044404878993
+2021,2022,"2021-2022","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.713514236292137,0.117647058823529,-1.1624330021451
+2021,2022,"2021-2022","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",47.0869859640381,0.352941176470588,-0.321352437559484
+2021,2022,"2021-2022","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.83951620958373,0.294117647058824,-0.681946729540716
+2021,2022,"2021-2022","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.44221896857849,0.117647058823529,-1.26119105186181
+2021,2022,"2021-2022","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.14244888031755,0.764705882352941,4.26452342634854
+2021,2022,"2021-2022","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.153420231365212,0.588235294117647,0.0931682453798012
+2021,2022,"2021-2022","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.13172549203419,0.294117647058824,-0.749231824048613
+2021,2022,"2021-2022","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.829463977136425,0.411764705882353,-0.107168133693367
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.268962774127633,1,4.41721879195332
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.00719211822660099,0.705882352941177,0.906666666666667
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0121936667303351,0.647058823529412,0.649630412758061
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.00420024771326299,0.941176470588235,6.34891533771848
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.0163697100808846,0.764705882352941,0.808985413796852
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.119881861301633,1,3.79234958035669
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.0195193675088019,0.88235294117647,2.9347500671194
+2022,2023,"2022-2023","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.0119751994109132,0.88235294117647,4.30932910280155
+2022,2023,"2022-2023","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",4788.99112875051,0.88235294117647,1.99020410656091
+2022,2023,"2022-2023","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",140.444759174673,0.705882352941177,0.692934429337325
+2022,2023,"2022-2023","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",91.9848231768275,0.88235294117647,3.61371402839841
+2022,2023,"2022-2023","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",4.3274823836433,1,3.64708562241156
+2022,2023,"2022-2023","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.72696885624307,1,3.4261566540665
+2022,2023,"2022-2023","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.83787166841322,0.705882352941177,0.942031952261591
+2022,2023,"2022-2023","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.110460800755263,0.294117647058824,-1.05608328604707
+2022,2023,"2022-2023","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.144122843654867,0.529411764705882,0.279771516261842
+2022,2023,"2022-2023","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.794257640885907,0.176470588235294,-1.61778438108497
+2022,2023,"2022-2023","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",84.2829771851032,0.88235294117647,1.53757388724186
+2022,2023,"2022-2023","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.51705597525257,1,2.51537630263206
+2022,2023,"2022-2023","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.51705597525177,1,2.06805337221943
+2022,2023,"2022-2023","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.51152726037042,0.470588235294118,-0.0670279580012507
+2022,2023,"2022-2023","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0351022146514782,0.176470588235294,-0.955512204192648
+2022,2023,"2022-2023","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0733482576736134,0.352941176470588,-0.468120300530837
+2022,2023,"2022-2023","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0,0.0882352941176471,-1.13871435854017
+2022,2023,"2022-2023","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",93.2885555945427,0.88235294117647,2.29331244294018
+2022,2023,"2022-2023","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.98591802291554,0.941176470588235,2.16467930918456
+2022,2023,"2022-2023","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.72320788596325,0.941176470588235,2.61941371667905
+2022,2023,"2022-2023","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.82728820443667,0.411764705882353,-0.112040020150547
+2022,2023,"2022-2023","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0945483369067743,0.411764705882353,-0.518248761670697
+2022,2023,"2022-2023","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.117975856906798,0.294117647058824,-0.929720163856024
+2022,2023,"2022-2023","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.292280335768965,0.529411764705882,0.105702697619384
+2022,2023,"2022-2023","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",36.1562285721116,0.470588235294118,-0.0638496631143805
+2022,2023,"2022-2023","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.55555918367313,0.823529411764706,1.53512076571118
+2022,2023,"2022-2023","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.56555488025234,0.823529411764706,1.50254021365285
+2022,2023,"2022-2023","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.68330613535538,0.764705882352941,0.855329278136194
+2022,2023,"2022-2023","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.167120086565163,0.823529411764706,9.15669049224641
+2022,2023,"2022-2023","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.332091072681963,0.823529411764706,9.0878870795313
+2022,2023,"2022-2023","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0.0855431555586171,0.823529411764706,0
+2022,2023,"2022-2023","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",83.6854514484671,0.88235294117647,2.34234668893421
+2022,2023,"2022-2023","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",3.57846621315159,0.941176470588235,2.80090536405599
+2022,2023,"2022-2023","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.56788998100937,0.88235294117647,2.1881644059477
+2022,2023,"2022-2023","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.84010755857222,0.647058823529412,0.45519205294345
+2022,2023,"2022-2023","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0546383717232511,0.294117647058824,-0.837287656092264
+2022,2023,"2022-2023","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.112374491200481,0.470588235294118,-0.262621822989017
+2022,2023,"2022-2023","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.115834784441304,0.117647058823529,-3.06926107146552
+2022,2023,"2022-2023","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",105.792220227384,0.88235294117647,2.25992678352893
+2022,2023,"2022-2023","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",5.54992176461825,1,2.88357747279588
+2022,2023,"2022-2023","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",4.78177256655092,1,2.64664400839836
+2022,2023,"2022-2023","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",5.22135106136438,0.764705882352941,1.48295792976943
+2022,2023,"2022-2023","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.246324684290975,1,1.60115675796043
+2022,2023,"2022-2023","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.266774145294026,0.705882352941177,0.991513101589519
+2022,2023,"2022-2023","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.740299272543131,0.470588235294118,-0.116775926490532
+2022,2023,"2022-2023","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",91.9848231768275,0.88235294117647,3.61371402839841
+2022,2023,"2022-2023","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",4.3274823836433,1,3.64708562241156
+2022,2023,"2022-2023","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",3.72696885624307,1,3.4261566540665
+2022,2023,"2022-2023","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.83787166841322,0.705882352941177,0.942031952261591
+2022,2023,"2022-2023","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.110460800755263,0.294117647058824,-1.05608328604707
+2022,2023,"2022-2023","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.144122843654867,0.529411764705882,0.279771516261842
+2022,2023,"2022-2023","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.794257640885907,0.176470588235294,-1.61778438108497
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_total_weight",0.045339235090081,0.411764705882353,-0.184966774801658
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_edge_density",0.000886699507389163,0.294117647058824,-0.800000000000001
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_weighted_reciprocity",0.0122935878219479,0.705882352941177,0.66729979271619
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_in_strength_gini",0.000879284243277878,0.470588235294118,-0.0828336858232795
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_out_strength_gini",0.00493257846294481,0.352941176470588,-0.732864677018986
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_effective_destinations",0.00897141373850507,0.235294117647059,-0.936891200847361
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_top10_destination_share",0.00653395786517597,0.411764705882353,-0.216103455096247
+2023,2024,"2023-2024","conventional",,,"conventional indicator","native indicator scale","indicator_binary_transitivity",0.00353849153954727,0.352941176470588,-0.150029490082078
+2023,2024,"2023-2024","adjacency benchmark",,,"adjacency benchmark","raw weighted scale","singular_spectrum_raw",607.961984661057,0.176470588235294,-1.10189718368755
+2023,2024,"2023-2024","adjacency benchmark",,,"adjacency benchmark","unit-mean shape","singular_spectrum_shape",50.1903676070514,0.235294117647059,-0.969898895960727
+2023,2024,"2023-2024","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",40.4370781130069,0.117647058823529,-0.90418294813136
+2023,2024,"2023-2024","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.59956666758103,0.117647058823529,-1.09945615591322
+2023,2024,"2023-2024","estimator","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.56913488485317,0.235294117647059,-1.00081286683255
+2023,2024,"2023-2024","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.8360978659656,0.117647058823529,-1.60928113769906
+2023,2024,"2023-2024","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.10101253205765,0.176470588235294,-1.30884355581541
+2023,2024,"2023-2024","estimator","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.106495166326745,0.176470588235294,-2.8433959830114
+2023,2024,"2023-2024","estimator","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.731567196661805,0,-4.30767528388329
+2023,2024,"2023-2024","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",11.6871380373034,0.0588235294117647,-1.21991112220102
+2023,2024,"2023-2024","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",0.704259738764086,0.176470588235294,-0.967934039898841
+2023,2024,"2023-2024","estimator","smooth",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",0.795275849558151,0.235294117647059,-1.13721832357528
+2023,2024,"2023-2024","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.04451774221108,0.0588235294117647,-1.1126309110677
+2023,2024,"2023-2024","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.0174907223947326,0.117647058823529,-1.62805624880697
+2023,2024,"2023-2024","estimator","smooth",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0376937386755249,0.117647058823529,-1.34307478308104
+2023,2024,"2023-2024","estimator","smooth",13,"structural roles","label-invariant partition","estimated_role_instability",0,0.0882352941176471,-1.13871435854017
+2023,2024,"2023-2024","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",59.234147760612,0.470588235294118,-0.0819276937701092
+2023,2024,"2023-2024","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.83797383924055,0.411764705882353,-0.353189471827628
+2023,2024,"2023-2024","estimator","spectral",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.67166903083398,0.647058823529412,0.706970167030165
+2023,2024,"2023-2024","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",4.06026152358052,0.588235294117647,0.110709860148854
+2023,2024,"2023-2024","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.131793717109432,0.705882352941177,0.693372619732441
+2023,2024,"2023-2024","estimator","spectral",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.185407724659968,0.764705882352941,0.847840854185463
+2023,2024,"2023-2024","estimator","spectral",13,"structural roles","label-invariant partition","estimated_role_instability",0.434193957028667,0.705882352941177,0.999345149136729
+2023,2024,"2023-2024","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",24.997339748072,0.235294117647059,-0.540189918886808
+2023,2024,"2023-2024","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.83162103737937,0.529411764705882,0.10962632872152
+2023,2024,"2023-2024","resolution","block",2,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.98175699099853,0.764705882352941,1.02264499037873
+2023,2024,"2023-2024","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.6506542637918,0.411764705882353,-0.258054843361734
+2023,2024,"2023-2024","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.080898210984883,0.705882352941177,3.63590685822092
+2023,2024,"2023-2024","resolution","block",2,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.161225685384105,0.705882352941177,3.6176347365611
+2023,2024,"2023-2024","resolution","block",2,"structural roles","label-invariant partition","estimated_role_instability",0.0401627449640907,0.705882352941177,0
+2023,2024,"2023-2024","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",18.2352945981349,0,-1.28010967614339
+2023,2024,"2023-2024","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.21135952488238,0.411764705882353,-0.747511912132107
+2023,2024,"2023-2024","resolution","block",4,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.73616328062347,0.470588235294118,-0.190379755215734
+2023,2024,"2023-2024","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",1.41098351123195,0.0588235294117647,-1.22748887473222
+2023,2024,"2023-2024","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.043449938925891,0.0588235294117647,-1.33017889725564
+2023,2024,"2023-2024","resolution","block",4,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.0864981210951104,0.294117647058824,-0.885620259091628
+2023,2024,"2023-2024","resolution","block",4,"structural roles","label-invariant partition","estimated_role_instability",0.0242370149837421,0,-3.90569252434025
+2023,2024,"2023-2024","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",56.0533571404491,0.352941176470588,-0.0767217054001429
+2023,2024,"2023-2024","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",2.06698748484845,0.235294117647059,-1.04070104332893
+2023,2024,"2023-2024","resolution","block",8,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",2.86727478929001,0.411764705882353,-0.209823131729385
+2023,2024,"2023-2024","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",3.8018803510172,0.470588235294118,-0.0873341131749648
+2023,2024,"2023-2024","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.117516603162106,0.235294117647059,-2.92389135160226
+2023,2024,"2023-2024","resolution","block",8,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.193888802796723,0.235294117647059,-0.883468561844368
+2023,2024,"2023-2024","resolution","block",8,"structural roles","label-invariant partition","estimated_role_instability",0.61898964360597,0,-4.85256462039104
+2023,2024,"2023-2024","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_frobenius_raw",40.4370781130069,0.117647058823529,-0.90418294813136
+2023,2024,"2023-2024","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_cut_raw",1.59956666758103,0.117647058823529,-1.09945615591322
+2023,2024,"2023-2024","resolution","block",13,"fitted-kernel distance","raw weighted scale","graphon_wasserstein_raw",1.56913488485317,0.235294117647059,-1.00081286683255
+2023,2024,"2023-2024","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_frobenius_shape",2.8360978659656,0.117647058823529,-1.60928113769906
+2023,2024,"2023-2024","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_cut_shape",0.10101253205765,0.176470588235294,-1.30884355581541
+2023,2024,"2023-2024","resolution","block",13,"fitted-kernel distance","unit-mean shape","graphon_wasserstein_shape",0.106495166326745,0.176470588235294,-2.8433959830114
+2023,2024,"2023-2024","resolution","block",13,"structural roles","label-invariant partition","estimated_role_instability",0.731567196661805,0,-4.30767528388329

@@ -1,0 +1,33 @@
+Package: methodsxmobility
+Type: Project
+Title: Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection
+Version: 0.2.0
+Authors@R: c(
+    person("Zsolt T.", "Kosztyán", email = "kosztyan.zsolt@gtk.uni-pannon.hu",
+           role = c("aut", "cre")),
+    person("Kornél", "Dénes", role = "aut")
+  )
+Description: Reproducible analysis and manuscript workflow comparing annual
+    network indicators with graphon-inspired distances in node-aligned directed
+    weighted longitudinal networks.
+License: file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.4.0)
+Imports:
+    dplyr (>= 1.1.4),
+    flextable (>= 0.10.0),
+    ggplot2 (>= 4.0.2),
+    igraph (>= 2.0.3),
+    knitr (>= 1.50),
+    Matrix (>= 1.7-5),
+    officedown (>= 0.4.1),
+    officer (>= 0.7.6),
+    reshape2 (>= 1.4.4),
+    rmarkdown (>= 2.29),
+    RSpectra (>= 0.16-1),
+    scales (>= 1.4.0),
+    tidyr (>= 1.3.1),
+    xml2 (>= 1.3.6),
+    zip (>= 2.3.1)
+SystemRequirements: Pandoc

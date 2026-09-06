@@ -1,0 +1,1379 @@
+---
+title: "Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection"
+subtitle: "A Reproducible Workflow for Directed Weighted Longitudinal Networks"
+author: "Zsolt T. Kosztyán and Kornél Dénes"
+date: ""
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+  officedown::rdocx_document:
+    reference_docx: output/MethodsX-reference-clean.docx
+    toc: false
+    number_sections: false
+params:
+  build_figures: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = "center",
+  dpi = 300,
+  eval = isTRUE(params$build_figures)
+)
+
+required_packages <- c(
+  "ggplot2", "dplyr", "tidyr", "scales",
+  "officedown", "officer", "flextable"
+)
+missing_packages <- required_packages[
+  !vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)
+]
+if (length(missing_packages)) {
+  stop("Missing R package(s): ", paste(missing_packages, collapse = ", "))
+}
+suppressPackageStartupMessages(library(dplyr))
+
+graphical_abstract_script <- file.path(
+  "scripts", "production", "06_graphical_abstract.R"
+)
+if (!file.exists(graphical_abstract_script)) {
+  stop("Graphical-abstract source missing: ", graphical_abstract_script)
+}
+source(graphical_abstract_script, local = TRUE)
+
+figure_dir <- file.path("output", "figures")
+dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
+
+figure_inputs <- c(
+  simulation_kernels = file.path(
+    "data", "derived", "simulation", "SIMULATION_kernel_design.csv"
+  ),
+  simulation_power = file.path(
+    "data", "derived", "simulation", "SIMULATION_detection_summary.csv"
+  ),
+  empirical_evidence = file.path(
+    "data", "derived", "empirical", "EMPIRICAL_transition_evidence.csv"
+  ),
+  estimator_agreement = file.path(
+    "data", "derived", "empirical", "EMPIRICAL_estimator_agreement.csv"
+  ),
+  resolution_agreement = file.path(
+    "data", "derived", "empirical", "EMPIRICAL_resolution_agreement.csv"
+  ),
+  role_flow = file.path(
+    "data", "derived", "empirical", "EMPIRICAL_role_flow_matrix_2018.csv"
+  ),
+  refinement = file.path(
+    "data", "derived", "empirical", "EMPIRICAL_multiresolution_refinement.csv"
+  )
+)
+if (isTRUE(params$build_figures)) {
+  missing_inputs <- figure_inputs[!file.exists(figure_inputs)]
+  if (length(missing_inputs)) {
+    stop(
+      "Figure input(s) missing. Run source('run_all.R') first: ",
+      paste(missing_inputs, collapse = ", ")
+    )
+  }
+}
+
+mx_colors <- c(
+  blue = "#2F6B8A",
+  gold = "#C9912B",
+  orange = "#D56A2D",
+  olive = "#6F7D3C",
+  pink = "#B85C7A",
+  ink = "#25313A",
+  mid_grey = "#8B959C",
+  light_grey = "#E7EBEE"
+)
+
+theme_methodsx <- function(base_size = 10) {
+  ggplot2::theme_minimal(base_size = base_size, base_family = "sans") +
+    ggplot2::theme(
+      plot.title.position = "plot",
+      plot.title = ggplot2::element_text(
+        color = mx_colors["ink"], face = "bold", size = base_size + 2
+      ),
+      plot.subtitle = ggplot2::element_text(color = "#4F5B62", size = base_size),
+      plot.caption = ggplot2::element_text(color = "#657078", size = base_size - 2),
+      axis.title = ggplot2::element_text(color = mx_colors["ink"]),
+      axis.text = ggplot2::element_text(color = mx_colors["ink"]),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major = ggplot2::element_line(color = mx_colors["light_grey"], size = 0.3),
+      legend.position = "bottom",
+      legend.title = ggplot2::element_text(face = "bold"),
+      strip.text = ggplot2::element_text(face = "bold", color = mx_colors["ink"])
+    )
+}
+
+save_methodsx_figure <- function(plot, stem, width, height) {
+  ggplot2::ggsave(
+    file.path(figure_dir, paste0(stem, ".pdf")),
+    plot = plot, width = width, height = height, units = "in",
+    device = grDevices::pdf
+  )
+  ggplot2::ggsave(
+    file.path(figure_dir, paste0(stem, ".png")),
+    plot = plot, width = width, height = height, units = "in",
+    dpi = 600, bg = "white"
+  )
+  invisible(plot)
+}
+
+channel_labels <- c(
+  indicator_total_weight = "Total weight",
+  indicator_edge_density = "Edge density",
+  indicator_weighted_reciprocity = "Weighted reciprocity",
+  indicator_in_strength_gini = "In-strength Gini",
+  indicator_out_strength_gini = "Out-strength Gini",
+  indicator_effective_destinations = "Effective destinations",
+  indicator_top10_destination_share = "Top-10 destination share",
+  indicator_binary_transitivity = "Binary transitivity",
+  graphon_frobenius_raw = "Frobenius distance: raw scale",
+  graphon_cut_raw = "Cut-norm lower bound: raw scale",
+  graphon_wasserstein_raw = "Wasserstein distance: raw scale",
+  graphon_frobenius_shape = "Frobenius distance: unit-mean shape",
+  graphon_cut_shape = "Cut-norm lower bound: unit-mean shape",
+  graphon_wasserstein_shape = "Wasserstein distance: unit-mean shape",
+  singular_spectrum_raw = "Raw singular-spectrum distance",
+  singular_spectrum_shape = "Shape singular-spectrum distance",
+  estimated_role_instability = "Estimated role instability"
+)
+```
+
+# Article information
+
+## Article title
+
+**Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection**
+
+*A Reproducible Workflow for Directed Weighted Longitudinal Networks*
+
+## Authors
+
+Zsolt T. Kosztyán^a,b,c^; Kornél Dénes^d^
+
+## Affiliations
+
+a. Business Research Institute for Data-Driven Growth and Economics (BRIDGE), Faculty of Business and Economics, University of Pannonia, Egyetem Street 10, 8200 Veszprém, Hungary
+
+b. Department of Quantitative Methods, Institute of Management, Faculty of Business and Economics, University of Pannonia, Egyetem Street 10, 8200 Veszprém, Hungary
+
+c. Institute of Advanced Studies, Kőszeg (iASK), Chernel Street 14, 9730 Kőszeg, Hungary
+
+d. Faculty of Law, Institute of Political Science, Eötvös Loránd University, Tóth Kálmán Street 10, 1097 Budapest, Hungary
+
+## Corresponding author's email address and Twitter handle
+
+kosztyan.zsolt@gtk.uni-pannon.hu; Twitter/X: not applicable
+
+## Keywords
+
+longitudinal networks; anomaly detection; network indicators; graphon distances;
+directed weighted networks; block-kernel estimation; comparative method evaluation
+
+## Related research article
+
+Kosztyán, Z. T., Hosznyák, A., Király, T., Katona, A. I., Dénes, K., and
+Hornák, G. *Tracking Structural Evolution in Higher Education Application
+Networks with Graphon Distances: Hungary, 2006--2024*. Companion research
+manuscript; publication details will be inserted when available.
+
+# Abstract
+
+Structural anomaly detection in longitudinal networks is difficult because
+year-specific network indicators and matrix-level distances answer different
+questions. This article presents a reproducible workflow that compares and
+integrates two complementary evidence families: conventional indicators of activity,
+connectivity, reciprocity, and concentration, and graphon-inspired distances
+between node-aligned fitted directed weighted kernels. An anomaly-scoring layer
+converts heterogeneous transition measures to comparable within-channel
+evidence, groups correlated channels into structural perspectives, and reports
+their consensus without replacing the component results. Raw-weight and
+unit-mean comparisons distinguish changes in magnitude from redistribution of
+structural shape. Known-truth simulations calibrate channel-specific null
+thresholds and demonstrate complementarity: conventional indicators are highly
+sensitive and directly interpretable for global activity, density, and
+concentration changes, whereas fitted-kernel and spectral distances add
+sensitivity to coordinated relational changes. The maximum null false-positive
+rate is 5%; at the medium effect, the raw cut-norm lower-bound estimate detects
+86.0% of directional shifts, 61.5% of local block shocks, and 59.5% of role
+reassignments. In 19 annual Hungarian higher-education application networks,
+2017--2018 has the strongest consensus, with five of six perspectives at or
+above the 75th percentile. The method treats graphon distances as a complement
+to, not a substitute for, conventional longitudinal network analysis.
+
+# Graphical abstract
+
+```{r graphical-abstract, fig.width=6.8, fig.height=3.40, fig.alt="Conceptual workflow in which annual networks feed two complementary evidence lanes: indicator time series with a highlighted anomaly and graphon-inspired distances illustrated by a fitted surface. A calibration target leads to agreement or disagreement as interpretable outcomes."}
+p_graphical_abstract <- build_methodsx_graphical_abstract(mx_colors)
+save_methodsx_figure(
+  p_graphical_abstract, "FIG00_graphical_abstract", 12, 6
+)
+p_graphical_abstract
+```
+
+The graphical abstract presents the study as a comparison of two equally
+important evidence families rather than as a graphon-only pipeline. Annual
+network indicators preserve direct substantive interpretation; graphon-inspired
+distances retain coordinated relational information. Their convergence supports
+a broad structural-anomaly claim, while disagreement identifies the type and
+scale of change that requires interpretation.
+
+# Specifications table
+
+```{r specifications-table, results='asis'}
+specifications <- data.frame(
+  field = c(
+    "Subject area",
+    "More specific subject area",
+    "Name of your method",
+    "Name and reference of original method",
+    "Resource availability"
+  ),
+  entry = c(
+    "Computer Science",
+    "Network science; temporal and dynamic network analysis",
+    "Network-indicator and graphon-distance comparison workflow",
+    paste(
+      "Annual network indicators, directed weighted block-kernel estimation,",
+      "node-aligned distances, and anomaly-score consensus; see Donnat and",
+      "Holmes [1], Lovász [2], and the companion research article listed above"
+    ),
+    paste(
+      "R source code, aggregate annual networks, intermediate analytical",
+      "outputs, validation tables, and figure-generation code are supplied",
+      "in the accompanying reproducibility package"
+    )
+  ),
+  check.names = FALSE
+)
+spec_ft <- flextable::flextable(specifications)
+spec_ft <- flextable::delete_part(spec_ft, part = "header")
+spec_ft <- flextable::bold(spec_ft, j = 1, part = "body", bold = TRUE)
+spec_ft <- flextable::width(spec_ft, j = 1, width = 2.15)
+spec_ft <- flextable::width(spec_ft, j = 2, width = 4.10)
+table_border <- officer::fp_border(color = "000000", width = 0.75)
+spec_ft <- flextable::border_remove(spec_ft)
+spec_ft <- flextable::border_outer(
+  spec_ft, border = table_border, part = "all"
+)
+spec_ft <- flextable::border_inner_h(
+  spec_ft, border = table_border, part = "body"
+)
+spec_ft <- flextable::border_inner_v(
+  spec_ft, border = table_border, part = "body"
+)
+spec_ft <- flextable::padding(spec_ft, padding = 5, part = "all")
+spec_ft <- flextable::valign(spec_ft, valign = "center", part = "all")
+spec_ft <- flextable::font(spec_ft, fontname = "Calibri", part = "all")
+spec_ft <- flextable::fontsize(spec_ft, size = 10.5, part = "all")
+spec_ft
+```
+
+# Background
+
+Longitudinal network analysis commonly begins with annual indicators such as
+total weight, density, reciprocity, transitivity, or concentration. These
+measures are substantively interpretable and remain the first evidence family
+in the proposed workflow, but each compresses an entire relational system to a
+scalar. A transition can therefore rearrange coordinated origin--destination
+patterns while producing only a modest change in an aggregate indicator. At
+the other extreme, relying on one matrix distance can make the result difficult
+to interpret and can miss the form of change that matters. Reviews of graph
+comparison accordingly emphasize that the meaning of a distance depends on the
+network representation and the structural feature being compared [1,3].
+
+This method combines rather than ranks these approaches. Conventional network
+indicators describe interpretable annual trajectories of activity,
+connectivity, reciprocity, and concentration. Graphon-inspired fitted-kernel
+distances form a second evidence family that retains node-aligned relational
+structure at a selected resolution. The raw weighted representation asks
+whether the intensity surface changed; unit-mean normalization asks whether
+weights were redistributed after removing the average level. Frobenius
+distance accumulates cellwise deviations, a cut-norm search targets a coherent
+rectangular origin--destination subset, Wasserstein distance compares marginal
+fitted-intensity distributions, and singular values summarize dominant
+directed modes of the original adjacency matrices.
+
+An anomaly-scoring layer links the two evidence families. Each empirical
+transition is ranked relative to the other observed transitions within its own
+channel, and correlated channels are summarized into six perspectives before a
+consensus profile is calculated. Known-truth simulations separately calibrate
+channel-specific null thresholds. Agreement across indicator and graphon-based
+perspectives supports a broader structural claim; disagreement is retained as
+diagnostic information about the kind of change observed. Graphon distances
+therefore complement rather than replace conventional network analysis.
+
+The workflow is designed for node-aligned directed weighted snapshots. It does
+not minimize over node relabelings, and its fitted non-negative intensity
+kernels are block-kernel analogues rather than probability-valued graphons.
+These distinctions are important: graphon theory motivates the representation
+[2,4], but the empirical objects and the reported discrepancies retain node
+identity and raw weight scale.
+
+The practical contribution is a guide to method selection and claim strength.
+Researchers retain familiar annual network indicators, add graphon-inspired
+distances where relational detail is needed, and use anomaly profiles to decide
+whether a transition reflects scale, broad matrix change, localized coordinated
+change, redistribution, dominant spectral modes, or role reorganization.
+Simulation calibration and specification sensitivity are part of the method,
+not optional post-hoc diagnostics.
+
+The comparison is organized around three research questions. **RQ1:** How do
+conventional annual network indicators and graphon-inspired distances differ in
+their sensitivity to known forms of longitudinal network change? **RQ2:** When
+do the two evidence families converge or diverge in the empirical ranking of
+annual transitions? **RQ3:** How can null calibration, estimator and resolution
+sensitivity, and role-flow interpretation translate those patterns into
+reproducible claims? These questions determine the sequence of the validation
+and empirical sections and provide the conceptual structure of the graphical
+abstract.
+
+The central methodological question is therefore not which single metric is
+best, but how interpretable network indicators and relational distance measures
+can be combined without concealing their different sensitivities. The main
+contribution is the integration protocol: preserve the annual indicator
+trajectories, add graphon-inspired distance channels, calibrate their detector
+behaviour under known perturbations, reduce correlated channels to transparent
+perspectives, and interpret both consensus and disagreement. It is a workflow
+contribution rather than a claim that one newly proposed distance dominates all
+existing alternatives.
+
+# Method details
+
+## Design principles and workflow
+
+The method requires a sequence of non-negative directed weighted adjacency
+matrices $A_t\in\mathbb{R}_{\geq0}^{n\times n}$ with the same ordered node set
+in every snapshot. Self-loops may be retained as substantive weights, but
+density and binary transitivity are calculated after removing the diagonal.
+All preprocessing decisions, including the node universe, time interval,
+weight definition, and missing-node rule, must be fixed before transition
+scores are calculated.
+
+Structural change is not a single observable quantity. A transition may alter
+overall activity, connectivity, concentration, directionality, mesoscale
+organization, or the roles occupied by individual nodes. Figure 1 presents the
+method as two evidence families joined by a common anomaly-scoring and decision
+layer. The resulting profile is interpreted only after known-truth calibration
+and robustness assessment.
+
+```{r figure-workflow, fig.width=6.8, fig.height=5.95, fig.cap="Reproducible workflow for detecting, validating, and interpreting structural anomalies in node-aligned directed weighted longitudinal networks."}
+workflow_nodes <- data.frame(
+  id = 1:7,
+  x = c(2, 1, 3, 2, 1, 3, 2),
+  y = c(6, 5, 5, 4, 3, 3, 2),
+  label = c(
+    "1  Input integrity\nnode alignment + weights",
+    "2A  Conventional\nnetwork indicators",
+    "2B  Graphon-inspired\nkernel distances",
+    "3  Channel-specific\nanomaly scores",
+    "4A  Known-truth null\ncalibration",
+    "4B  Estimator + resolution\nrobustness",
+    "5  Perspective consensus +\nstructural interpretation"
+  ),
+  group = c("input", "branch", "branch", "evidence", "validation", "validation", "interpretation")
+)
+workflow_edges <- data.frame(
+  x = c(2, 2, 1, 3, 2, 2, 1, 3),
+  y = c(5.72, 5.72, 4.72, 4.72, 3.72, 3.72, 2.72, 2.72),
+  xend = c(1, 3, 2, 2, 1, 3, 2, 2),
+  yend = c(5.30, 5.30, 4.30, 4.30, 3.30, 3.30, 2.30, 2.30)
+)
+workflow_nodes$fill <- c(
+  input = "#E8F1F5", branch = "#F2F5F7", evidence = "#E8F1F5",
+  validation = "#FBF1DE", interpretation = "#EDF0E3"
+)[workflow_nodes$group]
+
+p_workflow <- ggplot2::ggplot() +
+  ggplot2::geom_segment(
+    data = workflow_edges,
+    ggplot2::aes(x = x, y = y, xend = xend, yend = yend),
+    size = 0.55, color = mx_colors["mid_grey"],
+    arrow = grid::arrow(length = grid::unit(0.13, "inches"), type = "closed")
+  ) +
+  ggplot2::geom_tile(
+    data = workflow_nodes,
+    ggplot2::aes(x = x, y = y, fill = fill),
+    width = 1.55, height = 0.62, color = mx_colors["ink"], size = 0.35
+  ) +
+  ggplot2::geom_text(
+    data = workflow_nodes,
+    ggplot2::aes(x = x, y = y, label = label),
+    size = 3.4, lineheight = 0.95, color = mx_colors["ink"]
+  ) +
+  ggplot2::scale_fill_identity() +
+  ggplot2::coord_cartesian(xlim = c(0.05, 3.95), ylim = c(1.55, 6.45), clip = "off") +
+  ggplot2::labs(
+    title = "Integrated structural-anomaly workflow",
+    subtitle = "Two evidence families are integrated by anomaly scoring, validation, and consensus"
+  ) +
+  ggplot2::theme_void(base_family = "sans") +
+  ggplot2::theme(
+    plot.title = ggplot2::element_text(face = "bold", color = mx_colors["ink"], size = 13),
+    plot.subtitle = ggplot2::element_text(color = "#4F5B62", size = 10),
+    plot.title.position = "plot",
+    plot.margin = ggplot2::margin(10, 12, 10, 12)
+  )
+save_methodsx_figure(p_workflow, "FIG01_workflow", 8, 7)
+p_workflow
+```
+
+Conventional indicators and graphon-inspired distances provide parallel
+transition evidence. The anomaly layer places their heterogeneous scores on
+comparable within-channel scales, while simulations establish which mechanisms
+each channel can detect and specification checks reveal which rankings remain
+stable. Consensus summarizes convergence without erasing disagreement. Role
+and flow analysis is used last, to interpret rather than define an anomaly.
+
+## Step 1. Construct and verify aligned snapshots
+
+For each time point, convert the edge list to an $n\times n$ matrix in the same
+node order. The included empirical application contains 19 annual snapshots
+from 2006 through 2024 and 175 nodes in every year. The pipeline verifies the
+year sequence, matrix dimensions, finite non-negative weights, and two
+regression anchors: total weight 358,367 in 2016 and 384,035 in 2019. These
+anchors detect accidental use of the superseded 2016 input or an incorrectly
+copied annual table.
+
+## Step 2. Calculate interpretable annual network indicators
+
+Eight snapshot descriptors provide substantive anchors: total weight,
+off-diagonal edge density, weighted reciprocity, in- and out-strength Gini
+coefficients, the entropy-based effective number of destinations, the share of
+weight received by the ten largest destinations, and binary transitivity.
+Transition scores are absolute consecutive-year changes; total weight and
+effective destinations are compared on a $\log(1+x)$ scale. These descriptors
+are not treated as interchangeable tests. Each describes a specific structural
+dimension that helps explain a distance peak.
+
+## Step 3. Fit directed weighted block kernels
+
+At each fixed resolution $K$, nodes are clustered from standardized outgoing
+strength, incoming strength, outgoing degree, and incoming degree. For the
+reference block estimator, the fitted block-pair intensity is the mean of the
+corresponding entries of $A_t$. If $z_t(i)$ is the block assigned to node $i$
+and $W_t$ is the fitted $K\times K$ block matrix, the node-aligned fitted kernel
+is [8]
+
+$$
+M_t(i,j)=W_t[z_t(i),z_t(j)].
+$$
+
+The reference temporal analysis holds $K=13$ constant. It is a common
+high-resolution comparison scale, not an estimate of a unique true number of
+roles. Robustness is evaluated with block, smoothed, and spectral estimators at
+$K=13$, and with the block estimator at $K\in\{2,4,8,13\}$.
+
+The snapshot-specific adaptive-$K$ heuristic is diagnostic only. For
+$n\leq200$, its corrected implementation uses deterministic dense `svd()`,
+removes singular values no larger than $10^{-8}$ of the leading singular value,
+and then applies the relative-drop rule. This prevents an iterative singular-
+value solver's numerical noise floor from forcing rank-deficient matrices to
+the $\lfloor\sqrt{n}\rfloor$ ceiling. In the present data the corrected
+diagnostic gives $K=2$ for most years and $K=13$ for 2009--2011; it does not
+change any fixed-$K=13$ distance reported here.
+
+## Step 4. Compare raw intensity and normalized shape
+
+For each adjacent pair, compute every distance twice: on the fitted intensity
+matrices $M_t$ and on their unit-mean versions
+$S_t=M_t/\overline{M_t}$. The raw comparison retains total scale; the shape
+comparison removes average intensity and focuses on redistribution.
+
+The normalized Frobenius distance is the root-mean-square aligned cell
+difference,
+
+$$
+d_F(M_1,M_2)=\frac{\lVert M_1-M_2\rVert_F}{n}.
+$$
+
+For $D=M_1-M_2$, the exact normalized node-aligned cut norm is
+
+$$
+d_{\square}^{\mathrm{aligned}}(M_1,M_2)=
+\frac{1}{n^2}\max_{S,T\subseteq\{1,\ldots,n\}}
+\left|\sum_{i\in S,\,j\in T}D_{ij}\right|.
+$$
+
+Exact computation is NP-hard. The implementation therefore reports
+$\widehat d_{\square}^{\mathrm{aligned}}$, the best reproducible lower bound
+found by alternating maximization on both $D$ and $-D$, starting from three
+deterministic row subsets and 200 random restarts per sign in publication mode.
+The best value among 1,000 random subset-pair draws is retained as a floor.
+This quantity must be described as a **cut-norm lower-bound estimate**, not as
+the exact cut norm and not as an unlabeled graphon cut distance.
+
+The empirical one-dimensional Wasserstein distance is
+
+$$
+d_{W_1}(M_1,M_2)=\frac{1}{n^2}\sum_{r=1}^{n^2}
+\left|x_{(r)}-y_{(r)}\right|,
+$$
+
+where $x_{(r)}$ and $y_{(r)}$ are sorted fitted entries. It compares intensity
+distributions and deliberately discards origin--destination locations [5,6].
+Finally, the original adjacency matrices are compared through the root-mean-
+square difference between their ten leading singular values. This benchmark
+captures dominant directed modes without relying on possibly complex
+eigenvalues of a nonsymmetric matrix.
+
+## Step 5. Quantify role instability and robustness
+
+Structural-role change is measured as one minus the adjusted Rand index between
+consecutive fitted partitions [7], so arbitrary block labels do not affect the
+score. Estimator and resolution robustness are summarized by Spearman
+correlation of all 18 transition scores and by Jaccard overlap between the two
+top-five transition sets. Correlation measures overall rank stability; Jaccard
+overlap tests whether the substantively highlighted transitions remain the
+same.
+
+## Step 6. Construct anomaly profiles and use them as a decision guide
+
+For the empirical sequence, every transition score is converted to its
+within-channel percentile among the 18 consecutive-year transitions. Correlated
+channels are then grouped into six perspectives: activity and connectivity,
+distribution and reciprocity, adjacency spectrum, raw fitted kernel, normalized
+shape, and structural roles. The mean of the six perspective percentiles is a
+consensus navigation score, and breadth is the number of perspectives at or
+above the 75th percentile. Equal weighting at the perspective level prevents a
+large family of closely related distances from dominating the summary merely
+because it contains more channels. The 75th-percentile boundary is a descriptive
+navigation convention, not a significance threshold; the full six-perspective
+profile remains the primary empirical result. These quantities describe
+relative anomaly within the observed period; they are not posterior
+probabilities, formal change-point tests, or causal evidence.
+
+No channel should be chosen only because it produces the largest standardized
+peak. The research question determines the primary evidence, and at least one
+channel from the other evidence family, with a different blind spot, should be
+used as a complement.
+
+| Research question | Primary evidence | What a large value supports | Main blind spot | Recommended complement |
+|---|---|---|---|---|
+| Did overall activity or connectivity change? | Total weight and edge density; raw distances | A change in aggregate scale or occupied dyads | Cannot separate broad scaling from structured redistribution | Compare raw and unit-mean shape channels |
+| Was change widespread across aligned pairs? | Frobenius distance | Many moderate cell changes or a few large cell changes | Does not identify a coherent affected subset | Cut-norm lower-bound estimate and conventional indicators |
+| Did a coordinated origin--destination subset change? | Cut-norm lower-bound estimate | A strong rectangular signed discrepancy | Lower bound is optimization- and resolution-sensitive | Frobenius distance plus restart and resolution checks |
+| Did the distribution of fitted weights change? | Empirical $W_1$ distance | A shift in the marginal intensity distribution | Discards node-pair locations | Node-aligned Frobenius or cut-norm lower-bound estimate |
+| Did dominant directed modes change? | Singular-spectrum distance | A change in leading adjacency-matrix modes | Does not localize nodes or block pairs | Kernel distances and indicators |
+| Did mesoscale roles reorganize? | One minus adjusted Rand index | A label-invariant partition change | Estimated roles can be noisy and low-powered | Kernel distances plus role-flow interpretation |
+| Is a reported transition robust? | Spearman rank agreement and top-five Jaccard overlap | Timing is not tied to one estimator or resolution | Agreement does not validate substantive meaning | Known-truth calibration and domain interpretation |
+
+## Step 7. Calibrate channel sensitivity with known-truth simulations
+
+The known-truth scenarios in Figure 2 isolate six conceptually different
+structural interventions. Each simulation uses $n=80$ nodes and four latent
+roles. Edges are sampled from a block-specific Bernoulli presence model and
+positive weights from block-specific conditional means with node-level sender
+and receiver heterogeneity. Publication mode uses 200 replicates for the null
+and for each small, medium, and large non-null effect. Figure 2 reports the
+relative change in the expected kernel at the medium effect level before and
+after unit-mean normalization. It therefore shows, on an interpretable common
+scale, whether a scenario primarily changes network magnitude or structural
+shape.
+
+```{r figure-simulation-scenarios, fig.width=6.8, fig.height=4.15, fig.cap="Relative change in the expected weighted kernel under six medium-effect simulation scenarios. Connected points compare raw intensity with unit-mean structural shape; labels report the actual relative Frobenius change rather than a column-normalized color scale."}
+kernel_design <- utils::read.csv(figure_inputs["simulation_kernels"])
+
+scenario_order <- c(
+  "global_scale", "density_shift", "destination_attraction",
+  "directional_shift", "local_block_shock", "role_reassignment"
+)
+scenario_labels <- kernel_design %>%
+  dplyr::distinct(.data$scenario, .data$scenario_label)
+scenario_labels <- stats::setNames(
+  scenario_labels$scenario_label, scenario_labels$scenario
+)
+
+kernel_matrix <- function(data) {
+  as.matrix(stats::xtabs(
+    expected_weight ~ origin_block + destination_block, data = data
+  ))
+}
+relative_kernel_change <- lapply(scenario_order, function(scenario_id) {
+  scenario_data <- kernel_design[kernel_design$scenario == scenario_id, ]
+  baseline <- kernel_matrix(scenario_data[scenario_data$state == "Baseline", ])
+  changed <- kernel_matrix(scenario_data[scenario_data$state == "Changed", ])
+  baseline_shape <- baseline / mean(baseline)
+  changed_shape <- changed / mean(changed)
+  data.frame(
+    scenario = scenario_id,
+    raw_change = sqrt(sum((changed - baseline)^2)) / sqrt(sum(baseline^2)),
+    shape_change = sqrt(sum((changed_shape - baseline_shape)^2)) /
+      sqrt(sum(baseline_shape^2))
+  )
+}) %>%
+  dplyr::bind_rows()
+
+scenario_response <- relative_kernel_change %>%
+  dplyr::mutate(
+    scenario_label = factor(
+      unname(scenario_labels[.data$scenario]),
+      levels = rev(unname(scenario_labels[scenario_order]))
+    ),
+    y_base = as.numeric(.data$scenario_label)
+  )
+
+scenario_points <- scenario_response %>%
+  tidyr::pivot_longer(
+    cols = c("raw_change", "shape_change"),
+    names_to = "response", values_to = "relative_change"
+  ) %>%
+  dplyr::mutate(
+    response = dplyr::recode(
+      .data$response,
+      raw_change = "Raw intensity",
+      shape_change = "Unit-mean shape"
+    ),
+    y = .data$y_base + ifelse(.data$response == "Raw intensity", 0.12, -0.12),
+    label = scales::percent(.data$relative_change, accuracy = 0.1)
+  )
+
+p_scenarios <- ggplot2::ggplot(
+  scenario_response,
+  ggplot2::aes(y = y_base)
+) +
+  ggplot2::geom_segment(
+    ggplot2::aes(
+      x = shape_change, xend = raw_change,
+      yend = y_base
+    ),
+    color = mx_colors["mid_grey"], size = 1.0
+  ) +
+  ggplot2::geom_point(
+    data = scenario_points,
+    ggplot2::aes(x = relative_change, y = y, fill = response),
+    shape = 21, size = 4.2, color = mx_colors["ink"], stroke = 0.35
+  ) +
+  ggplot2::geom_text(
+    data = scenario_points,
+    ggplot2::aes(x = relative_change, y = y, label = label),
+    nudge_x = 0.015, hjust = 0, size = 3.0, color = mx_colors["ink"]
+  ) +
+  ggplot2::scale_fill_manual(
+    values = c(
+      "Raw intensity" = mx_colors["blue"],
+      "Unit-mean shape" = mx_colors["gold"]
+    ),
+    name = "Comparison scale"
+  ) +
+  ggplot2::scale_x_continuous(
+    limits = c(0, 0.75), breaks = seq(0, 0.7, by = 0.1),
+    labels = scales::label_percent(accuracy = 1)
+  ) +
+  ggplot2::scale_y_continuous(
+    breaks = seq_along(levels(scenario_response$scenario_label)),
+    labels = levels(scenario_response$scenario_label),
+    expand = ggplot2::expansion(add = 0.45)
+  ) +
+  ggplot2::labs(
+    title = "Normalization reveals whether a perturbation changes magnitude or shape",
+    subtitle = "Medium-effect expected-kernel response; connected points belong to the same scenario",
+    x = "Relative Frobenius change in the expected kernel", y = NULL
+  ) +
+  theme_methodsx(9) +
+  ggplot2::theme(
+    panel.grid.major.y = ggplot2::element_blank(),
+    legend.position = "bottom"
+  )
+save_methodsx_figure(p_scenarios, "FIG02_simulation_scenarios", 9.5, 5.8)
+p_scenarios
+```
+
+The paired responses make the scale--shape distinction explicit. At the medium
+effect, global volume scaling changes the raw expected kernel by 59.5% but its
+unit-mean shape by only 2.5%; the density intervention changes the raw kernel by
+45.0% and leaves the normalized expected shape unchanged. Destination
+attraction, directional change, local block shock, and role reassignment retain
+substantial shape responses. Raw and normalized comparisons therefore provide
+complementary evidence rather than interchangeable versions of one distance.
+
+## Reproducibility implementation
+
+The complete workflow is executed by `source("run_all.R")`. Publication mode
+uses random seed 20260817, 200 simulation replicates per design cell, 1,000
+random cut-search floor samples for empirical comparisons, 128 for simulation
+comparisons, and 200 alternating-maximization restarts. Diagnostic mode uses
+smaller values for rapid error detection but writes the same file structure.
+Every analytical table is checked before rendering. The final output manifest
+is written only after the HTML manuscript, Word manuscript, and all PDF/PNG
+figures have been generated, so its sizes and MD5 hashes refer to the current
+run rather than to previously rendered files.
+
+OpenAI ChatGPT was used in a supportive role for code review, code editing,
+visualization redesign, and manuscript organization. It did not generate or
+alter the empirical observations or simulation outcomes. Zsolt T. Kosztyán
+reviewed the AI-assisted changes and verified the reported claims against the
+scripted outputs. Kornél Dénes will independently validate the software and
+computational claims before submission. The authors retain full responsibility
+for the analytical code and manuscript.
+
+# Method validation
+
+## Known-truth simulation calibration
+
+Figure 3 evaluates sensitivity after calibrating every channel against its own
+null distribution. Each cell is the proportion of simulated transitions that
+exceeded the channel-specific 95th-percentile null threshold. The null column
+therefore checks false-positive control, while the remaining columns reveal
+which structural changes each evidence channel is capable of detecting.
+
+```{r figure-simulation-power, fig.width=6.8, fig.height=5.10, fig.cap="Null-calibrated detection rates by change scenario and evidence channel. Non-null columns show the medium effect level; the null column shows the empirical false-positive rate."}
+simulation_power <- utils::read.csv(figure_inputs["simulation_power"])
+selected_channels <- c(
+  "indicator_total_weight", "indicator_edge_density",
+  "indicator_weighted_reciprocity", "indicator_in_strength_gini",
+  "indicator_effective_destinations", "graphon_frobenius_raw",
+  "graphon_cut_raw", "graphon_frobenius_shape", "graphon_cut_shape",
+  "graphon_wasserstein_shape", "singular_spectrum_raw",
+  "estimated_role_instability"
+)
+null_power <- simulation_power %>%
+  dplyr::filter(.data$scenario == "null", .data$channel %in% selected_channels) %>%
+  dplyr::mutate(display_scenario = "Null false-positive rate")
+medium_power <- simulation_power %>%
+  dplyr::filter(
+    .data$scenario != "null", .data$effect_label == "medium",
+    .data$channel %in% selected_channels
+  ) %>%
+  dplyr::mutate(display_scenario = .data$scenario_label)
+power_plot_data <- dplyr::bind_rows(null_power, medium_power)
+scenario_order <- c("Null false-positive rate", unique(medium_power$display_scenario))
+power_plot_data$display_scenario <- factor(
+  power_plot_data$display_scenario, levels = scenario_order
+)
+power_plot_data$channel_label <- factor(
+  unname(channel_labels[power_plot_data$channel]),
+  levels = rev(unname(channel_labels[selected_channels]))
+)
+p_power <- ggplot2::ggplot(
+  power_plot_data,
+  ggplot2::aes(
+    x = display_scenario, y = channel_label,
+    fill = calibrated_detection_rate
+  )
+) +
+  ggplot2::geom_tile(color = "white", size = 0.35) +
+  ggplot2::geom_text(
+    ggplot2::aes(
+      label = scales::percent(calibrated_detection_rate, accuracy = 1),
+      color = calibrated_detection_rate > 0.55
+    ),
+    size = 2.8
+  ) +
+  ggplot2::scale_color_manual(values = c(`TRUE` = "white", `FALSE` = mx_colors["ink"]), guide = "none") +
+  ggplot2::scale_fill_gradientn(
+    colors = c("#F4F6F7", "#C9DCE5", mx_colors["blue"]),
+    limits = c(0, 1), labels = scales::label_percent(), name = "Detection\nrate"
+  ) +
+  ggplot2::labs(
+    title = "Different structural changes activate different evidence channels",
+    subtitle = "Threshold for each channel: 95th percentile of its null distribution",
+    x = NULL, y = NULL
+  ) +
+  theme_methodsx(9) +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(angle = 35, hjust = 1),
+    panel.grid = ggplot2::element_blank(), legend.position = "right"
+  )
+save_methodsx_figure(p_power, "FIG03_simulation_power", 10, 7.5)
+p_power
+```
+
+The largest null detection rate is 5%, confirming the intended calibration in
+this finite simulation. Conventional network indicators provide strong and
+readily interpretable detection where the intervention targets their own
+structural dimension. At the medium effect, total weight detects every global
+scaling, density-shift, and destination-attraction replicate; edge density and
+weighted reciprocity detect every density shift; and both in-strength Gini and
+effective destinations detect every destination-attraction replicate.
+
+Graphon-inspired and adjacency-matrix distances add evidence for changes that
+are less completely summarized by annual indicators. Global scaling is
+detected in all replicates by raw Frobenius, the raw cut-norm lower-bound
+estimate, and the raw singular spectrum, while the corresponding unit-mean
+shape distances remain near their null rates. Directional change is detected by
+the raw singular spectrum in 88.0% of replicates and by the raw cut-norm lower-
+bound estimate in 86.0%, compared with 71.5% for total weight and 57.5% for raw
+Frobenius. For localized block shocks and role reassignment, the raw cut-norm
+lower-bound estimate reaches 61.5% and 59.5%, compared with 57.0% and 37.0% for
+total weight; estimated role instability reaches only 21.0% and 12.0%.
+
+The result is complementarity rather than a universal winner. Conventional
+indicators locate interpretable changes in network-level trajectories; graphon-
+inspired distances test whether aligned relational patterns change beyond what
+those summaries reveal; and the anomaly profile records whether the two
+evidence families converge or disagree.
+
+## Empirical anomaly profiles
+
+The empirical illustration in Figure 4 asks a different question: which annual
+transitions are relatively unusual across several structural perspectives?
+Unlike the simulation rates, these are descriptive within-channel percentiles,
+not null-hypothesis rejection probabilities. The first two perspectives retain
+the conventional annual indicators; the adjacency spectrum, raw fitted kernel,
+normalized shape, and structural roles add increasingly relational evidence.
+Transitions are ordered by their mean perspective percentile, and the consensus
+cell reports how many perspectives place the transition at or above the 75th
+percentile.
+
+```{r figure-empirical-evidence, fig.width=6.8, fig.height=4.29, fig.cap="Convergence of empirical transition evidence across six structural perspectives. The eight highest-consensus annual transitions are shown. The consensus cell reports the mean perspective percentile and, below it, the number of perspectives at or above the 75th percentile."}
+empirical_evidence <- utils::read.csv(figure_inputs["empirical_evidence"])
+evidence_channels <- c(
+  "indicator_total_weight", "indicator_edge_density",
+  "indicator_weighted_reciprocity", "indicator_in_strength_gini",
+  "singular_spectrum_raw", "graphon_frobenius_raw", "graphon_cut_raw",
+  "graphon_frobenius_shape", "graphon_cut_shape",
+  "estimated_role_instability"
+)
+evidence_plot_data <- dplyr::bind_rows(
+  empirical_evidence %>%
+    dplyr::filter(
+      .data$analysis_dimension %in% c("conventional", "adjacency benchmark"),
+      .data$channel %in% evidence_channels
+    ),
+  empirical_evidence %>%
+    dplyr::filter(
+      .data$analysis_dimension == "estimator", .data$estimator == "block",
+      .data$fixed_K == 13, .data$channel %in% evidence_channels
+    )
+)
+evidence_plot_data$channel_label <- factor(
+  unname(channel_labels[evidence_plot_data$channel]),
+  levels = unname(channel_labels[evidence_channels])
+)
+
+perspective_lookup <- c(
+  indicator_total_weight = "Activity and connectivity",
+  indicator_edge_density = "Activity and connectivity",
+  indicator_weighted_reciprocity = "Distribution and reciprocity",
+  indicator_in_strength_gini = "Distribution and reciprocity",
+  singular_spectrum_raw = "Adjacency spectrum",
+  graphon_frobenius_raw = "Raw fitted kernel",
+  graphon_cut_raw = "Raw fitted kernel",
+  graphon_frobenius_shape = "Normalized shape",
+  graphon_cut_shape = "Normalized shape",
+  estimated_role_instability = "Structural roles"
+)
+perspective_order <- c(
+  "Activity and connectivity", "Distribution and reciprocity",
+  "Adjacency spectrum", "Raw fitted kernel", "Normalized shape",
+  "Structural roles"
+)
+perspective_evidence <- evidence_plot_data %>%
+  dplyr::mutate(
+    perspective = unname(perspective_lookup[.data$channel])
+  ) %>%
+  dplyr::group_by(.data$transition, .data$perspective) %>%
+  dplyr::summarise(
+    perspective_percentile = mean(.data$evidence_percentile),
+    .groups = "drop"
+  )
+
+transition_consensus <- perspective_evidence %>%
+  dplyr::group_by(.data$transition) %>%
+  dplyr::summarise(
+    consensus = mean(.data$perspective_percentile),
+    breadth = sum(.data$perspective_percentile >= 0.75),
+    .groups = "drop"
+  ) %>%
+  dplyr::arrange(dplyr::desc(.data$consensus), dplyr::desc(.data$breadth)) %>%
+  dplyr::mutate(consensus_rank = dplyr::row_number())
+
+top_transitions <- utils::head(transition_consensus$transition, 8)
+perspective_cells <- perspective_evidence %>%
+  dplyr::filter(.data$transition %in% top_transitions) %>%
+  dplyr::transmute(
+    transition = .data$transition,
+    perspective = .data$perspective,
+    value = .data$perspective_percentile,
+    label = scales::percent(.data$perspective_percentile, accuracy = 1)
+  )
+consensus_cells <- transition_consensus %>%
+  dplyr::filter(.data$transition %in% top_transitions) %>%
+  dplyr::transmute(
+    transition = .data$transition,
+    perspective = "Consensus",
+    value = .data$consensus,
+    label = paste0(
+      "#", .data$consensus_rank, "  ",
+      scales::percent(.data$consensus, accuracy = 1), "\n",
+      .data$breadth, "/6"
+    )
+  )
+consensus_plot_data <- dplyr::bind_rows(
+  perspective_cells, consensus_cells
+) %>%
+  dplyr::mutate(
+    transition = factor(.data$transition, levels = rev(top_transitions)),
+    perspective = factor(
+      .data$perspective, levels = c(perspective_order, "Consensus")
+    )
+  )
+
+p_evidence <- ggplot2::ggplot(
+  consensus_plot_data,
+  ggplot2::aes(x = perspective, y = transition, fill = value)
+) +
+  ggplot2::geom_tile(color = "white", size = 0.45) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = label, color = value >= 0.62),
+    size = 2.8, lineheight = 0.9
+  ) +
+  ggplot2::geom_vline(xintercept = 6.5, color = mx_colors["ink"], size = 0.5) +
+  ggplot2::scale_color_manual(
+    values = c(`TRUE` = "white", `FALSE` = mx_colors["ink"]), guide = "none"
+  ) +
+  ggplot2::scale_fill_gradientn(
+    colors = c("#F4F6F7", "#C9DCE5", mx_colors["blue"]),
+    limits = c(0, 1), labels = scales::label_percent(), name = "Within-channel\npercentile"
+  ) +
+  ggplot2::labs(
+    title = "The strongest transitions combine different structural signatures",
+    subtitle = "Perspective-level evidence for the eight highest-consensus annual transitions",
+    x = NULL, y = NULL
+  ) +
+  theme_methodsx(9) +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(angle = 35, hjust = 1),
+    panel.grid = ggplot2::element_blank(), legend.position = "right"
+  )
+save_methodsx_figure(p_evidence, "FIG04_empirical_transition_evidence", 9.5, 6)
+p_evidence
+```
+
+The highest consensus occurs in 2017--2018 (mean perspective percentile 84.8%;
+five of six perspectives at or above the 75th percentile). The next three are
+2020--2021 (77.0%; three of six), 2011--2012 (70.6%; two of six), and
+2022--2023 (69.1%; four of six). Their differing column profiles show why the
+consensus score is a navigation aid rather than a replacement for the component
+evidence. In 2017--2018, activity and connectivity are high (82.4%), but
+distribution and reciprocity are not (35.3%); raw kernel, normalized-shape,
+spectral, and role perspectives all exceed 94%. In 2022--2023, both conventional
+indicator perspectives and the raw-kernel and spectral perspectives are high,
+whereas normalized shape (50.0%) and roles (17.6%) are not. These profiles show
+how graphon distances refine the interpretation of annual indicator changes
+without displacing them. Importantly, 2015--2016 ranks only eleventh by
+consensus and is not among the eight transitions displayed. The corrected
+empirical input therefore does not support treating the transition adjacent to
+2016 as a dominant break.
+
+## Estimator and resolution robustness
+
+Figure 5 examines whether the empirical ranking of annual transitions depends
+on the fitted-kernel estimator or the selected fixed resolution. Cell color
+reports Spearman rank correlation, while the annotation reports both that
+correlation and the top-five Jaccard overlap. The two measures distinguish
+overall rank stability from agreement about the most prominent transitions.
+
+```{r figure-robustness, fig.width=6.8, fig.height=4.44, fig.cap="Agreement of empirical transition rankings across fitted-kernel estimators and fixed resolutions. Cell color and the first annotation line show Spearman correlation; the second line shows top-five Jaccard overlap."}
+estimator_agreement <- utils::read.csv(figure_inputs["estimator_agreement"])
+resolution_agreement <- utils::read.csv(figure_inputs["resolution_agreement"])
+agreement_channels <- c(
+  "graphon_frobenius_raw", "graphon_cut_raw",
+  "graphon_frobenius_shape", "graphon_cut_shape"
+)
+estimator_heatmap <- estimator_agreement %>%
+  dplyr::filter(.data$channel %in% agreement_channels) %>%
+  dplyr::mutate(
+    comparison_1 = as.character(.data$comparison_1),
+    comparison_2 = as.character(.data$comparison_2),
+    comparison = paste(.data$comparison_1, "vs", .data$comparison_2),
+    panel = "Estimator agreement at K=13"
+  )
+resolution_heatmap <- resolution_agreement %>%
+  dplyr::mutate(
+    comparison_1 = as.character(.data$comparison_1),
+    comparison_2 = as.character(.data$comparison_2)
+  ) %>%
+  dplyr::filter(
+    .data$channel %in% agreement_channels,
+    .data$comparison_1 != .data$comparison_2
+  ) %>%
+  dplyr::mutate(
+    comparison = paste0("K=", .data$comparison_2, " vs K=", .data$comparison_1),
+    panel = "Resolution agreement versus K=13"
+  )
+agreement_plot_data <- dplyr::bind_rows(
+  estimator_heatmap, resolution_heatmap
+)
+agreement_plot_data$channel_label <- factor(
+  unname(channel_labels[agreement_plot_data$channel]),
+  levels = unname(channel_labels[agreement_channels])
+)
+agreement_plot_data$comparison <- factor(
+  agreement_plot_data$comparison,
+  levels = rev(unique(agreement_plot_data$comparison))
+)
+agreement_plot_data$panel <- factor(
+  agreement_plot_data$panel,
+  levels = c("Estimator agreement at K=13", "Resolution agreement versus K=13")
+)
+agreement_plot_data <- agreement_plot_data %>%
+  dplyr::mutate(
+    annotation = paste0(
+      "rho ", sprintf("%.2f", .data$spearman_rho), "\n",
+      "J ", scales::percent(.data$top5_jaccard, accuracy = 1)
+    )
+  )
+p_agreement <- ggplot2::ggplot(
+  agreement_plot_data,
+  ggplot2::aes(
+    x = channel_label, y = comparison, fill = spearman_rho
+  )
+) +
+  ggplot2::geom_tile(color = "white", size = 0.5) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = annotation, color = abs(spearman_rho) >= 0.68),
+    size = 2.8, lineheight = 0.9
+  ) +
+  ggplot2::facet_grid(panel ~ ., scales = "free_y", space = "free_y") +
+  ggplot2::scale_color_manual(
+    values = c(`TRUE` = "white", `FALSE` = mx_colors["ink"]), guide = "none"
+  ) +
+  ggplot2::scale_fill_gradient2(
+    low = mx_colors["orange"], mid = "#F4F6F7", high = mx_colors["blue"],
+    midpoint = 0, limits = c(-1, 1), name = "Spearman\ncorrelation"
+  ) +
+  ggplot2::labs(
+    title = "Robustness differs by distance and specification choice",
+    subtitle = "rho = Spearman correlation; J = top-five Jaccard overlap",
+    x = NULL, y = NULL
+  ) +
+  theme_methodsx(9) +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(angle = 25, hjust = 1),
+    panel.grid = ggplot2::element_blank(), legend.position = "right"
+  )
+save_methodsx_figure(p_agreement, "FIG05_robustness_agreement", 9.5, 6.2)
+p_agreement
+```
+
+Raw-scale Frobenius is the most stable displayed channel: estimator correlations are
+0.876--0.963, and correlations with the $K=13$ ranking are 0.756, 0.957, and
+0.938 at $K=2,4,$ and 8. The raw-scale cut-norm lower-bound estimate is robust
+across estimators (0.765--0.899) but more resolution-sensitive (0.542, 0.870,
+and 0.676). The unit-mean shape cut-norm lower-bound estimate is the clearest
+warning case: its $K=8$ correlation with $K=13$ is
+-0.003 and its top-five overlap is 11.1%. The diverging color scale is necessary
+to display this near-zero negative association rather than suppress it. A
+transition supported only by the shape-scale cut estimate should therefore be
+treated as specification-sensitive; convergence across raw, shape, spectral,
+and indicator perspectives supports a stronger empirical claim.
+
+## Structural interpretation through role flows
+
+Figure 6 moves from detecting a transition to interpreting a selected network
+state. A single role-flow map encodes two non-equivalent quantities: bubble area
+is a role pair's share of all observed application weight, whereas fill is the
+share conditional on its origin role. The design therefore makes systemwide
+concentration and origin-specific destination choice visible without using
+separately normalized heatmaps.
+
+```{r figure-role-flow, fig.width=6.8, fig.height=5.60, fig.cap="Observed application-weight flow among active fixed-K=13 destination-oriented structural roles in 2018. Bubble area represents each role pair's share of total system weight; fill represents its share conditional on the origin role. Role rank 1 is the strongest fitted destination role."}
+role_flow <- utils::read.csv(figure_inputs["role_flow"])
+active_origins <- role_flow %>%
+  dplyr::group_by(.data$origin_role_rank) %>%
+  dplyr::summarise(total = sum(.data$observed_weight), .groups = "drop") %>%
+  dplyr::filter(.data$total > 0) %>%
+  dplyr::pull(.data$origin_role_rank)
+active_destinations <- role_flow %>%
+  dplyr::group_by(.data$destination_role_rank) %>%
+  dplyr::summarise(total = sum(.data$observed_weight), .groups = "drop") %>%
+  dplyr::filter(.data$total > 0) %>%
+  dplyr::pull(.data$destination_role_rank)
+
+role_flow_active <- role_flow %>%
+  dplyr::filter(
+    .data$origin_role_rank %in% active_origins,
+    .data$destination_role_rank %in% active_destinations
+  ) %>%
+  dplyr::group_by(.data$origin_role_rank) %>%
+  dplyr::mutate(
+    origin_conditional_share = .data$observed_weight / sum(.data$observed_weight)
+  ) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(
+    label = ifelse(
+      .data$observed_weight_share >= 0.015,
+      scales::percent(.data$observed_weight_share, accuracy = 0.1),
+      ""
+    ),
+    light_text = .data$origin_conditional_share >= 0.45 & .data$label != ""
+  )
+
+destination_marginals <- role_flow %>%
+  dplyr::group_by(.data$destination_role_rank) %>%
+  dplyr::summarise(share = sum(.data$observed_weight_share), .groups = "drop") %>%
+  dplyr::arrange(dplyr::desc(.data$share))
+top_destination_share <- sum(utils::head(destination_marginals$share, 3))
+top_four_flow_share <- sum(
+  utils::head(sort(role_flow$observed_weight_share, decreasing = TRUE), 4)
+)
+
+p_role_flow <- ggplot2::ggplot(
+  role_flow_active,
+  ggplot2::aes(
+    x = destination_role_rank, y = origin_role_rank,
+    size = observed_weight_share, fill = origin_conditional_share
+  )
+) +
+  ggplot2::geom_point(
+    shape = 21, color = mx_colors["ink"], stroke = 0.25, alpha = 0.95
+  ) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = label, color = light_text),
+    size = 2.4, fontface = "bold", show.legend = FALSE
+  ) +
+  ggplot2::scale_color_manual(
+    values = c(`TRUE` = "white", `FALSE` = mx_colors["ink"]), guide = "none"
+  ) +
+  ggplot2::scale_x_continuous(
+    breaks = active_destinations,
+    expand = ggplot2::expansion(add = 0.6)
+  ) +
+  ggplot2::scale_y_reverse(
+    breaks = active_origins,
+    expand = ggplot2::expansion(add = 0.6)
+  ) +
+  ggplot2::scale_fill_gradient(
+    low = "#F3F6F8", high = mx_colors["orange"], limits = c(0, 1),
+    labels = scales::label_percent(accuracy = 1),
+    name = "Share within\norigin role"
+  ) +
+  ggplot2::scale_size_area(
+    max_size = 13,
+    labels = scales::label_percent(accuracy = 0.1),
+    name = "Share of all\napplication weight"
+  ) +
+  ggplot2::coord_equal() +
+  ggplot2::labs(
+    title = "Role flows separate systemwide concentration from origin-specific choice",
+    subtitle = "Bubble area = total-system share; fill = conditional destination share",
+    x = "Destination role rank", y = "Origin role rank"
+  ) +
+  theme_methodsx(9) +
+  ggplot2::theme(
+    legend.position = "right",
+    panel.grid.minor = ggplot2::element_blank()
+  )
+save_methodsx_figure(p_role_flow, "FIG06_role_flow_matrix", 8.5, 7)
+p_role_flow
+```
+
+The flow structure is strongly concentrated: the three largest destination
+roles receive `r scales::percent(top_destination_share, accuracy = 0.1)` of all
+application weight, and the four largest origin--destination role pairs account
+for `r scales::percent(top_four_flow_share, accuracy = 0.1)`. The conditional
+fill nevertheless reveals differences among origin roles that bubble area alone
+would obscure. This illustrates why role-flow interpretation adds substantive
+information after a structural transition has been identified; it does not
+serve as an independent change detector.
+
+# Practical interpretation and conclusions
+
+The workflow should be read as a three-part evidence-integration architecture. First,
+conventional annual network indicators preserve substantive interpretability
+and show how activity, connectivity, reciprocity, and concentration evolve.
+Second, graphon-inspired and adjacency-based distances test whether the aligned
+relational pattern changes in ways that scalar summaries can miss. Third, the
+anomaly-scoring, simulation-calibration, and consensus layer makes these
+heterogeneous signals comparable and records the breadth of their agreement.
+The third part is an integration and validation layer, not another source of
+network data.
+
+Accordingly, reporting should begin with the annual network-indicator
+trajectories, then use graphon-inspired distances to refine the type and
+location-scale of structural change, and finally use anomaly profiles,
+specification checks, and role flows to assess robustness and interpretation.
+This ordering prevents a graphon-only reading of the method while also avoiding
+the opposite mistake of treating annual scalar indicators as a complete
+description of network evolution.
+
+The known-truth results reject a universal ranking of methods: indicator,
+kernel-distance, spectral, and role channels respond differently to the same
+perturbation. The appropriate final claim is therefore conditional. Convergent
+indicator and graphon-inspired evidence supports a broad structural anomaly;
+divergence identifies whether the signal is mainly aggregate, relational,
+scale-dependent, shape-dependent, spectral, or role-based. Researchers should
+report that profile rather than average away the disagreement.
+
+# Limitations
+
+The workflow assumes that node identity and weight meaning are comparable over
+time. If nodes enter or leave the system, researchers must first define a common
+universe or use a method designed for unmatched networks. Because the reported
+distances are node-aligned, they are not invariant to relabeling and should not
+be described as unlabeled graphon distances.
+
+The cut quantity is a reproducible lower-bound estimate. Alternating
+maximization can converge to a local optimum, and increasing the number of
+restarts may increase the reported score. Absolute cut values should therefore
+be accompanied by the restart count and random-search floor; transition
+rankings should be checked across resolutions.
+
+Block-kernel results depend on estimator and resolution. A fixed $K$ makes
+annual distances comparable but does not establish that $K$ is the true latent
+number of roles. The empirical robustness analysis shows that raw Frobenius is
+comparatively stable in this application, whereas shape cut can be highly
+resolution-sensitive. These findings are data-specific and do not establish a
+universal ranking of distance measures.
+
+The simulations isolate seven deliberately simplified cases, including the
+null. They evaluate detection under the documented $n=80$, $K=4$ weighted block
+model and effect schedule; they do not prove sensitivity under every sparse,
+heavy-tailed, dependent, or node-misaligned process. Researchers should add
+domain-relevant perturbations when applying the workflow elsewhere.
+
+Empirical within-channel percentiles are descriptive relative anomaly scores
+over the 18 observed transitions. They are not calibrated $p$-values, do not
+correct for multiple testing, and do not by themselves establish a formal
+change point. The equal perspective weights, perspective definitions, and
+75th-percentile breadth boundary are transparent analytic choices rather than
+estimated optimal parameters. Confirmatory use requires an external null model,
+sensitivity analysis for alternative aggregation rules, or an appropriate
+time-series change-point procedure.
+
+Structural-role groups describe similarity of directed connection profiles;
+they are not modularity communities. Role flows are descriptive aggregates and
+do not identify individual pathways or causal mechanisms. In the empirical
+application, edges represent applications rather than realized enrollment, so
+destination-role position is not an institutional quality ranking and annual
+associations are not causal effects of policy events.
+
+# Ethics statements
+
+The method development and reported illustration use aggregate annual
+micro-region flow counts. The reproducibility package contains no applicant-
+level records or direct personal identifiers, and no experimental intervention,
+animal research, or new recruitment of human participants was undertaken for
+this methods study. Access to and any further use of the underlying
+administrative records remain subject to the data provider's authorization and
+applicable data-protection requirements.
+
+# CRediT author statement
+
+Zsolt T. Kosztyán: Conceptualization; Methodology; Software; Validation; Formal
+analysis; Investigation; Data curation; Visualization; Writing -- original
+draft; Writing -- review and editing; Project administration.
+
+Kornél Dénes: Software; Validation; Writing -- review and editing.
+
+<!-- PRE-SUBMISSION AUTHORSHIP GATE: confirm that independent validation is
+complete, both authors approve the final manuscript, and both accept
+accountability for their contributions before removing draft status. -->
+
+# Acknowledgments
+
+The authors thank the colleagues who supported the reconstruction and checking
+of the annual inputs. Project no. K 142395 was
+implemented with support provided by the Ministry of Culture and Innovation of
+Hungary from the National Research, Development and Innovation Fund, financed
+under the K-22 "OTKA" funding scheme.
+
+# Declaration of interests
+
+The authors declare that they have no known competing financial interests or
+personal relationships that could have appeared to influence the work reported
+in this paper.
+
+# Supplementary material and/or additional information [OPTIONAL]
+
+The accompanying reproducibility package contains the R pipeline, aggregate
+annual edge lists and node metadata, derived empirical and simulation tables,
+validation reports, session information, output manifests, and publication-
+quality PDF and PNG figures. Supplementary Figure S1 reports whether the fitted
+role solutions are approximately nested across adjacent fixed resolutions.
+
+```{r figure-supplement-refinement, fig.width=6.8, fig.height=4.68, fig.cap="Empirical consistency with coarse-to-fine role refinement across selected years and adjacent fixed resolutions."}
+refinement <- utils::read.csv(figure_inputs["refinement"])
+refinement$transition <- factor(
+  paste0("K=", refinement$low_K, " to K=", refinement$high_K),
+  levels = paste0(
+    "K=", c(2, 4, 8), " to K=", c(4, 8, 13)
+  )
+)
+refinement$year <- factor(refinement$year, levels = sort(unique(refinement$year)))
+refinement$year_position <- as.numeric(refinement$year) +
+  (as.numeric(refinement$transition) - 2) * 0.14
+refinement_colors <- stats::setNames(
+  unname(mx_colors[c("blue", "gold", "olive")]),
+  levels(refinement$transition)
+)
+p_refinement <- ggplot2::ggplot(
+  refinement,
+  ggplot2::aes(
+    x = weighted_refinement_consistency, y = year_position,
+    fill = transition, shape = transition
+  )
+) +
+  ggplot2::geom_vline(xintercept = 0.8, color = mx_colors["mid_grey"], linetype = 2) +
+  ggplot2::geom_point(size = 4.2, color = mx_colors["ink"], stroke = 0.3) +
+  ggplot2::scale_x_continuous(limits = c(0, 1), labels = scales::label_percent()) +
+  ggplot2::scale_y_continuous(
+    breaks = seq_along(levels(refinement$year)),
+    labels = levels(refinement$year)
+  ) +
+  ggplot2::scale_fill_manual(
+    values = refinement_colors,
+    name = "Resolution step"
+  ) +
+  ggplot2::scale_shape_manual(
+    values = stats::setNames(c(21, 22, 24), levels(refinement$transition)),
+    name = "Resolution step"
+  ) +
+  ggplot2::labs(
+    title = "Approximate refinement across fixed resolutions",
+    subtitle = "Weighted share of nodes assigned consistently with dominant lower-resolution parents",
+    x = "Weighted refinement consistency", y = NULL
+  ) +
+  theme_methodsx(9)
+save_methodsx_figure(p_refinement, "FIGS01_refinement_consistency", 8, 5.5)
+p_refinement
+```
+
+# Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
+
+During the preparation of this work, the authors used OpenAI ChatGPT to support
+code review, code editing, visualization redesign, manuscript organization, and
+English-language revision. After using this service, the authors reviewed and
+edited the content, verified the computational claims against the reproducible
+R outputs, and take full responsibility for the content of the published
+article. No generative-AI system is listed as an author.
+
+# References
+
+[1] Donnat C, Holmes S. Tracking network dynamics: A survey using graph
+distances. *Annals of Applied Statistics*. 2018;12(2):971--1012.
+https://doi.org/10.1214/18-AOAS1176.
+
+[2] Lovász L. *Large Networks and Graph Limits*. Providence, RI: American
+Mathematical Society; 2012. https://doi.org/10.1090/coll/060.
+
+[3] Wills P, Meyer FG. Metrics for graph comparison: A practitioner's guide.
+*PLoS ONE*. 2020;15(2):e0228728.
+https://doi.org/10.1371/journal.pone.0228728.
+
+[4] Lovász L, Szegedy B. Limits of dense graph sequences. *Journal of
+Combinatorial Theory, Series B*. 2006;96(6):933--957.
+https://doi.org/10.1016/j.jctb.2006.05.002.
+
+[5] Peyré G, Cuturi M. Computational optimal transport: With applications to
+data science. *Foundations and Trends in Machine Learning*.
+2019;11(5--6):355--607. https://doi.org/10.1561/2200000073.
+
+[6] Villani C. *Optimal Transport: Old and New*. Berlin: Springer; 2009.
+https://doi.org/10.1007/978-3-540-71050-9.
+
+[7] Hubert L, Arabie P. Comparing partitions. *Journal of Classification*.
+1985;2:193--218. https://doi.org/10.1007/BF01908075.
+
+[8] White HC, Boorman SA, Breiger RL. Social structure from multiple networks.
+I. Blockmodels of roles and positions. *American Journal of Sociology*.
+1976;81(4):730--780. https://doi.org/10.1086/226141.

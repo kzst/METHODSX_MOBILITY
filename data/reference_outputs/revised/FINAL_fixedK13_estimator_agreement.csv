@@ -1,0 +1,16 @@
+"fixed_K","metric","metric_role","estimator_1","estimator_2","spearman_rho","top5_jaccard"
+13,"frobenius","primary","block","smooth",0.962848297213622,0.666666666666667
+13,"frobenius","primary","block","spectral",0.876160990712074,1
+13,"frobenius","primary","smooth","spectral",0.886480908152735,0.666666666666667
+13,"cut","primary","block","smooth",0.810113519091847,1
+13,"cut","primary","block","spectral",0.764705882352941,0.666666666666667
+13,"cut","primary","smooth","spectral",0.898864809081527,0.666666666666667
+13,"wasserstein","secondary","block","smooth",0.836945304437564,1
+13,"wasserstein","secondary","block","spectral",0.682146542827657,0.428571428571429
+13,"wasserstein","secondary","smooth","spectral",0.729618163054696,0.428571428571429
+13,"jensen_shannon","exploratory","block","smooth",0.564499484004128,0.428571428571429
+13,"jensen_shannon","exploratory","block","spectral",0.547987616099071,0.428571428571429
+13,"jensen_shannon","exploratory","smooth","spectral",0.48813209494324,0.428571428571429
+13,"total_variation","exploratory","block","smooth",0.609907120743034,0.428571428571429
+13,"total_variation","exploratory","block","spectral",0.448916408668731,0.428571428571429
+13,"total_variation","exploratory","smooth","spectral",0.614035087719298,0.666666666666667

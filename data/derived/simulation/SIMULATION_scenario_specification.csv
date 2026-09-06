@@ -1,0 +1,8 @@
+"scenario","scenario_label","structural_scope","known_change","diagnostic_purpose"
+"null","Null: sampling variation","none","No parameter change","False-positive calibration"
+"global_scale","Global volume scaling","global magnitude only","All conditional weight means increase","Separate scale from structural shape"
+"density_shift","Global density shift","global topology","All edge probabilities increase","Detect sparsity and connectivity change"
+"destination_attraction","Destination-attraction shock","one destination role","Incoming probability and weight increase for the leading destination block","Detect target-specific attraction"
+"directional_shift","Directional asymmetry shift","selected directed block pairs","Selected directions increase while their reverse directions decrease","Detect directed reorganization"
+"local_block_shock","Localized block-pair shock","one directed block pair","One origin-to-destination block pair strengthens","Detect localized structural change"
+"role_reassignment","Node role reassignment","subset of nodes","A controlled fraction of nodes changes latent role","Detect partition and role change"
