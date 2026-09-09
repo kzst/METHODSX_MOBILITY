@@ -8,9 +8,10 @@ edge lists and node registry to:
 - validated empirical and known-truth simulation tables;
 - fitted-kernel and structural-role objects;
 - all publication figures, including the graphical abstract;
-- the HTML review manuscript and MethodsX Word manuscript;
+- the HTML review manuscript and template-compliant MethodsX Word manuscript;
 - a one-page MethodsX cover letter;
-- session, configuration, input, figure, and output provenance records.
+- session, configuration, input, figure, output, and template-compliance
+  provenance records.
 
 The publication configuration uses seed `20260817`, 200 simulation replicates,
 1,000 empirical random cut-floor samples, 128 simulation cut-floor samples, and
@@ -81,13 +82,18 @@ source("run_all.R")
 8. The output manifest contains the current HTML and DOCX products and excludes
    its own path.
 9. The manuscript DOCX contains no updateable fields or external file targets;
-   ordinary DOI and e-mail hyperlinks may remain.
+   no template comments or instructional text remain; ordinary DOI and e-mail
+   hyperlinks may remain.
 10. `output/Cover_Letter_MethodsX.docx` exists and its declarations have been
     confirmed by both authors before submission.
-11. `scripts/release_check.R` completes without error.
-12. A human reviewer inspects the complete HTML and DOCX, with special attention
-    to figure widths, the retained template header, mathematical notation, and
-    the graphical abstract at thumbnail scale.
+11. `output/diagnostics/METHODSX_TEMPLATE_compliance.csv` contains 19 passing
+    checks, including the exact mandatory section order, an 18-word title, an
+    abstract below 200 words with three bullets, and a completed Specifications
+    table.
+12. `scripts/release_check.R` completes without error.
+13. A human reviewer inspects the complete HTML and DOCX, with special attention
+    to figure widths, the retained template header, and mathematical notation,
+    and inspects the separately submitted graphical abstract at thumbnail scale.
 
 ## Cut-norm terminology
 
@@ -121,29 +127,35 @@ on a second operating system. Cross-platform byte-identical graphics are not
 guaranteed because font and graphics devices may differ; analytical CSV values
 and validation outcomes are the primary cross-platform invariants.
 
-## Word field and cover-letter handling
+## MethodsX template, Word-field, and cover-letter handling
 
-`scripts/production/07_freeze_docx_fields.R` first creates
-`output/MethodsX-reference-clean.docx` from the unchanged
-`MethodsX-reference.docx`. The runtime copy replaces the template's named
-`rIdMethodsXHeader` relationship with the next available numeric relationship
-ID and updates the matching header reference. This prevents the repeated
-`header1.xml` relationship/coercion warnings from `officer` and `officedown`
-without removing or rebuilding the MethodsX header.
+Word rendering uses `MethodsX-Method-Article-Template.docx`, the exact binary
+served by the link in the editorial letter. The supplied template already uses
+numeric relationship identifiers, so no generated reference copy is needed.
+The source Rmd contains the mandatory template headings in the prescribed
+order, completes all five Specifications fields, suppresses duplicate YAML
+front matter, and exports rather than embeds the graphical abstract.
 
-After rendering, the same script converts the seven officedown figure-number
-`SEQ` fields to fixed integers. This removes Word's generic external-field
-update prompt without unlinking embedded images or removing DOI/e-mail
+After rendering, `scripts/production/07_freeze_docx_fields.R` converts the
+officedown figure-number `SEQ` fields to fixed integers and removes inactive
+template comment parts and anchors. This prevents Word's generic external-field
+update prompt without unlinking embedded article images or removing DOI/e-mail
 hyperlinks. DOCX archives are extracted through `zip::unzip()` from normalized
-absolute paths and are checked for `word/document.xml` before processing. The
-release check reopens both the clean reference and final manuscript and rejects
+absolute paths and are checked for `word/document.xml` before processing.
+
+`scripts/production/09_validate_template_compliance.R` then checks the final
+DOCX itself. It rejects missing or reordered mandatory sections, title or
+abstract limit violations, missing abstract bullets, incomplete Specifications
+fields, absent author/ORCID metadata, an embedded graphical abstract, omitted
+conflict-of-interest alternatives, surviving template instructions or comments,
+and obsolete extra conclusion headings. The release check also rejects
 non-numeric relationship IDs, remaining field markers, update-on-open settings,
-or external file targets.
+and external local-file targets.
 
 `scripts/production/08_cover_letter.R` creates
 `output/Cover_Letter_MethodsX.docx`. Its date defaults to the run date; for a
 specific submission date use, for example,
-`Sys.setenv(METHODSX_SUBMISSION_DATE = "2026-08-28")`. Confirm the author-
+`Sys.setenv(METHODSX_SUBMISSION_DATE = "2026-09-09")`. Confirm the author-
 approval, exclusivity, originality, and conflict-of-interest statements before
 the letter is sent. The release ZIP also includes the visually reviewed copy at
 `submission/Cover_Letter_MethodsX.docx`.
@@ -157,5 +169,8 @@ the letter is sent. The release ZIP also includes the visually reviewed copy at
 5. Inspect and approve the generated cover letter.
 6. Have the second author validate software and computational claims.
 7. Confirm the CRediT statement and final author approval.
-8. Select code and data licenses.
-9. Tag the release and attach the reproduction ZIP plus the graphical abstract.
+8. Enter institutional e-mail addresses and ORCIDs for both authors in
+   Editorial Manager and wait for both authorship verifications.
+9. Select code and data licenses.
+10. Tag the release and attach the reproduction ZIP plus the separate graphical
+    abstract.

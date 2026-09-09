@@ -37,7 +37,7 @@ jobs:
           name: methodsx-mobility-publication
           path: |
             output/MethodsX_MOB.docx
+            output/Cover_Letter_MethodsX.docx
             output/MethodsX_MOB_figures.html
             output/figures/
             output/diagnostics/
-

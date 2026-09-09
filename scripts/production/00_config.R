@@ -1,5 +1,5 @@
 # MethodsX MOB analysis configuration
-# Version: 0.2.0
+# Version: 0.3.0
 
 options(stringsAsFactors = FALSE)
 
@@ -78,7 +78,7 @@ mx_default_emp_cut <- if (mx_mode == "publication") 1000L else 100L
 mx_default_cut_restarts <- if (mx_mode == "publication") 200L else 20L
 
 MX_CONFIG <- list(
-  pipeline_version = "0.2.0",
+  pipeline_version = "0.3.0",
   mode = mx_mode,
   seed = 20260817L,
   years = 2006:2024,
@@ -134,5 +134,4 @@ mx_log(
   ", simulation cut-floor samples=", MX_CONFIG$simulation_cut_samples,
   ", alternating cut restarts=", MX_CONFIG$cut_restarts, "."
 )
-
 

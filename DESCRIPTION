@@ -1,11 +1,15 @@
 Package: methodsxmobility
 Type: Project
 Title: Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: c(
-    person("Zsolt T.", "Kosztyán", email = "kosztyan.zsolt@gtk.uni-pannon.hu",
-           role = c("aut", "cre")),
-    person("Kornél", "Dénes", role = "aut")
+    person("Zsolt Tibor", "Kosztyán",
+           email = "kosztyan.zsolt@gtk.uni-pannon.hu",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-7345-8336")),
+    person("Kornél", "Dénes", role = "aut",
+           email = "morgosz@student.elte.hu",
+           comment = c(ORCID = "0009-0002-9527-6124"))
   )
 Description: Reproducible analysis and manuscript workflow comparing annual
     network indicators with graphon-inspired distances in node-aligned directed

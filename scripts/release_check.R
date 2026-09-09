@@ -3,14 +3,14 @@
 required_sources <- c(
   "METHODSX_MOB.Rproj",
   "MethodsX_MOB.Rmd",
-  "MethodsX-reference.docx",
+  "MethodsX-Method-Article-Template.docx",
   "run_all.R",
   "DESCRIPTION",
   "CITATION.cff",
-  file.path("scripts", "production", sprintf("%02d_%s.R", 0:8, c(
+    file.path("scripts", "production", sprintf("%02d_%s.R", 0:9, c(
     "config", "prepare_empirical", "analysis_helpers", "empirical_benchmark",
     "simulation_benchmark", "validate_outputs", "graphical_abstract",
-    "freeze_docx_fields", "cover_letter"
+    "freeze_docx_fields", "cover_letter", "validate_template_compliance"
   )))
 )
 
@@ -63,9 +63,10 @@ if (require_rendered) {
     expected_figures,
     file.path("output", "MethodsX_MOB_figures.html"),
     file.path("output", "MethodsX_MOB.docx"),
-    file.path("output", "MethodsX-reference-clean.docx"),
     file.path("output", "Cover_Letter_MethodsX.docx"),
+    file.path("submission", "Cover_Letter_MethodsX.docx"),
     file.path("output", "diagnostics", "METHODSX_FIGURE_manifest.csv"),
+    file.path("output", "diagnostics", "METHODSX_TEMPLATE_compliance.csv"),
     file.path("output", "diagnostics", "METHODSX_PIPELINE_output_manifest.csv")
   )
   missing_rendered <- required_rendered[!file.exists(required_rendered)]
@@ -89,15 +90,15 @@ if (require_rendered) {
   }
   source(file.path("scripts", "production", "07_freeze_docx_fields.R"))
   docx_audit <- mx_audit_docx_fields(file.path("output", "MethodsX_MOB.docx"))
-  reference_audit <- mx_audit_docx_fields(
-    file.path("output", "MethodsX-reference-clean.docx")
-  )
+  source(file.path("scripts", "production", "09_validate_template_compliance.R"))
+  mx_validate_methodsx_template(file.path("output", "MethodsX_MOB.docx"))
   if (
     docx_audit$seq_fields != 0L || docx_audit$field_markers != 0L ||
       docx_audit$dirty_fields != 0L || docx_audit$update_fields != 0L ||
+      docx_audit$comment_anchors != 0L ||
+      length(docx_audit$comment_parts) != 0L ||
       length(docx_audit$external_file_targets) != 0L ||
-      length(docx_audit$invalid_relationship_ids) != 0L ||
-      length(reference_audit$invalid_relationship_ids) != 0L
+      length(docx_audit$invalid_relationship_ids) != 0L
   ) {
     stop(
       "The rendered Word manuscript still contains updateable fields or ",

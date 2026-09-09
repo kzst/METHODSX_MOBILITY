@@ -57,10 +57,10 @@ if (MX_CONFIG$render_rmd) {
   ))
   mx_assert_files(
     c(
-      "MethodsX_MOB.Rmd", "MethodsX-reference.docx",
+      "MethodsX_MOB.Rmd", "MethodsX-Method-Article-Template.docx",
       file.path("scripts", "production", c(
         "06_graphical_abstract.R", "07_freeze_docx_fields.R",
-        "08_cover_letter.R"
+        "08_cover_letter.R", "09_validate_template_compliance.R"
       ))
     ),
     "Manuscript source"
@@ -73,19 +73,9 @@ if (MX_CONFIG$render_rmd) {
     file.path("scripts", "production", "08_cover_letter.R"),
     local = .GlobalEnv, chdir = FALSE
   )
-
-  cleaned_reference <- file.path("output", "MethodsX-reference-clean.docx")
-  repaired_relationships <- mx_prepare_reference_docx(
-    "MethodsX-reference.docx", cleaned_reference
-  )
-  mx_log(
-    "Prepared the Word reference copy with numeric relationship IDs at ",
-    cleaned_reference, ". Repaired: ",
-    if (length(repaired_relationships)) {
-      paste(repaired_relationships, collapse = ", ")
-    } else {
-      "none"
-    }, "."
+  source(
+    file.path("scripts", "production", "09_validate_template_compliance.R"),
+    local = .GlobalEnv, chdir = FALSE
   )
 
   mx_log("Rendering the MethodsX HTML review manuscript.")
@@ -117,14 +107,32 @@ if (MX_CONFIG$render_rmd) {
     "Converted ", frozen_fields,
     " automatic figure-number fields to fixed text in the Word manuscript."
   )
+  compliance <- mx_validate_methodsx_template(
+    file.path("output", "MethodsX_MOB.docx")
+  )
+  mx_log(
+    "MethodsX template compliance passed: title ", compliance$title_words,
+    " words; abstract ", compliance$abstract_words,
+    " words; all required sections present in template order."
+  )
 
   mx_log("Rendering the MethodsX cover letter.")
   mx_build_cover_letter(file.path("output", "Cover_Letter_MethodsX.docx"))
+  dir.create("submission", recursive = TRUE, showWarnings = FALSE)
+  if (!file.copy(
+    file.path("output", "Cover_Letter_MethodsX.docx"),
+    file.path("submission", "Cover_Letter_MethodsX.docx"),
+    overwrite = TRUE
+  )) {
+    stop("Could not refresh submission/Cover_Letter_MethodsX.docx.", call. = FALSE)
+  }
 
   mx_assert_files(
-    file.path("output", c(
+    c(file.path("output", c(
       "MethodsX_MOB_figures.html", "MethodsX_MOB.docx",
       "Cover_Letter_MethodsX.docx"
+    )), file.path(
+      "output", "diagnostics", "METHODSX_TEMPLATE_compliance.csv"
     )),
     "Rendered manuscript"
   )
@@ -173,6 +181,6 @@ mx_log(
 )
 if (MX_CONFIG$render_rmd) {
   mx_log("Figure review file: output/MethodsX_MOB_figures.html")
-  mx_log("Word manuscript: output/MethodsX_MOB.docx")
+  mx_log("Template-compliant Word manuscript: output/MethodsX_MOB.docx")
   mx_log("Cover letter: output/Cover_Letter_MethodsX.docx")
 }

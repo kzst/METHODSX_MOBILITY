@@ -1,14 +1,13 @@
 ---
-title: "Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection"
-subtitle: "A Reproducible Workflow for Directed Weighted Longitudinal Networks"
-author: "Zsolt T. Kosztyán and Kornél Dénes"
+title: null
+author: null
 date: ""
 output:
   html_document:
     toc: true
     toc_depth: 2
   officedown::rdocx_document:
-    reference_docx: output/MethodsX-reference-clean.docx
+    reference_docx: MethodsX-Method-Article-Template.docx
     toc: false
     number_sections: false
 params:
@@ -150,13 +149,13 @@ channel_labels <- c(
 
 ## Article title
 
-**Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection**
-
-*A Reproducible Workflow for Directed Weighted Longitudinal Networks*
+**Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection: A Reproducible Workflow for Directed Weighted Longitudinal Networks**
 
 ## Authors
 
-Zsolt T. Kosztyán^a,b,c^; Kornél Dénes^d^
+Zsolt Tibor Kosztyán^a,b,c,*^ ([ORCID 0000-0001-7345-8336](https://orcid.org/0000-0001-7345-8336)); Kornél Dénes^d^ ([ORCID 0009-0002-9527-6124](https://orcid.org/0009-0002-9527-6124))
+
+Kornél Dénes's institutional e-mail: morgosz@student.elte.hu
 
 ## Affiliations
 
@@ -170,7 +169,7 @@ d. Faculty of Law, Institute of Political Science, Eötvös Loránd University, 
 
 ## Corresponding author's email address and Twitter handle
 
-kosztyan.zsolt@gtk.uni-pannon.hu; Twitter/X: not applicable
+kosztyan.zsolt@gtk.uni-pannon.hu; X: not applicable
 
 ## Keywords
 
@@ -187,43 +186,36 @@ manuscript; publication details will be inserted when available.
 # Abstract
 
 Structural anomaly detection in longitudinal networks is difficult because
-year-specific network indicators and matrix-level distances answer different
-questions. This article presents a reproducible workflow that compares and
-integrates two complementary evidence families: conventional indicators of activity,
-connectivity, reciprocity, and concentration, and graphon-inspired distances
-between node-aligned fitted directed weighted kernels. An anomaly-scoring layer
-converts heterogeneous transition measures to comparable within-channel
-evidence, groups correlated channels into structural perspectives, and reports
-their consensus without replacing the component results. Raw-weight and
-unit-mean comparisons distinguish changes in magnitude from redistribution of
-structural shape. Known-truth simulations calibrate channel-specific null
-thresholds and demonstrate complementarity: conventional indicators are highly
-sensitive and directly interpretable for global activity, density, and
-concentration changes, whereas fitted-kernel and spectral distances add
-sensitivity to coordinated relational changes. The maximum null false-positive
-rate is 5%; at the medium effect, the raw cut-norm lower-bound estimate detects
-86.0% of directional shifts, 61.5% of local block shocks, and 59.5% of role
-reassignments. In 19 annual Hungarian higher-education application networks,
-2017--2018 has the strongest consensus, with five of six perspectives at or
-above the 75th percentile. The method treats graphon distances as a complement
-to, not a substitute for, conventional longitudinal network analysis.
+scalar indicators and matrix-level distances retain different information. We
+present a reproducible method that adapts these existing tools to node-aligned
+directed weighted snapshots and compares them within one calibrated evidence
+framework.
+
+- Conventional indicators describe interpretable changes in activity,
+  connectivity, reciprocity, and concentration; graphon-inspired kernel and
+  spectral distances retain coordinated relational structure.
+- Raw-weight and unit-mean comparisons separate intensity shifts from
+  structural redistribution, while within-channel anomaly profiles and
+  known-truth simulations prevent heterogeneous scales from being conflated.
+- Null-calibrated simulations show complementary sensitivity (maximum
+  false-positive rate 5%); in 19 annual Hungarian higher-education application
+  networks, 2017--2018 produces the strongest six-perspective consensus.
+
+The workflow is designed to reveal agreement and disagreement, not to select a
+universal winner: convergence supports a broad structural anomaly, whereas
+divergence helps diagnose its type and scale.
 
 # Graphical abstract
 
-```{r graphical-abstract, fig.width=6.8, fig.height=3.40, fig.alt="Conceptual workflow in which annual networks feed two complementary evidence lanes: indicator time series with a highlighted anomaly and graphon-inspired distances illustrated by a fitted surface. A calibration target leads to agreement or disagreement as interpretable outcomes."}
+```{r graphical-abstract-export, include=FALSE, fig.width=12, fig.height=6}
 p_graphical_abstract <- build_methodsx_graphical_abstract(mx_colors)
 save_methodsx_figure(
   p_graphical_abstract, "FIG00_graphical_abstract", 12, 6
 )
-p_graphical_abstract
 ```
 
-The graphical abstract presents the study as a comparison of two equally
-important evidence families rather than as a graphon-only pipeline. Annual
-network indicators preserve direct substantive interpretation; graphon-inspired
-distances retain coordinated relational information. Their convergence supports
-a broad structural-anomaly claim, while disagreement identifies the type and
-scale of change that requires interpretation.
+Submitted as separate files: `FIG00_graphical_abstract.pdf` and
+`FIG00_graphical_abstract.png` (minimum export size 7200 x 3600 pixels).
 
 # Specifications table
 
@@ -239,16 +231,22 @@ specifications <- data.frame(
   entry = c(
     "Computer Science",
     "Network science; temporal and dynamic network analysis",
-    "Network-indicator and graphon-distance comparison workflow",
+    "Calibrated comparison of network indicators and graphon-inspired distances",
     paste(
-      "Annual network indicators, directed weighted block-kernel estimation,",
-      "node-aligned distances, and anomaly-score consensus; see Donnat and",
-      "Holmes [1], Lovász [2], and the companion research article listed above"
+      "The workflow customizes established network-summary, graph-distance, and",
+      "graph-limit methods for directed weighted longitudinal data. Key original",
+      "sources: Donnat C, Holmes S. Ann Appl Stat. 2018;12:971-1012.",
+      "https://doi.org/10.1214/18-AOAS1176; Lovász L. Large Networks and",
+      "Graph Limits. AMS; 2012. https://doi.org/10.1090/coll/060;",
+      "Lovász L, Szegedy B. J Combin Theory B. 2006;96:933-957.",
+      "https://doi.org/10.1016/j.jctb.2006.05.002"
     ),
     paste(
-      "R source code, aggregate annual networks, intermediate analytical",
-      "outputs, validation tables, and figure-generation code are supplied",
-      "in the accompanying reproducibility package"
+      "The complete versioned package is supplied as supplementary material and",
+      "is prepared for public release at",
+      "https://github.com/kzst/METHODSX_MOBILITY. It contains R source code,",
+      "aggregate annual networks, derived validation data, and figure and",
+      "manuscript-generation code"
     )
   ),
   check.names = FALSE
@@ -280,70 +278,47 @@ spec_ft
 
 Longitudinal network analysis commonly begins with annual indicators such as
 total weight, density, reciprocity, transitivity, or concentration. These
-measures are substantively interpretable and remain the first evidence family
-in the proposed workflow, but each compresses an entire relational system to a
-scalar. A transition can therefore rearrange coordinated origin--destination
-patterns while producing only a modest change in an aggregate indicator. At
-the other extreme, relying on one matrix distance can make the result difficult
-to interpret and can miss the form of change that matters. Reviews of graph
-comparison accordingly emphasize that the meaning of a distance depends on the
-network representation and the structural feature being compared [1,3].
+measures are interpretable, but each compresses an entire relational system to
+a scalar. A transition can therefore rearrange coordinated origin--destination
+patterns while producing only a modest indicator change. Matrix and graph
+distances retain more relational information, yet a single distance can be
+difficult to interpret and may be sensitive to representation, scale,
+estimator, or resolution [1,3].
 
-This method combines rather than ranks these approaches. Conventional network
-indicators describe interpretable annual trajectories of activity,
-connectivity, reciprocity, and concentration. Graphon-inspired fitted-kernel
-distances form a second evidence family that retains node-aligned relational
-structure at a selected resolution. The raw weighted representation asks
-whether the intensity surface changed; unit-mean normalization asks whether
-weights were redistributed after removing the average level. Frobenius
-distance accumulates cellwise deviations, a cut-norm search targets a coherent
-rectangular origin--destination subset, Wasserstein distance compares marginal
-fitted-intensity distributions, and singular values summarize dominant
-directed modes of the original adjacency matrices.
+The method reported here is a structured adjustment of these existing
+approaches for node-aligned directed weighted longitudinal networks. It makes
+four linked modifications. First, it retains conventional indicators as the
+primary interpretable evidence family instead of replacing them. Second, it
+fits non-negative directed block kernels and compares both raw intensity and
+unit-mean shape, separating changes in average magnitude from redistribution.
+Third, it places heterogeneous indicator, fitted-kernel, spectral, and
+role-instability channels on comparable within-channel anomaly scales and then
+summarizes correlated channels into six transparent perspectives. Fourth, it
+uses known-truth simulations to calibrate channel-specific null thresholds and
+to identify which change mechanisms each channel can detect.
 
-An anomaly-scoring layer links the two evidence families. Each empirical
-transition is ranked relative to the other observed transitions within its own
-channel, and correlated channels are summarized into six perspectives before a
-consensus profile is calculated. Known-truth simulations separately calibrate
-channel-specific null thresholds. Agreement across indicator and graphon-based
-perspectives supports a broader structural claim; disagreement is retained as
-diagnostic information about the kind of change observed. Graphon distances
-therefore complement rather than replace conventional network analysis.
+The fitted-kernel evidence family combines several non-equivalent views.
+Frobenius distance accumulates aligned cellwise deviations; a reproducible
+cut-norm search targets a coherent rectangular origin--destination subset;
+Wasserstein distance compares marginal fitted-intensity distributions; and
+singular values summarize dominant directed modes of the original adjacency
+matrices. The fitted non-negative intensity surfaces are block-kernel analogues,
+not probability-valued graphons, and the analysis does not minimize over node
+relabelings [2,4]. These restrictions make the estimand explicit and preserve
+substantive node identity.
 
-The workflow is designed for node-aligned directed weighted snapshots. It does
-not minimize over node relabelings, and its fitted non-negative intensity
-kernels are block-kernel analogues rather than probability-valued graphons.
-These distinctions are important: graphon theory motivates the representation
-[2,4], but the empirical objects and the reported discrepancies retain node
-identity and raw weight scale.
-
-The practical contribution is a guide to method selection and claim strength.
-Researchers retain familiar annual network indicators, add graphon-inspired
-distances where relational detail is needed, and use anomaly profiles to decide
-whether a transition reflects scale, broad matrix change, localized coordinated
-change, redistribution, dominant spectral modes, or role reorganization.
-Simulation calibration and specification sensitivity are part of the method,
-not optional post-hoc diagnostics.
-
-The comparison is organized around three research questions. **RQ1:** How do
-conventional annual network indicators and graphon-inspired distances differ in
-their sensitivity to known forms of longitudinal network change? **RQ2:** When
-do the two evidence families converge or diverge in the empirical ranking of
-annual transitions? **RQ3:** How can null calibration, estimator and resolution
-sensitivity, and role-flow interpretation translate those patterns into
-reproducible claims? These questions determine the sequence of the validation
-and empirical sections and provide the conceptual structure of the graphical
-abstract.
-
-The central methodological question is therefore not which single metric is
-best, but how interpretable network indicators and relational distance measures
-can be combined without concealing their different sensitivities. The main
-contribution is the integration protocol: preserve the annual indicator
-trajectories, add graphon-inspired distance channels, calibrate their detector
-behaviour under known perturbations, reduce correlated channels to transparent
-perspectives, and interpret both consensus and disagreement. It is a workflow
-contribution rather than a claim that one newly proposed distance dominates all
-existing alternatives.
+The comparison addresses three questions: which evidence channels are
+sensitive to known forms of change; which consecutive empirical transitions
+receive convergent support; and, when channels disagree, whether scale,
+estimator, resolution, or structural mechanism explains the divergence.
+Convergence across indicator and graphon-inspired perspectives supports a
+broad structural-anomaly claim. Disagreement is retained as diagnostic
+information rather than treated as failure. The resulting contribution is a
+replicable decision workflow for choosing, combining, validating, and
+interpreting change measures without declaring one universal winner. The
+illustration uses 19 annual Hungarian higher-education application networks,
+but the method applies to any sequence with stable node identities and
+comparable non-negative directed weights.
 
 # Method details
 
@@ -708,7 +683,7 @@ run rather than to previously rendered files.
 
 OpenAI ChatGPT was used in a supportive role for code review, code editing,
 visualization redesign, and manuscript organization. It did not generate or
-alter the empirical observations or simulation outcomes. Zsolt T. Kosztyán
+alter the empirical observations or simulation outcomes. Zsolt Tibor Kosztyán
 reviewed the AI-assisted changes and verified the reported claims against the
 scripted outputs. Kornél Dénes will independently validate the software and
 computational claims before submission. The authors retain full responsibility
@@ -1176,7 +1151,7 @@ would obscure. This illustrates why role-flow interpretation adds substantive
 information after a structural transition has been identified; it does not
 serve as an independent change detector.
 
-# Practical interpretation and conclusions
+## Practical interpretation and use
 
 The workflow should be read as a three-part evidence-integration architecture. First,
 conventional annual network indicators preserve substantive interpretability
@@ -1259,7 +1234,7 @@ applicable data-protection requirements.
 
 # CRediT author statement
 
-Zsolt T. Kosztyán: Conceptualization; Methodology; Software; Validation; Formal
+Zsolt Tibor Kosztyán: Conceptualization; Methodology; Software; Validation; Formal
 analysis; Investigation; Data curation; Visualization; Writing -- original
 draft; Writing -- review and editing; Project administration.
 
@@ -1279,9 +1254,14 @@ under the K-22 "OTKA" funding scheme.
 
 # Declaration of interests
 
-The authors declare that they have no known competing financial interests or
+☒ The authors declare that they have no known competing financial interests or
 personal relationships that could have appeared to influence the work reported
 in this paper.
+
+☐ The authors declare the following financial interests/personal relationships
+which may be considered as potential competing interests:
+
+Not applicable; no competing interests were declared.
 
 # Supplementary material and/or additional information [OPTIONAL]
 

@@ -59,7 +59,7 @@ mx_build_cover_letter <- function(
   doc <- officer::body_add_fpar(
     doc,
     officer::fpar(
-      officer::ftext("Zsolt T. Kosztyán", name_text),
+      officer::ftext("Zsolt Tibor Kosztyán", name_text),
       fp_p = compact_format
     )
   )
@@ -70,7 +70,10 @@ mx_build_cover_letter <- function(
   )
   doc <- add_text_paragraph(
     doc,
-    "Egyetem Street 10, 8200 Veszprém, Hungary | kosztyan.zsolt@gtk.uni-pannon.hu",
+    paste0(
+      "Egyetem Street 10, 8200 Veszprém, Hungary | ",
+      "kosztyan.zsolt@gtk.uni-pannon.hu | ORCID 0000-0001-7345-8336"
+    ),
     small_text, compact_format
   )
   doc <- officer::body_add_fpar(
@@ -84,7 +87,7 @@ mx_build_cover_letter <- function(
   doc <- officer::body_add_fpar(
     doc,
     officer::fpar(
-      officer::ftext("Re: Submission to MethodsX — ", body_bold),
+      officer::ftext("Re: Revised submission MEX-D-26-02151 — ", body_bold),
       officer::ftext(
         paste0(
           "Comparing Network Indicators and Graphon Distances for Structural ",
@@ -99,57 +102,63 @@ mx_build_cover_letter <- function(
   doc <- add_text_paragraph(
     doc,
     paste0(
-      "Please consider our manuscript as a Method Article for publication in ",
-      "MethodsX. It addresses a practical problem in longitudinal network ",
-      "analysis: conventional annual indicators and graphon-inspired distances ",
-      "capture different forms of structural change and should be compared ",
-      "without treating either evidence family as a universal substitute for ",
-      "the other."
+      "Thank you for inviting us to amend and resubmit this MethodsX Method ",
+      "Article. We have addressed the two pre-evaluation requirements in the ",
+      "editorial letter."
     )
   )
   doc <- add_text_paragraph(
     doc,
     paste0(
-      "The proposed workflow retains interpretable indicators of activity, ",
-      "connectivity, reciprocity, and concentration; adds node-aligned fitted-",
-      "kernel, spectral, and structural-role distances; and integrates them ",
-      "through channel-specific anomaly scoring, known-truth calibration, and ",
-      "transparent consensus reporting. Agreement supports a broad structural-",
-      "anomaly claim, while disagreement identifies the type, scale, or ",
-      "specification sensitivity of the change."
+      "First, the manuscript has been rebuilt using the exact MethodsX Method ",
+      "Article Template supplied through the link in the editorial decision. ",
+      "Every mandatory field has been completed, the prescribed section ",
+      "headings and order have been retained, the title contains 18 words, the ",
+      "abstract contains three method bullets and remains below 200 words, and ",
+      "the Background remains below 500 words. All instructional text and ",
+      "comments have been removed. The graphical abstract is supplied ",
+      "separately in PDF and high-resolution PNG formats."
     )
   )
   doc <- add_text_paragraph(
     doc,
     paste0(
-      "Validation combines controlled simulations with 19 annual Hungarian ",
-      "higher-education application networks covering 2006–2024 and 175 aligned ",
-      "micro-regions. The calibrated maximum null false-positive rate is 5%, and ",
-      "the empirical analysis identifies 2017–2018 as the strongest six-",
-      "perspective consensus. The complete R pipeline, aggregate inputs, ",
-      "validation tables, and manuscript-generation sources accompany the ",
-      "submission."
+      "Second, the manuscript and submission metadata identify both authors and ",
+      "their ORCIDs: Zsolt Tibor Kosztyán (0000-0001-7345-8336) and Kornél ",
+      "Dénes (0009-0002-9527-6124). Both Editorial Manager author records will ",
+      "use kosztyan.zsolt@gtk.uni-pannon.hu and morgosz@student.elte.hu, ",
+      "respectively, and both authors will complete the ",
+      "requested authorship verification before editorial evaluation."
     )
   )
   doc <- add_text_paragraph(
     doc,
     paste0(
-      "We believe the manuscript fits MethodsX because its primary contribution ",
-      "is an auditable, reusable workflow with explicit assumptions, validation ",
-      "gates, robustness checks, and publication-ready outputs. The manuscript is ",
-      "original and is not under consideration elsewhere. Both authors have ",
-      "approved the submitted version and declare no known competing financial ",
-      "interests or personal relationships that could have influenced the work."
+      "The methodological presentation now states the precise adjustment to ",
+      "existing approaches: conventional network indicators are retained as ",
+      "interpretable evidence, directed weighted block-kernel distances are ",
+      "compared on raw and unit-mean scales, and both families are integrated ",
+      "through within-channel anomaly profiles and known-truth calibration. The ",
+      "complete R pipeline, aggregate inputs, validation tables, graphical-",
+      "abstract source, and template-compliance report accompany the revision."
     )
   )
   doc <- add_text_paragraph(
     doc,
-    "Thank you for considering our manuscript.",
+    paste0(
+      "The manuscript is original and is not under consideration elsewhere. The authors declare no known ",
+      "competing financial interests or personal relationships that could have ",
+      "influenced the work."
+    )
+  )
+  doc <- add_text_paragraph(
+    doc,
+    "Thank you for reconsidering the revised submission.",
     body_text,
     officer::fp_par(text.align = "left", padding.bottom = 10)
   )
   doc <- add_text_paragraph(doc, "Sincerely,", body_text, compact_format)
-  doc <- add_text_paragraph(doc, "Zsolt T. Kosztyán", body_bold, compact_format)
+  doc <- add_text_paragraph(doc, "Zsolt Tibor Kosztyán", body_bold, compact_format)
   doc <- add_text_paragraph(
     doc, "Corresponding author, on behalf of both authors", small_text, compact_format
   )

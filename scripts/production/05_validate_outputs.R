@@ -107,7 +107,7 @@ checks <- data.frame(
     as.character(maximum_null_rate)
   ),
   expected = c(
-    "0.2.0",
+    "0.3.0",
     paste(2006:2024, collapse = ","),
     "175",
     "358367",
@@ -131,7 +131,7 @@ checks <- data.frame(
 )
 
 checks$passed <- c(
-  identical(MX_CONFIG$pipeline_version, "0.2.0"),
+  identical(MX_CONFIG$pipeline_version, "0.3.0"),
   identical(as.integer(input_checks$year), as.integer(2006:2024)),
   all(input_checks$nodes == MX_CONFIG$expected_nodes),
   isTRUE(all.equal(
@@ -266,6 +266,5 @@ if (!all(checks$passed)) {
 
 mx_refresh_reproducibility_metadata(include_rendered_outputs = FALSE)
 mx_log("All analytical output checks passed.")
-
 
 

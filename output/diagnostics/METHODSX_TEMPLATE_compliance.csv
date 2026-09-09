@@ -1,0 +1,20 @@
+check,observed,passed
+first_visible_section_is_article_information,Article information,True
+required_template_headings_present,14 of 14,True
+required_template_headings_in_order,"0,17,23,25,26,31,70,97,104,106,109,111,115,121",True
+article_title_exact,Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection: A Reproducible Workflow for Directed Weighted Longitudinal Networks,True
+article_title_max_20_words,18,True
+no_duplicate_front_matter_title,1,True
+both_author_names_present,"Zsolt Tibor Kosztyán,Kornél Dénes",True
+corresponding_author_marked,*,True
+both_orcids_present,"0000-0001-7345-8336,0009-0002-9527-6124",True
+both_institutional_emails_present,"kosztyan.zsolt@gtk.uni-pannon.hu,morgosz@student.elte.hu",True
+abstract_max_200_words,134,True
+abstract_has_1_to_3_bullets,3,True
+graphical_abstract_declared_as_separate_file,Submitted as separate files: FIG00_graphical_abstract.pdf and FIG00_graphical_abstract.png (minimum export size 7200 × 3600 pixels).,True
+graphical_abstract_not_embedded_in_manuscript,False,True
+all_specifications_fields_present,5 of 5,True
+both_competing_interest_options_retained,two statements,True
+template_instruction_text_removed,,True
+template_comment_anchors_removed,0,True
+obsolete_conclusion_heading_removed,False,True

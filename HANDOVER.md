@@ -7,13 +7,28 @@
 | Projekt | `METHODSX_MOBILITY` |
 | Kézirat munkacíme | *Comparing Network Indicators and Graphon Distances for Structural Anomaly Detection: A Reproducible Workflow for Directed Weighted Longitudinal Networks* |
 | Célfolyóirat és cikktípus | MethodsX, Method Article |
-| Átadó | Zsolt T. Kosztyán |
+| Átadó | Zsolt Tibor Kosztyán |
 | Átvevő és független validáló | Kornél Dénes |
-| Csomagverzió | 0.2.0 |
-| Átadás dátuma | 2026-08-28 |
-| Életciklusfázis | benyújtás előtti független validálás és kiadási ellenőrzés |
+| Csomagverzió | 0.3.0 |
+| Átadás dátuma | 2026-09-09 |
+| Életciklusfázis | szerkesztői formai visszaküldés utáni újrabeadás és független validálás |
 
 > **Fontos:** ez a dokumentum egy validálásra átadott kiadási jelöltet ír le. A jelenléte önmagában nem jelenti azt, hogy a független validálás megtörtént. A kézirat csak Kornél dokumentált ellenőrzése és mindkét szerző jóváhagyása után tekinthető benyújtásra késznek.
+
+## Szerkesztői újrabeadás: MEX-D-26-02151
+
+A 0.3.0 változat a MethodsX formai előszűrésének két észrevételét kezeli. A
+kézirat a szerkesztő által hivatkozott, változatlan MethodsX-sablont használja,
+és a pipeline a kész DOCX-et 19 pontos strukturális megfelelőségi vizsgálaton
+ellenőrzi. Mindkét szerző ORCID-je bekerült a kéziratba és a géppel olvasható
+metaadatokba. Az Editorial Manager-feladatok pontos listája a
+`submission/EDITORIAL_MANAGER_CHECKLIST.md` fájlban található.
+
+Mindkét intézményi e-mail-cím rendelkezésre áll: Zsolt Tibor Kosztyán címe
+`kosztyan.zsolt@gtk.uni-pannon.hu`, Kornél Dénes címe
+`morgosz@student.elte.hu` (a levelező szerző 2026-09-09-i közlése alapján).
+Mindkét szerző adatait rögzíteni kell az Editorial Managerben, és mindkét
+szerzőnek külön igazolnia kell a szerzőséget. Ezt a dokumentum nem helyettesíti.
 
 ## 1. Az átadás célja és határa
 
@@ -48,6 +63,7 @@ A validálás elsődleges forrása a GitHubra előkészített ZIP vagy annak kic
 | `CONTRIBUTING.md` | független ellenőrzés és hibajelentés szabályai |
 | `DATA_DICTIONARY.md` | a megosztott adatok és mezők leírása |
 | `MethodsX_MOB.Rmd` | a kézirat és az ábrák reprodukálható forrása |
+| `MethodsX-Method-Article-Template.docx` | a szerkesztői levél linkjéről származó, változatlan hivatalos sablon |
 | `run_all.R` | a teljes workflow egyetlen fő belépési pontja |
 | `scripts/production/00_config.R` | konfiguráció, seedek és futási módok |
 | `scripts/production/01_prepare_empirical.R` | éves hálózatok előkészítése |
@@ -58,12 +74,13 @@ A validálás elsődleges forrása a GitHubra előkészített ZIP vagy annak kic
 | `scripts/production/06_graphical_abstract.R` | grafikus absztrakt és export |
 | `scripts/production/07_freeze_docx_fields.R` | Word-sablon javítása és mezőaudit |
 | `scripts/production/08_cover_letter.R` | reprodukálható Cover Letter |
+| `scripts/production/09_validate_template_compliance.R` | a végső DOCX 19 pontos MethodsX-sablonauditja |
 | `scripts/release_check.R` | önálló kiadásijelölt-ellenőrzés |
 | `data/raw/` | megosztható aggregált bemenetek |
 | `data/derived/` | átadott publication köztes eredmények |
-| `submission/` | Cover Letter szerkeszthető és ellenőrzött változata |
+| `submission/` | Cover Letter, szerkesztői válasz, Editorial Manager ellenőrzőlista és szerzői adatlap |
 
-Az `output/` könyvtár a futás során jön létre. A ZIP-ben található `data/derived/` fájlok a gyors kézirat-újrarenderelést segítik, de nem helyettesítik a független, `METHODSX_REUSE_INTERMEDIATE=0` beállítású döntő reprodukciót.
+Az `output/` könyvtár a futás során frissül. A 0.3.0 csomag a formai javítás után ellenőrzött DOCX-et, Cover Lettert és a külön grafikus absztraktot is tartalmazza; a teljes R-pipeline újrafuttatását ez nem helyettesíti. A ZIP-ben található `data/derived/` fájlok a gyors kézirat-újrarenderelést segítik, de nem helyettesítik a független, `METHODSX_REUSE_INTERMEDIATE=0` beállítású döntő reprodukciót.
 
 ## 4. Adatvédelmi és integritási korlát
 
@@ -141,6 +158,7 @@ A döntő futás csak akkor tekinthető sikeresnek, ha:
 - 16 aktuális ábrafájl jön létre: PDF és PNG a grafikus absztrakthoz, a hat fő ábrához és az S1 kiegészítő ábrához;
 - létrejön a HTML-kézirat, a DOCX-kézirat és a Cover Letter;
 - a végső DOCX-ben nincs frissíthető Word-mező, külső fájlcél vagy érvénytelen relationship ID;
+- a `METHODSX_TEMPLATE_compliance.csv` mind a 19 sablonellenőrzése `TRUE`;
 - az output-manifest nem tartalmazza önmagát.
 
 Kulcskimenetek:
@@ -149,10 +167,10 @@ Kulcskimenetek:
 output/MethodsX_MOB_figures.html
 output/MethodsX_MOB.docx
 output/Cover_Letter_MethodsX.docx
-output/MethodsX-reference-clean.docx
 output/figures/FIG00_graphical_abstract.pdf
 output/figures/FIG00_graphical_abstract.png
 output/diagnostics/METHODSX_PIPELINE_validation.csv
+output/diagnostics/METHODSX_TEMPLATE_compliance.csv
 output/diagnostics/METHODSX_PIPELINE_configuration.csv
 output/diagnostics/METHODSX_PIPELINE_sessionInfo.txt
 output/diagnostics/METHODSX_FIGURE_manifest.csv
@@ -161,7 +179,7 @@ output/diagnostics/METHODSX_PIPELINE_output_manifest.csv
 
 ## 6. Rögzített numerikus ellenőrzési pontok
 
-Az alábbi értékek a 0.2.0 publication eredményei. Eltérés esetén először a konfigurációt és a bemeneteket kell ellenőrizni. Ha a tiszta, dokumentált futás eredménye mégis eltér, a kéziratot nem szabad változatlanul jóváhagyni.
+Az alábbi értékek a 0.3.0 publication eredményei. Eltérés esetén először a konfigurációt és a bemeneteket kell ellenőrizni. Ha a tiszta, dokumentált futás eredménye mégis eltér, a kéziratot nem szabad változatlanul jóváhagyni.
 
 | Ellenőrzési pont | Elvárt érték |
 |---|---:|
@@ -223,7 +241,7 @@ Nyisd meg a teljes HTML- és DOCX-kéziratot, ne csak az első oldalakat.
 - a bal alsó kutatási kérdések teljesen látszanak: `WHEN? WHAT?` és `HOW ROBUST?`;
 - a hálózat-, idősor-, graphonfelület-, kalibráció- és kontribúciószimbólumok nem takarnak szöveget;
 - a piros anomáliajel csak a mini idősordiagramon belül fut;
-- az ábra 6.8 hüvelykes Word-megjelenítésnél és kicsinyített nézetben is olvasható;
+- az ábra a sablon szerinti 5 × 13 cm-es kicsinyített nézetben is olvasható;
 - a PDF vektoros, a PNG pedig megfelelő felbontású.
 
 ### DOCX-kézirat
@@ -232,7 +250,7 @@ Nyisd meg a teljes HTML- és DOCX-kéziratot, ne csak az első oldalakat.
 - nem jelenik meg a „más fájlokra hivatkozó mezők frissítése” kérdés;
 - a MethodsX-fejléc minden oldalon megmarad;
 - egyetlen ábra, táblázat, képaláírás vagy szövegrész sem lóg ki a margón;
-- a grafikus absztrakt nincs számozva, a fő és kiegészítő ábrasorrend következetes;
+- a grafikus absztrakt nincs beágyazva a kéziratba, hanem külön PDF/PNG fájlként készült; a fő és kiegészítő ábrasorrend következetes;
 - a matematikai jelölések, görög betűk, kötőjelek és ékezetek helyesek;
 - a DOI- és e-mail-hivatkozások működhetnek, de külső helyi fájlhivatkozás nem maradhat;
 - a teljes dokumentum végigolvasva sem tartalmaz hiányzó képet vagy sérült oldaltörést.
@@ -248,11 +266,12 @@ Nyisd meg a teljes HTML- és DOCX-kéziratot, ne csak az első oldalakat.
 
 Ezek nem elfogadott warningok, hanem olyan korábbi hibák, amelyek javítása regressziótesztet igényel:
 
-1. A MethodsX referencia-DOCX fejlécében korábban nem numerikus relationship ID okozott `header1.xml` figyelmeztetéseket. A pipeline most futásidőben készít egy szabványosított `output/MethodsX-reference-clean.docx` másolatot, az eredeti sablont változatlanul hagyva.
+1. A korábbi egyedi referencia-DOCX fejlécében nem numerikus relationship ID okozott `header1.xml` figyelmeztetéseket. A 0.3.0 pipeline közvetlenül a szerkesztő által megadott hivatalos `MethodsX-Method-Article-Template.docx` fájlt használja; ebben a fejléc relationship ID-ja szabványos, numerikus.
 2. A Word-ábraszámozás frissíthető `SEQ` mezői korábban általános külsőmező-frissítési kérdést válthattak ki. A pipeline hét automatikus ábraszámmezőt fix szöveggé alakít, majd auditálja a DOCX-et.
 3. A DOCX újracsomagolásának meg kell őriznie a `word/document.xml` útvonalat; a ZIP-csomagolás ezért mirror módban történik.
 4. A Cover Letter színei érvényes, `#` előtagú hexadecimális értékek.
 5. A grafikus absztrakt dekoratív elemei korábban szövegkilógást okozhattak; a felirat olvashatósága minden esetben elsőbbséget élvez az ikonok részletességével szemben.
+6. A szerkesztői újrabeadás előtt a `submission/AUTHOR_METADATA.csv` kész adatait rögzíteni kell az Editorial Managerben, mindkét ORCID-et a megfelelő rekordhoz kell kapcsolni, majd mindkét szerzőnek igazolnia kell a szerzőséget. Ezt a szkript nem tudja a felhasználó helyett elvégezni.
 
 Ha bármelyik korábbi tünet visszatér, azt regressziós hibaként kell jelenteni.
 
@@ -337,4 +356,3 @@ A technikai `GO` döntés után is szükséges:
 - a végső ZIP SHA-256 értékének és a GitHub release/tag azonosítójának rögzítése.
 
 Az AI-eszköz nem szerző. A tudományos állításokért, a kódért, az adatok kezeléséért és a beadott szövegért kizárólag a szerzők vállalnak felelősséget.
-

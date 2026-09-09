@@ -1,10 +1,8 @@
 # Prepare and verify Word OOXML packages used by the manuscript pipeline.
 #
-# The MethodsX reference document contains a valid header, but its relationship
-# identifier is named `rIdMethodsXHeader`. officer/officedown expects numeric
-# `rId<number>` identifiers and consequently emits repeated coercion warnings.
-# The source template is preserved: mx_prepare_reference_docx() makes a clean
-# runtime copy with numeric relationship identifiers before rendering.
+# The current MethodsX template already uses numeric relationship identifiers.
+# mx_prepare_reference_docx() is retained only for backward compatibility with
+# older project copies that used a named header relationship.
 #
 # officedown also writes figure numbers as dirty SEQ fields. Microsoft Word can
 # then show a generic security prompt claiming that fields may refer to other
@@ -186,13 +184,23 @@ mx_audit_docx_fields <- function(docx_path) {
     ""
   }
   relationship_audit <- mx_relationship_audit(audit_dir)
+  comment_parts <- list.files(
+    file.path(audit_dir, "word"),
+    pattern = "^(comments.*[.]xml|people[.]xml)$",
+    full.names = FALSE
+  )
 
   c(
     list(
       seq_fields = mx_count_regex("<w:instrText[^>]*>\\s*SEQ fig", word_xml),
       field_markers = mx_count_regex("<w:fldChar\\b", word_xml),
       dirty_fields = mx_count_regex("w:dirty=", word_xml),
-      update_fields = mx_count_regex("<w:updateFields\\b", settings_xml)
+      update_fields = mx_count_regex("<w:updateFields\\b", settings_xml),
+      comment_anchors = mx_count_regex(
+        "<w:(?:commentRangeStart|commentRangeEnd|commentReference)\\b",
+        word_xml
+      ),
+      comment_parts = comment_parts
     ),
     relationship_audit
   )
@@ -325,6 +333,13 @@ mx_freeze_docx_fields <- function(docx_path) {
     }
   }
 
+  comment_nodes <- xml2::xml_find_all(
+    document_doc,
+    ".//w:commentRangeStart | .//w:commentRangeEnd | .//w:commentReference",
+    namespaces
+  )
+  if (length(comment_nodes)) xml2::xml_remove(comment_nodes)
+
   xml2::write_xml(document_doc, document_path, options = "format")
   document_xml <- readLines(document_path, warn = FALSE)
   document_xml <- gsub(' w:dirty="true"', "", document_xml, fixed = TRUE)
@@ -339,6 +354,52 @@ mx_freeze_docx_fields <- function(docx_path) {
     xml2::write_xml(settings_doc, settings_path, options = "format")
   }
 
+  relationships_path <- file.path(
+    work_dir, "word", "_rels", "document.xml.rels"
+  )
+  if (file.exists(relationships_path)) {
+    relationship_doc <- xml2::read_xml(relationships_path)
+    relationship_nodes <- xml2::xml_find_all(
+      relationship_doc, ".//*[local-name()='Relationship']"
+    )
+    relationship_types <- xml2::xml_attr(relationship_nodes, "Type")
+    remove_relationships <- grepl(
+      "/(comments|commentsExtended|commentsIds|commentsExtensible|people)$",
+      relationship_types
+    )
+    remove_relationships[is.na(remove_relationships)] <- FALSE
+    if (any(remove_relationships)) {
+      xml2::xml_remove(relationship_nodes[remove_relationships])
+      xml2::write_xml(relationship_doc, relationships_path, options = "format")
+    }
+  }
+
+  comment_files <- list.files(
+    file.path(work_dir, "word"),
+    pattern = "^(comments.*[.]xml|people[.]xml)$",
+    full.names = TRUE
+  )
+  if (length(comment_files)) unlink(comment_files, force = TRUE)
+
+  content_types_path <- file.path(work_dir, "[Content_Types].xml")
+  if (file.exists(content_types_path)) {
+    content_types_doc <- xml2::read_xml(content_types_path)
+    override_nodes <- xml2::xml_find_all(
+      content_types_doc, ".//*[local-name()='Override']"
+    )
+    part_names <- xml2::xml_attr(override_nodes, "PartName")
+    remove_overrides <- grepl(
+      "^/word/(comments.*[.]xml|people[.]xml)$", part_names
+    )
+    remove_overrides[is.na(remove_overrides)] <- FALSE
+    if (any(remove_overrides)) {
+      xml2::xml_remove(override_nodes[remove_overrides])
+      xml2::write_xml(
+        content_types_doc, content_types_path, options = "format"
+      )
+    }
+  }
+
   frozen_docx <- tempfile(fileext = ".docx")
   on.exit(unlink(frozen_docx, force = TRUE), add = TRUE)
   mx_pack_docx(work_dir, frozen_docx)
@@ -347,6 +408,7 @@ mx_freeze_docx_fields <- function(docx_path) {
   if (
     audit$seq_fields != 0L || audit$field_markers != 0L ||
       audit$dirty_fields != 0L || audit$update_fields != 0L ||
+      audit$comment_anchors != 0L || length(audit$comment_parts) != 0L ||
       length(audit$external_file_targets) != 0L ||
       length(audit$invalid_relationship_ids) != 0L
   ) {
